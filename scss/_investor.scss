@@ -1,0 +1,147 @@
+.top-investor-section{
+    background: url(../images/meet-our-investor.png) no-repeat top center;
+    background-size: contain;
+    margin: 100px 0;
+    .investor-item{
+        max-width: 270px;
+        overflow: hidden;
+        border-radius: 5px;
+        margin: 0 auto;
+        box-shadow: 0 10px 30px rgba(107, 94, 128, 0.2);
+        border-radius: 10px;
+        transition: all .3s;
+        .card{
+            text-align: center;
+            border: none;
+            .images{
+                img{
+                    max-width: 100%;
+                    border-bottom-left-radius: 10px;
+                    border-bottom-right-radius: 10px;
+                }
+            }
+            .card-body{
+                background: #fff;
+                border: none;
+                transition: all .3s;
+                h3{
+                    font-size: 18px;
+                    font-weight: 600;
+                    color: #111111;
+                    font-family: $pds;
+                    padding-top: 10px;
+                }
+                p{
+                    font-size: 14px;
+                    font-weight: 400;
+                    color: #313131;
+                    font-family: $ssp;
+                    padding-bottom: 20px;
+                }
+                ul{
+                    li{
+                        display: inline-block;
+                        a{
+                            display: inline-block;
+                            height: 40px;
+                            width: 40px;
+                            line-height: 40px;
+                            text-align: center;
+                            border-radius: 50%;
+                            font-size: 16px;
+                            color: #4D3184;
+                            margin: 0 5px;
+                            background:rgba(107, 94, 128, 0.1);
+                            &:hover, &:focus{
+                                background: #fff;
+                                color: #4D3184;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &:hover, &:focus{
+            .card{
+                background: #523680;
+                .card-body{
+                    background: #523680;
+                    h3{
+                        color: #fff;
+
+                    }
+                    p{
+                        color: #fff;
+                    }
+                    ul{
+                        li{
+                            a{
+                                color: #fff;
+                                background:rgba(107, 94, 128, 0.3);
+                                &:hover, &:focus{
+                                    color: #4D3184;
+                                    background: #fff;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.MoneyPro-history{
+    padding: 100px 0;
+    .item{
+        text-align: right;
+        margin-bottom: 30px;
+        .media{
+            display: flex;
+            align-items: flex-start;
+            margin-left: 60px;
+            .content{
+                h3{
+                    font-size: 20px;
+                    font-weight: 600;
+                    font-family: $pds;
+                    color: #111111;
+                    margin-bottom: 15px;
+                }
+                p{
+                    font-size: 16px;
+                    font-family: $rhd;
+                    font-weight: 400;
+                    color: #313131;
+                    line-height: 28px;
+                }
+            }
+            .media-body{
+                margin-left: 20px;
+                .icon{
+                    img{
+
+                    }
+                }
+            }
+        }
+    }
+    .images{
+        text-align: center;
+        img{
+            max-width: 100%;
+        }
+    }
+    .right_item{
+       text-align: left;
+       .media{
+           margin-right: 60px;
+           margin-left: 0;
+       }
+    }
+}
+
+.investor_pages_two{
+    background: #fff;
+}

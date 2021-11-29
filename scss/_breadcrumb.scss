@@ -1,0 +1,100 @@
+/**---------------------- single-page-area ----------------------**/
+body.search.search-results .content-area {
+    padding-top: 120px;
+}
+.wp-block-cover.alignleft {
+    position: relative;
+    background-size: cover;
+    background-position: 50%;
+    min-height: 620px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    box-sizing: border-box;
+}
+ .page-title-area {
+     padding: 240px 0 112px;
+     position: relative;
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-position: center;
+     color: #fff;
+     background: url(../images/breadcum.png) no-repeat bottom center;
+     background-color: rgba(94, 53, 177, 0.85);
+}
+.page-title-area.overlay-bg:before {
+    display: none;
+}
+.page-title-area.style-2{
+     padding: 307px 0 236px;
+     position: relative;
+     background-color: transparent;
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-position: center bottom;
+     }
+
+ .page-title-area .title {
+     font-size: 36px;
+     word-break: break-word;
+}
+.page-title-area h3 {
+     color: #fcfcfc;
+     font-weight: 700;
+     margin-bottom: 20px;
+     font-family: $pds;
+}
+ .page-title-area .breadcrumb {
+     margin: 0;
+     padding: 0;
+     display: inherit;
+     font-weight: 700;
+     background: transparent;
+     color: #fcfcfc;
+     word-break: break-word;
+}
+ .breadcrumb-item + .breadcrumb-item::before {
+     content: '-';
+     color: #fcfcfc;
+}
+
+.page-title-area .breadcrumb {
+    margin: 0;
+    padding: 0;
+    display: inherit;
+    font-weight: 700;
+    background: transparent;
+    color: #fcfcfc;
+    word-break: break-word;
+}
+.breadcrumb li.breadcrumb-list {
+    color: #A096B4;
+    display: inline-block;
+}
+.breadcrumb li.breadcrumb-list {
+    color: #A096B4;
+    margin: 0 20px;
+    position: relative;
+    a{
+    color: #A096B4;
+    font-weight: 400;
+    }
+    &:last-child{
+        a{
+            color: #fff;
+        }
+    }
+}
+
+.breadcrumb li:not(:last-child)::after {
+    display: inline-block;
+    color: #ffffff;
+    content: "\f101";
+    position: absolute;
+    right: -26px;
+    top: 1px;
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 400;
+}

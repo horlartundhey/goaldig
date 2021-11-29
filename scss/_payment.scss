@@ -1,0 +1,163 @@
+.payment-section{
+    background: url(../images/about.jpg) no-repeat center center;
+    background-size: cover;
+    padding: 100px 0;
+    .card{
+        border: none;
+        border-radius: 10px;
+        overflow: hidden;
+        .card-header{
+            background: #FF9C1A;
+            border: none;
+            border-radius: 0;
+            height: 70px;
+            line-height: 70px;
+            h2{
+                color: #fff;
+                font-size: 30px;
+                font-weight: 400;
+                font-family: $pds;
+            }
+        }
+        .card-body{
+            p{
+                font-size: 16px;
+                font-weight: 400;
+                color: #313131;
+                font-family: $ssp;
+                line-height: 28px;
+                padding-bottom: 20px;
+                border-bottom: 1px solid #E5E2EF;
+            }
+            h6{
+                font-size: 18px;
+                font-weight: 600;
+                font-family: $pds;
+                color: #111111;
+                padding: 30px 0;
+            }
+            ul{
+                margin-bottom: 75px;
+                li{
+                    display: inline-block;
+                    margin: 0 6px;
+                    margin-bottom: 20px;
+                    a{
+                        display: block;
+                        img{
+                            max-width: 100%;
+                        }
+                    }
+                }
+            }
+            .theme_btn{
+                display: block;
+                max-width: 200px;
+                width: 100%;
+                text-align: center;
+                line-height: 60px;
+                border: 2px solid #E5E2EF;
+                border-radius: 30px;
+                font-size: 16px;
+                font-weight: 600;
+                color: #523680;
+                font-family: $ssp;
+                margin-left: auto;
+                margin-bottom: 40px;
+                &:hover, &:focus{
+                    background: #FF9C1A;
+                    border: 2px solid #FF9C1A;
+                    color: #fff;
+                }
+            }
+        }
+    }
+    .card-right{
+        .card-header{
+            background: #FF4874;
+        }
+        .card-body{
+            .swiper-container{
+                height: 320px;
+                margin-bottom: 40px;
+                .swiper-wrapper{
+                    .swiper-slide{
+                        .media{
+                            display: flex;
+                            align-items: center;
+                            padding: 15px;
+                            background: #F4F2F9;
+                            border-radius: 5px;
+                            .images{
+                                img{
+                                    max-width: 100%;
+                                }
+                            }
+                            .meida-body{
+                                margin-left: 15px;
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                width: 100%;
+                                .left{
+                                    a{
+                                        display: block;
+                                        margin: 0;
+                                        font-size: 18px;
+                                        font-weight: 600;
+                                        font-family: $pds;
+                                        color: #111111;
+                                    }
+                                    h6{
+                                        padding: 0;
+                                        font-size: 18px;
+                                        font-weight: 400;
+                                        font-family: $ssp;
+                                        color: #313131;
+                                    }
+                                    small{
+                                        color: #313131;
+                                    }
+                                }
+                                .right{
+                                    text-align: center;
+                                    img{
+                                        max-width: 100%;
+                                    }
+                                    h6{
+                                        padding: 0;
+                                        font-family: $ssp;
+                                        font-weight: 700;
+                                        color: #111111;
+                                        font-size: 18px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .bottom{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 40px;
+                .theme_btn{
+                    border: none;
+                    background: #FF9C1A;
+                    color: #fff;
+                     margin: 0;
+                }
+                .all-see{
+                    font-size: 16px;
+                    font-weight: 400;
+                    font-family: $ssp;
+                    color: #313131;
+                    &:hover, &:focus{
+                        color: #FF9C1A;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,40 @@
+.counterup-section{
+    background: url(../images/counterup-bg.jpg) no-repeat center center;
+    background-size: cover;
+    padding: 100px 0;
+    .images{
+        margin-left: -200px;
+        img{
+            max-width: 100%;
+        }
+    }
+    .item{
+        padding: 80px 10px;
+        box-shadow: 0 20px 50px rgba(205,196,219, 0.3);
+        border-radius: 10px;
+        text-align: center;
+        margin-bottom: 30px;
+        img{
+            max-width: 100%;
+            margin-bottom: 30px;
+        }
+        h5{
+            color: #313131;
+            font-size: 24px;
+            font-weight: 400;
+            font-family: $ssp;
+        }
+        h3{
+            font-size: 36px;
+            font-weight: 700;
+            color: #523680;
+            font-family: $ssp;
+        }
+        &.one_item{
+            margin-top: 100px;
+        }
+        &.last_item{
+            margin-top: -100px;
+        }
+    }
+}

@@ -1,0 +1,369 @@
+/* Large Screen */
+@media (max-width: 1600px){ 
+    .banner_section .right-side-images img{
+        max-width: 100%;
+    }
+    .faq-section .images-side{
+        margin: 0;
+    }
+}
+@media (max-width: 1366px){ 
+    .banner_section .carousel-control-prev{
+        left: 5px;
+    }
+    .banner_section .carousel-control-next{
+        right: 5px;
+    }
+}
+@media (max-width: 1260px){
+    .container
+    .main-header .main-navbar .nav-inner ul li a{
+        line-height: 60px; 
+        margin: 0 14px;
+        font-size: 14px;
+    }
+    .main-header .main-navbar .nav-inner .brand{
+        width: 150px;
+    }
+    .main-header .main-navbar .nav-inner .brand{
+       width: 150px;
+    }
+    .how-we-work-section .item .arrow-img {
+        right: -80px;
+    }
+    .MoneyPro-history .item .media{
+        margin: 0;
+    }
+    .banner_section .slider-area .item .left-content h2 {
+        font-size: 40px;
+        line-height: 46px;
+    }
+}
+/* Tab Screen */
+@media (max-width: 991px){
+    
+    .blog-details-section .left-side .post-comment{
+        margin-bottom: 30px;
+    }
+    .MoneyPro-history .item .media{
+        justify-content: flex-end;
+    }
+    .MoneyPro-history .right_item{
+        .media{
+            display: block;
+            text-align: right;
+            .icon{
+                float: right;
+                margin-left: 20px;
+            }
+        }
+    }
+    .MoneyPro-history{
+        padding: 60px 0;
+    }
+    .MoneyPro-history .images{
+        display: none;
+    }
+    .banner_section .right-side-images{
+        display: none;
+    }
+    .banner_section{
+        padding-top: 180px;
+    }
+    .banner_section .carousel-control-next{
+        display: none;
+    }
+    .banner_section .carousel-control-prev{
+        display: none;
+    }
+    .main-header .main-navbar{
+        padding: 10px;
+        .desktop-menu{
+            display: none;
+        }
+    }
+    .main-header .main-navbar .mobile-header .menu-icon .open-menu{
+        display: block;
+    }
+    .main-header .top-header .topbar-right li a{
+        font-size: 12px;
+    }
+    .main-header .top-header .topbar-right li{
+        padding: 0 5px;
+    }
+    .main-header .top-header .topbar-left li a{
+        font-size: 12px;
+    }
+    .main-header .top-header .topbar-left li a .phone{
+        font-size: 12px;
+    }
+    .main-header .top-header .topbar-left li{
+        padding: 0 10px;
+    }
+    .main-header .main-navbar .nav-inner .search_btn {
+        display: block;
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        border: 1px solid #D3CBE2;
+        text-align: center;
+        line-height: 30px;
+        font-size: 14px;
+        color: #4D3184;
+    }
+    .main-header .main-navbar .mobile-header .menu-icon{
+        display: block;
+    }
+    
+    .activee{
+        .mobile-menu{
+            display: block;
+        }
+    }
+    .features-section{
+        padding: 60px 0;
+    }
+    .about-section .right-side{
+        display: none;
+    }
+    .counterup-section .images{
+        display: none;
+    }
+    .faq-section .images-side{
+        display: none;
+    }
+    .how-we-work-section .item .icon {
+        height: 80px;
+        width: 80px;
+        line-height: 80px;
+    }
+    .how-we-work-section .item .arrow-img {
+        position: absolute;
+        top: 20px !important;
+        right: -50px;
+        width: 100px;
+    }
+    .how-we-work-section .item .icon span {
+        height: 20px;
+        width: 20px;
+        font-size: 12px;
+        line-height: 20px;
+    }
+    .how-we-work-section .item h3{
+        font-size: 20px;
+    }
+    .about-section{
+        padding: 60px 0;
+    }
+    .how-we-work-section{
+        padding: 60px 0;
+    }
+    .counterup-section{
+        padding: 60px 0;
+    }
+    .transction-section .tab-content .tab-pane .table{
+        width: 1000px;
+    }
+    .transction-section{
+        padding: 60px 0;
+    }
+    .pricing-section{
+        padding: 60px 0;
+    }
+    .calculate-section .calculate_wraper{
+        height: auto;
+    }
+    .calculate-section .right_side{
+        max-width: 100%;
+    }
+    .top-investor-section .investor-item{
+        margin-bottom: 30px;
+    }
+    .top-investor-section .investor-item{
+        max-width: 100%;
+    }
+    .top-investor-section .investor-item .card .images img{
+        width: 100%;
+    }
+    .top-investor-section{
+        margin-top: 60px;
+    }
+    .payment-section{
+        padding: 60px 0;
+    }
+    .payment-section .card .card-header h2{
+        font-size: 25px;
+    }
+    .payment-section .card{
+        margin-bottom: 30px;
+    }
+    .faq-section{
+        padding: 60px 0;
+    }
+    .testimonials-section{
+        padding: 60px 0;
+    }
+    .footer-item{
+        margin-top: 30px;
+    }
+    .footer-section .left{
+        margin-top: 30px;
+    }
+    .page-title-area {
+        padding: 192px 0 112px;
+    }
+    .blog-section .left-side{
+        margin-right: 0;
+    }
+    .contact-width-section .map-area {
+        margin-top: 30px;
+    }
+}
+/* Tab Screen */
+@media (max-width: 767px){ 
+    .blog-section .left-side .card .card-body .title{
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .contact-info-section .heading h2{
+        font-size: 30px;
+    }
+    .post-comment .form_title{
+        font-size: 30px;
+    }
+    .page-title-area {
+        padding: 140px 0 112px;
+    }
+    .banner_section{
+        padding-bottom: 50px;
+        background-size: 900%;
+    }
+    .MoneyPro-history .right_item .media .icon{
+        height: 110px;
+    }
+    .banner_section_two{
+        background-size: 900%;
+        padding-bottom: 50px;
+    }
+    .banner_section .slider-area .item .left-content h2 {
+        font-size: 40px;
+        line-height: 50px;
+    }
+    .counterup-section .item{
+        padding: 74px 10px;
+    }
+    .counterup-section .item img{
+        width: 60px;
+        margin-bottom: 15px;
+    }
+    .counterup-section .item h5{
+        font-size: 16px;
+    }
+    .counterup-section .item h3{
+        font-size: 25px;
+    }
+    .how-we-work-section .item .arrow-img{
+        display: none;
+    }
+    .how-we-work-section .item{
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+    .heading-title h2{
+        font-size: 25px;
+        padding-bottom: 0;
+    }
+    .main-header .mobile-menu{
+        max-width: 450px;
+    }
+    .main-header .main-navbar::after{
+        width: 95%;
+    }
+    .main-header .top-header{
+        display: none;
+    }
+    .main-header{
+        top: 10px;
+    }
+    
+}
+/* Mobil Screen */
+@media (max-width: 575px){
+    .banner_section .slider-area .item .left-content p{
+        font-size: 16px;
+    }
+    .banner_section .slider-area .item .left-content h2{
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .top-investor-section .investor-item{
+        max-width: 320px;
+    }
+    .calculate-section .left_content h4{
+        font-size: 25px;
+    }
+    .pricing-section .pracing-item ul{
+        margin-bottom: 30px;
+    }
+    .main-header .mobile-menu{
+        left: 15px;
+        right: 15px;
+    }
+    .search_modal .input_box .form-wraper .theme-btn{
+        max-width: 100px;
+    }
+    .search_modal .input_box{
+        padding: 0 10px;
+    }
+    .counterup-section .item{
+        padding: 20px 10px;
+    }
+}
+
+/* Mobil Screen */
+@media (max-width: 410px){
+    .transction-section .nav-pills .nav-item button {
+        width: 110px;
+        line-height: 41px;
+    }
+    .pricing-section .nav-pills .nav-item button{
+        width: 110px;
+        line-height: 41px;
+    }
+    .calculate-section .right_side .item h2{
+        font-size: 20px;
+        line-height: 18px;
+    }
+    .calculate-section .right_side .item{
+        padding: 15px 0;
+    }
+    .calculate-section .right_side .item p{
+        font-size: 16px;
+        margin: 0;
+    }
+    .payment-section .card-right .card-body .swiper-container .swiper-wrapper .swiper-slide .media .meida-body .left h6{
+        font-size: 14px;
+    }
+    .payment-section .card-right .card-body .swiper-container .swiper-wrapper .swiper-slide .media .meida-body .left a{
+        font-size: 14px;
+    }
+    .payment-section .card-right .card-body .swiper-container .swiper-wrapper .swiper-slide .media .meida-body .right h6{
+        font-size: 14px;
+    }
+    .blog-section .left-side .card .card-body {
+        padding: 20px 0;
+    }
+    .blog-details-section .left-side .comment .comment-item{
+        display: block;
+        padding-right: 0;
+    }
+    .blog-details-section .left-side .comment .comment-item .content{
+        margin-left: 0;
+    }
+}
+/* Mobil Screen */
+@media (max-width: 380px){
+    .features-section .item{
+        padding: 10px;
+    }
+}

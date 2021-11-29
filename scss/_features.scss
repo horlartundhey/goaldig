@@ -1,0 +1,49 @@
+.features-section{
+    padding: 100px 0;
+    .container-fluid{
+        background: url(../images/features.png) no-repeat top center;
+        background-size: contain;
+    }
+    .item{
+        padding: 25px 40px;
+        transition: all .3s;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        .icon{
+            margin-bottom: 20px;
+            img{
+                max-width: 100%;
+            }
+        }
+        h4{
+            font-size: 20px;
+            font-weight: 600;
+            color: #111111;
+            line-height: 34px;
+            font-family: $pds;
+            margin-bottom: 20px;
+        }
+        p{
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 28px;
+            color:#313131;
+            font-family: $ssp;
+            padding-bottom: 30px;
+        }
+        a{
+            font-size: 16px;
+            font-weight: 600;
+            color: #313131;
+            line-height: 34px;
+        }
+        &:hover, &:focus, &.active{
+            background: #fff;
+            box-shadow: 0 20px 40px rgba(107, 94, 128, 0.2);
+            a{
+                color: #523680;
+                text-decoration: underline;
+            }
+        }
+    }
+}
