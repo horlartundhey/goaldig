@@ -1,0 +1,15 @@
+{
+	"description" : "The CodeIgniter framework",
+	"name" : "codeigniter/framework",
+	"license": "MIT",
+	"require": {
+		"php": ">=5.2.4",
+		"mremi/url-shortener": "dev-master",
+		"ps/image-optimizer": ">=1.0",
+		"tecnickcom/tcpdf": ">6.0",
+		"stefangabos/zebra_pagination":">1.0"
+	},
+	"require-dev": {
+		"mikey179/vfsStream": "1.1.*"
+	}
+}
