@@ -38,7 +38,7 @@
                     <div class="mb-4">
                         <i class="feather icon-unlock auth-icon"></i>
                     </div>
-                    <h3 class="mb-4">Members Login</h3>
+                    <h3 class="mb-4">Admin Login</h3>
 
                       <div class="form-group">
                         <input type="text" class="form-control" name="email" id="username" value="" placeholder="Email">
