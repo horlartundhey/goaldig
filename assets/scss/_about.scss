@@ -1,0 +1,124 @@
+.about-section{
+    background: url(../images/about.jpg) no-repeat center center;
+    background-size: cover;
+    padding: 100px 0;
+    .left-content{
+        .heading-title{
+            text-align: left;
+            max-width: 470px;
+            margin-left: 0;
+            margin-right: auto;
+            h6{
+                justify-content: start;
+                color: #fff;
+            }
+            h2{
+                text-align: left;
+                color: #fff;
+            }
+            p{
+                text-align: left;
+                color: #fff;
+            }
+        }
+        .media{
+            display: flex;
+            margin-bottom: 30px;
+            max-width: 390px;
+            .images{
+                img{
+                    max-width: 100%;
+                }
+            }
+            .media-body{
+                margin-left: 15px;
+                h3{
+                    font-size: 20px;
+                    font-weight: 700;
+                    color: #fff;
+                    font-family: $pds;
+                    padding-bottom: 20px;
+                }
+                p{
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: #fff;
+                    font-family: $ssp;
+                    line-height: 28px;
+                }
+            }
+        }
+        .theme_btn{
+            display: block;
+            max-width: 200px;
+            line-height: 50px;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 400;
+            color: #fff;
+            border: 1px solid #fff;
+            border-radius: 30px;
+            margin-top: 50px;
+            &:hover, &:focus{
+                background: #FF9C1A;
+                border: 1px solid #FF9C1A;
+            }
+        }
+    }
+    .right-side{
+        img{
+            max-width: 100%;
+        }
+    }
+}
+.about_two_page{
+    background: #fff;
+    .left-content {
+        .heading-title {
+            h6{
+                color: #111111;
+            }
+            h2{
+                color: #111111;
+            }
+            p{
+                color: #111111;
+            }
+        }
+        .media .media-body {
+            h3{
+                color: #111111;
+            }
+            p{
+                color: #111111;
+            }
+        }
+    }
+    .theme_btn{
+        background: #FF9C1A;
+        color: #fff;
+        &:hover, &:focus{
+            background: #523680 !important;
+        }
+    }
+}
+
+.what-you-start{
+    background: url(../images/what-bg.png) no-repeat  top center ;
+    background-size: cover;
+    ul{
+        li{
+            max-width: 320px;
+            display: flex;
+            font-size: 16px;
+            font-weight: 400;
+            font-family: $ssp;
+            color: #fff;
+            margin-bottom: 20px;
+            span{
+                display: inline-block;
+                margin-right: 15px;
+            }
+        }
+    }
+}

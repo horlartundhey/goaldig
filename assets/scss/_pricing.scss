@@ -1,0 +1,119 @@
+.pricing-section{
+    padding: 100px 0;
+    background: #fff;
+    .nav-pills{
+        justify-content: center;
+        margin-bottom: 50px;
+        .nav-item{
+            button{
+                width: 170px;
+                line-height: 58px;
+                text-align: center;
+                border-radius: 30px;
+                box-shadow: none;
+                outline: none;
+                border: none;
+                margin: 0 10px;
+                background: #FF9C1A;
+                font-size: 16px;
+                font-weight: 600;
+                color: #fff;
+                font-family: $ssp;
+                &.active{
+                    background: #523680;
+                }
+            }
+        }
+    }
+    .pracing-item{
+        position: relative;
+        transition: all 0.3s ease-in;
+        position: relative;
+        border-radius: 15px;
+        background: transparent;
+        border: 1px solid #ded8e9;
+        margin-bottom: 30px;
+        .top-left{
+            font-size: 16px;
+            font-weight: 700;
+            transition: all 0.3s ease-in;
+            position: absolute;
+            top: 0px;
+            left: 0;
+            background-color: #F4F2F9;
+            color: #4D3184;
+            width: 120px;
+            height: 85px;
+            clip-path: polygon(0 41%, 41% 0, 100% 0, 0 100%);
+            p{
+                transform: rotate(-38deg);
+                position: relative;
+                left: -16px;
+                top: 12px;
+                text-align: center;
+                font-size: 16px;
+                font-weight: 700;
+                color: #4D3184;
+                font-family: $rhd;
+            }
+        }
+        .top-area{
+            padding-top: 60px;
+            padding-bottom: 30px;
+            text-align: center;
+            border-bottom: 1px solid #ded8e9;
+            p {
+                font-size: 24px;
+                font-weight: 700;
+                font-family: $pds;
+                color: #111;
+                margin-top: 18px;
+            }
+        }
+        ul{
+            padding-top: 40px;
+            text-align: center;
+            margin-bottom: 110px;
+            li{
+                font-size: 18px;
+                font-weight: 400;
+                color: #513E75;
+                margin-bottom: 15px;
+                font-family: $ssp;
+                span{
+                    display: inline-block;
+                    margin-right: 10px;
+                    font-size: 16px;
+                }
+            }
+        }
+        .buy-now{
+            display: block;
+            max-width: 270px;
+            width: 100%;
+            text-align: center;
+            line-height: 60px;
+            border: 1px solid #D3CBE2;
+            border-radius: 30px;
+            font-size: 18px;
+            font-weight: 500;
+            color: #4D3184;
+            margin: 0 auto;
+            margin-bottom: 50px;
+            &:hover, &:focus{
+                color: #fff;
+                background: #4D3184;
+            }
+        }
+        &:hover, &:focus, &.active{
+            box-shadow: 0px 30px 70px rgba(221, 215, 233, .5);
+            border: 1px solid transparent;
+            .top-left{
+                background: #4D3184;
+                p{
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

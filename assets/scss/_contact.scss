@@ -1,0 +1,85 @@
+.contact-info-section{
+    padding: 100px 0;
+    .heading{
+        text-align: center;
+        max-width: 750px;
+        margin: 0 auto;
+        margin-bottom: 50px;
+        h6{
+            color: #FF007A;
+            font-weight: 500;
+            margin-bottom: 10px;
+            text-transform: capitalize;
+            display: inline-block;
+            font-size: 24px;
+        }
+        h2{
+            color: #4D3184;
+            text-transform: capitalize;
+            margin-bottom: 20px;
+            font-weight: 500;
+            font-size: 48px;
+            font-family: $pds;
+        }
+        p{
+
+        }
+    }
+    .item{
+        text-align: center;
+        border: 1px solid #D3CBE2;
+        padding: 55px 6px 50px;
+        margin-bottom: 30px;
+        transition: 0.3s;
+        border-radius: 5px;
+        .icon{
+            display: inline-block;
+            border: 1px solid #D3CBE2;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            margin-bottom: 25px;
+            transition: 0.3s;
+            i{
+                color: #4D3184;
+                font-size: 24px;
+            }
+            .fa-phone{
+                transform: rotate(90deg);
+            }
+        }
+        h3{
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            font-family: $pds;
+            color: $pfont;
+        }
+        p{
+            margin-bottom: 4px;
+        }
+        &:hover, &:focus{
+            box-shadow: 0px 30px 70px rgba(221, 215, 233, 0.5);
+            border: 1px solid transparent;
+            .icon{
+                border: 1px solid #4D3184;
+            }
+        }
+    }
+}
+
+.contact-width-section{
+    padding: 100px 0;
+    background: url(../images/calculate-bg.png) no-repeat bottom center;
+    background-size: cover;
+    .map-area{
+        iframe{
+            max-width: 100%;
+            width: 100%;
+            margin: 0;
+            border: none;
+            height: 450px;
+        }
+    }
+}

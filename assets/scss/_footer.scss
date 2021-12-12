@@ -1,0 +1,150 @@
+.footer-section{
+    background: url(../images/footer-section.jpg) no-repeat top center;
+    background-size: cover;
+    padding-top: 120px;
+    .left{
+        .logo{
+            display: block;
+            margin-bottom: 25px;
+            img{
+                max-width: 100%;
+            }
+        }
+        p{
+            font-size: 16px;
+            font-weight: 400;
+            color: #DFD8EC;
+            font-family: $ssp;
+            padding-bottom: 50px;
+        }
+        ul{
+            li{
+                display: inline-block;
+                a{
+                    display: block;
+                    height: 40px;
+                    width: 40px;
+                    line-height: 40px;
+                    text-align: center;
+                    color: #fff;
+                    background:rgba(107, 94, 128, 0.1);
+                    border-radius: 50%;
+                    margin-right: 15px;
+                    &:hover, &:focus{
+                        background: #fff;
+                        color: #523680;
+                    }
+                }
+            }
+        }
+    }
+    .footer-item{
+        h3{
+            font-size: 24px;
+            font-weight: 700;
+            color: #fff;
+            font-family: $pds;
+            margin-bottom: 40px;
+        }
+        ul{
+            li{
+                a{
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: #DFD8EC;
+                    line-height: 36px;
+                    position: relative;
+                    font-family: $ssp;
+                    i{
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        line-height: 23px;
+                        opacity: 0;
+                        font-size: 20px;
+                    }
+                    &:hover, &:focus{
+                        color: #FF9C1A;
+                        padding-left: 15px;
+                        i{
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+        form{
+            input{
+                width: 100%;
+                height: 60px;
+                padding: 5px 15px;
+                font-size: 16px;
+                font-weight: 400;
+                color: #000;
+                text-align: center;
+                margin-bottom: 10px;
+                font-family: $ssp;
+                outline: none;
+                border: none;
+                box-shadow: none;
+                border-radius: 30px;
+            }
+            .theme_btn{
+                display: block;
+                border: none;
+                outline: none;
+                box-shadow: none;
+                width: 100%;
+                line-height: 60px;
+                border-radius: 30px;
+                font-size: 16px;
+                font-weight: 600;
+                color: #fff;
+                font-family: $ssp;
+                background: #FF9C1A;
+            }
+        }
+        &.contact_item{
+            ul{
+                li{
+                    a{
+                        display: flex;
+                        padding: 0 !important;
+                        align-items:center;
+                        i{
+                            opacity: 1;
+                            margin-right: 15px;
+                            display: inline-block;
+                            position: unset !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .footer-bottom{
+        border-top: 1px solid #fff;
+        padding: 24px 0;
+        margin-top: 60px;
+        .bottom-left{
+            text-align: center;
+            span{
+                display: block;
+                font-size: 16px;
+                font-weight: 400;
+                color: #DFD8EC;
+                font-family: $ssp;
+                a{
+                    font-size: 16px;
+                    font-weight: 700;
+                    color: #DFD8EC;
+                    font-family: $ssp;
+                    margin: 0;
+                    &:hover, &:focus{
+                        color: #FF9C1A;
+                    }
+                }
+            }
+        }
+    }
+}

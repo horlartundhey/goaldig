@@ -1,0 +1,75 @@
+.how-we-work-section{
+    padding: 100px 0;
+    background: #F4F2F9;
+    .item{
+        position: relative;
+        max-width: 320px;
+        text-align: center;
+        .icon{
+            height: 120px;
+            width: 120px;
+            line-height: 120px;
+            text-align: center;
+            background: #523680;
+            border-radius: 50%;
+            box-shadow: 0 20px 50px rgba(82,54,128, 0.2);
+            position: relative;
+            margin: 0 auto;
+            margin-bottom: 30px;
+            img{
+                max-width: 100%;
+            }
+            span{
+                display: inline-block;
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 30px;
+                width: 30px;
+                background: rgb(82,54,128);
+                border: 1px solid #fff;
+                border-radius: 50%;
+                font-size: 16px;
+                line-height: 30px;
+                text-align: center;
+                font-weight: 600;
+                color: #fff;
+            }
+            &.icon-tow{
+                background: #FF9C1A;
+                box-shadow: 0 20px 50px rgba(255, 156, 26, 0.2);
+                span{
+                    background: #FF9C1A;
+                }
+            }
+            &.icon-three{
+                background: #FF4874;
+                box-shadow: 0 20px 50px rgba(255,72,116, 0.2);
+                span{
+                    background: #FF4874;
+                }
+            }
+        }
+        h3{
+            font-size: 24px;
+            font-weight: 600;
+            color: #111111;
+            font-family: $pds;
+            padding-bottom: 20px;
+        }
+        p{
+            font-size: 16px;
+            font-weight: 400;
+            color: #313131;
+            font-family: $ssp;
+        }
+        .arrow-img{
+            position: absolute;
+            top: 30px;
+            right: -140px;
+            img{
+                max-width: 100%;
+            }
+        }
+    }
+}
