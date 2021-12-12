@@ -1,4 +1,5 @@
 $("#error-box").hide();//css("display","none");
+$("#error-box1").hide();//css("display","none");
 
 
 $('#form_login').submit( function(e) {
@@ -93,6 +94,7 @@ $('#form_reset').submit( function(e) {
 
 /* Registration form processor */
 $('#registerform').submit( function(e) {
+
 	/*
 	var queryStringToHash = $('#registerform').serialize();
 	
@@ -120,51 +122,58 @@ $('#registerform').submit( function(e) {
 	
 	 e.preventDefault();    
     var formData = new FormData(this);
-	var pass = $("#password").val();
+	var pass = $("#password1").val();
 	var conf = $("#confirm-password").val();
 	
 	if(pass!=conf){
-				var msg = '<div class="alert alert-danger alert-dismissible" id="error-box" >';
+				var msg = '<div class="alert alert-danger alert-dismissible" id="error-box2" >';
 								msg+='<button type="button" class="close" data-dismiss="alert" aria-label="Close">';
 								msg+='<span aria-hidden="true">×</span></button>';
 								msg+='<i class="fa fa-warning"></i><b> Password does not match</b></div>';
 								
 									
-								$('#error-box').html(msg);
-								$("#error-box").show();//css("display","true");
+								$('#error-box2').html(msg);
+								$("#error-box2").show();//css("display","true");
 		return false;
 	}
 	
 	$.ajax({
-		        url: baseurl+'auth/register',
+		        url: 'auth/register',
 				method:'POST',
 				type: 'POST',
 				data: formData,
 				error: function(response){
-							$('#error-box').html("Error registering");
+							$('#error-box2').html("Error registering");
 							console.log(response);
 							return false;
 						},
 				success: function(response){
-					console.log(response);
 					response = JSON.parse(response);
 					console.log(response);
 						var statuss = response.status;
+						//var statuss = response.login_status;
 						if(statuss!="success"){
 							
-								var msg = '<div class="alert alert-danger alert-dismissible" id="error-box" >';
+								var msg = '<div class="alert alert-danger alert-dismissible" id="error-box2" >';
 								msg+='<button type="button" class="close" data-dismiss="alert" aria-label="Close">';
 								msg+='<span aria-hidden="true">×</span></button>';
 								msg+='<i class="fa fa-warning"></i><b> '+statuss+'</b></div>';
 																
-								$('#error-box').html(msg);
-								$("#error-box").show();//css("display","true");
-								location.href="#error-box";
+								$('#error-box2').html(msg);
+								$("#error-box2").show();//css("display","true");
+								location.href="#error-box1";
 								return false;
 						}else{
 							//toastr.success('Registration successfull!','Success');
 							//return false;
-							location.href=response.url;
+							var msg = '<div class="alert alert-success alert-dismissible" id="error-box2" >';
+								msg+='<button type="button" class="close" data-dismiss="alert" aria-label="Close">';
+								msg+='<span aria-hidden="true">×</span></button>';
+								msg+='<i class="fa fa-warning"></i><b> Registration successfull</b><br/><a href="'+response.url+'">Login to continue</a></div>';
+																
+								$('#error-box2').html(msg);
+								$("#error-box2").show();//css("display","true");
+							//location.href=response.url;
 						}
 						
 		        },

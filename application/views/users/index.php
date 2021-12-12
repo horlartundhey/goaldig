@@ -7,12 +7,12 @@
     <meta name="description" content="" />
     <meta name="keywords" content="" />
 	<title>Goal Digger Network</title>
-    <link rel="icon" href="images/fav.png" type="image/png" sizes="16x16"> 
+    <link rel="icon" href="<?php echo $this->config->config['base_url']?>social/<?php echo $this->config->config['base_url']?>social/images/fav.png" type="image/png" sizes="16x16"> 
     
-    <link rel="stylesheet" href="css/main.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/color.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="<?php echo $this->config->config['base_url']?>social/css/main.min.css">
+    <link rel="stylesheet" href="<?php echo $this->config->config['base_url']?>social/css/style.css">
+    <link rel="stylesheet" href="<?php echo $this->config->config['base_url']?>social/css/color.css">
+    <link rel="stylesheet" href="<?php echo $this->config->config['base_url']?>social/css/responsive.css">
 
 </head>
 <body>
@@ -25,7 +25,7 @@
 				<a class="" href="#menu"><i class="fa fa-align-justify"></i></a>
 			</span>
 			<span class="mh-text">
-				<a href="index.html" title=""><img src="images/goaldig1.png" alt=""></a>
+				<a href="index.html" title=""><img src="<?php echo $this->config->config['base_url']?>social/images/goaldig1.png" alt=""></a>
 			</span>
 			<span class="mh-btns-right">
 				<a class="fa fa-sliders" href="#shoppingbag"></a>
@@ -41,12 +41,12 @@
 			<ul>
 				<li><span>Home</span>
 					<ul>
-						<li><a href="index.html" title="">Home Social</a></li>
-						<li><a href="index2.html" title="">Home Social 2</a></li>
-						<li><a href="index-company.html" title="">Home Company</a></li>
-						<li><a href="landing.html" title="">Login page</a></li>
-						<li><a href="logout.html" title="">Logout Page</a></li>
-						<li><a href="newsfeed.html" title="">news feed</a></li>
+						<li><a href="#" title="">Home Social</a></li>
+						<li><a href="#" title="">Home Social 2</a></li>
+						<li><a href="#" title="">Home Company</a></li>
+						<li><a href="#" title="">Login page</a></li>
+						<li><a href="<?php echo $this->config->config['base_url']?>auth/logout" title="">Logout Page</a></li>
+						<li><a href="#l" title="">news feed</a></li>
 					</ul>
 				</li>
 				
@@ -57,7 +57,7 @@
 	
 	<div class="topbar stick">
 		<div class="logo">
-			<a title="" href="index.html"><img src="images/goaldig1.png" width="15%" alt=""></a>
+			<a title="" href="index.html"><img src="<?php echo $this->config->config['base_url']?>social/images/goaldig1.png" width="15%" alt=""></a>
 		</div>
 		
 		<div class="top-area">
@@ -78,7 +78,7 @@
 						<ul class="drops-menu">
 							<li>
 								<a href="notifications.html" title="">
-									<img src="images/resources/thumb-1.jpg" alt="">
+									<img src="<?php echo $this->config->config['base_url']?>social/images/resources/thumb-1.jpg" alt="">
 									<div class="mesg-meta">
 										<h6>sarah Loren</h6>
 										<span>Hi, how r u dear ...?</span>
@@ -99,7 +99,7 @@
 						<ul class="drops-menu">
 							<li>
 								<a href="notifications.html" title="">
-									<img src="images/resources/thumb-1.jpg" alt="">
+									<img src="<?php echo $this->config->config['base_url']?>social/images/resources/thumb-1.jpg" alt="">
 									<div class="mesg-meta">
 										<h6>sarah Loren</h6>
 										<span>Hi, how r u dear ...?</span>
@@ -122,7 +122,7 @@
 				</li> -->
 			</ul>
 			<div class="user-img">
-				<img src="images/resources/admin.jpg" alt="">
+				<img src="<?php echo $this->config->config['base_url']?>social/images/resources/admin.jpg" alt="">
 				<span class="status f-online"></span>
 				<div class="user-setting">
 					<a href="#" title=""><span class="status f-online"></span>online</a>
@@ -132,7 +132,7 @@
 					<a href="#" title=""><i class="ti-pencil-alt"></i>edit profile</a>
 					<a href="#" title=""><i class="ti-target"></i>activity log</a>
 					<a href="#" title=""><i class="ti-settings"></i>account setting</a>
-					<a href="#" title=""><i class="ti-power-off"></i>log out</a>
+					<a href="#" onclick="logout()" title=""><i class="ti-power-off"></i>log out</a>
 				</div>
 			</div>			
 		</div>
@@ -190,35 +190,35 @@
 										<h4 class="widget-title">Who's follownig</h4>
 										<ul class="followers">
 											<li>
-												<figure><img src="images/resources/friend-avatar2.jpg" alt=""></figure>
+												<figure><img src="<?php echo $this->config->config['base_url']?>social/images/resources/friend-avatar2.jpg" alt=""></figure>
 												<div class="friend-meta">
 													<h4><a href="time-line.html" title="">Kelly Bill</a></h4>
 													<a href="#" title="" class="underline">Add Friend</a>
 												</div>
 											</li>
 											<li>
-												<figure><img src="images/resources/friend-avatar4.jpg" alt=""></figure>
+												<figure><img src="<?php echo $this->config->config['base_url']?>social/images/resources/friend-avatar4.jpg" alt=""></figure>
 												<div class="friend-meta">
 													<h4><a href="time-line.html" title="">Issabel</a></h4>
 													<a href="#" title="" class="underline">Add Friend</a>
 												</div>
 											</li>
 											<li>
-												<figure><img src="images/resources/friend-avatar6.jpg" alt=""></figure>
+												<figure><img src="<?php echo $this->config->config['base_url']?>social/images/resources/friend-avatar6.jpg" alt=""></figure>
 												<div class="friend-meta">
 													<h4><a href="time-line.html" title="">Andrew</a></h4>
 													<a href="#" title="" class="underline">Add Friend</a>
 												</div>
 											</li>
 											<li>
-												<figure><img src="images/resources/friend-avatar8.jpg" alt=""></figure>
+												<figure><img src="<?php echo $this->config->config['base_url']?>social/images/resources/friend-avatar8.jpg" alt=""></figure>
 												<div class="friend-meta">
 													<h4><a href="time-line.html" title="">Sophia</a></h4>
 													<a href="#" title="" class="underline">Add Friend</a>
 												</div>
 											</li>
 											<li>
-												<figure><img src="images/resources/friend-avatar3.jpg" alt=""></figure>
+												<figure><img src="<?php echo $this->config->config['base_url']?>social/images/resources/friend-avatar3.jpg" alt=""></figure>
 												<div class="friend-meta">
 													<h4><a href="time-line.html" title="">Allen</a></h4>
 													<a href="#" title="" class="underline">Add Friend</a>
@@ -232,7 +232,7 @@
 								<div class="central-meta">
 									<div class="new-postbox">
 										<figure>
-											<img src="images/resources/admin2.jpg" alt="">
+											<img src="<?php echo $this->config->config['base_url']?>social/images/resources/admin2.jpg" alt="">
 										</figure>
 										<div class="newpst-input">
 											<form method="post">
@@ -277,14 +277,14 @@
 									<div class="user-post">
 										<div class="friend-info">
 											<figure>
-												<img src="images/resources/friend-avatar10.jpg" alt="">
+												<img src="<?php echo $this->config->config['base_url']?>social/images/resources/friend-avatar10.jpg" alt="">
 											</figure>
 											<div class="friend-name">
 												<ins><a href="time-line.html" title="">Janice Griffith</a></ins>
 												<span>published: june,2 2018 19:PM</span>
 											</div>
 											<div class="post-meta">
-												<img src="images/resources/user-post.jpg" alt="">
+												<img src="<?php echo $this->config->config['base_url']?>social/images/resources/user-post.jpg" alt="">
 												<div class="we-video-info">
 													<ul>
 														<li>
@@ -361,7 +361,7 @@
 									<div class="user-post">
 										<div class="friend-info">
 											<figure>
-												<img src="images/resources/nearly1.jpg" alt="">
+												<img src="<?php echo $this->config->config['base_url']?>social/images/resources/nearly1.jpg" alt="">
 											</figure>
 											<div class="friend-name">
 												<ins><a href="time-line.html" title="">Sara Grey</a></ins>
@@ -442,7 +442,7 @@
 											<ul class="we-comet">
 												<li>
 													<div class="comet-avatar">
-														<img src="images/resources/comet-1.jpg" alt="">
+														<img src="<?php echo $this->config->config['base_url']?>social/images/resources/comet-1.jpg" alt="">
 													</div>
 													<div class="we-comment">
 														<div class="coment-head">
@@ -456,7 +456,7 @@
 												</li>
 												<li>
 													<div class="comet-avatar">
-														<img src="images/resources/comet-2.jpg" alt="">
+														<img src="<?php echo $this->config->config['base_url']?>social/images/resources/comet-2.jpg" alt="">
 													</div>
 													<div class="we-comment">
 														<div class="coment-head">
@@ -474,7 +474,7 @@
 												</li>
 												<li class="post-comment">
 													<div class="comet-avatar">
-														<img src="images/resources/comet-2.jpg" alt="">
+														<img src="<?php echo $this->config->config['base_url']?>social/images/resources/comet-2.jpg" alt="">
 													</div>
 													<div class="post-comt-box">
 														<form method="post">
@@ -514,7 +514,7 @@
 										<h4 class="widget-title">Your profile</h4>	
 										<div class="your-page">
 											<figure>
-												<a href="#" title=""><img src="images/resources/friend-avatar9.jpg" alt=""></a>
+												<a href="#" title=""><img src="<?php echo $this->config->config['base_url']?>social/images/resources/friend-avatar9.jpg" alt=""></a>
 											</figure>
 											<div class="page-meta">
 												<a href="#" title="" class="underline">My page</a>
@@ -530,9 +530,9 @@
 									</div><!-- page like widget -->
 									<div class="widget">
 										<div class="banner medium-opacity bluesh">
-											<div class="bg-image" style="background-image: url(images/resources/baner-widgetbg.jpg)"></div>
+											<div class="bg-image" style="background-image: url(<?php echo $this->config->config['base_url']?>social/images/resources/baner-widgetbg.jpg)"></div>
 											<div class="baner-top">
-												<span><img alt="" src="images/book-icon.png"></span>
+												<span><img alt="" src="<?php echo $this->config->config['base_url']?>social/images/book-icon.png"></span>
 												<i class="fa fa-ellipsis-h"></i>
 											</div>
 											<div class="banermeta">
@@ -570,16 +570,20 @@
 			<div class="row">
 				<div class="col-md-12">
 					<span class="copyright"><a target="_blank" href="https://www.templateshub.net">Goal Digger</a></span>
-					<i><img src="images/goaldig2.png" alt="" width="10%"></i>
+					<i><img src="<?php echo $this->config->config['base_url']?>social/images/goaldig2.png" alt="" width="10%"></i>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>			
-	
-	<script src="js/main.min.js"></script>
-	<script src="js/script.js"></script>
-	<script src="js/map-init.js"></script>
+	<script>
+		function logout(){
+			location.href="<?php echo $this->config->config['base_url']?>logout";
+		}
+	</script>
+	<script src="<?php echo $this->config->config['base_url']?>social/js/main.min.js"></script>
+	<script src="<?php echo $this->config->config['base_url']?>social/js/script.js"></script>
+	<script src="<?php echo $this->config->config['base_url']?>social/js/map-init.js"></script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8c55_YHLvDHGACkQscgbGLtLRdxBDCfI"></script>
 
 </body>	

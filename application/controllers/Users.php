@@ -1,6 +1,6 @@
 <?php
 
-class Admin extends CI_Controller {
+class Users extends CI_Controller {
 
 
 		function __construct(){
@@ -41,13 +41,12 @@ class Admin extends CI_Controller {
 		}
 		
         public function view($page = 'dashboard',$param2='',$param3=''){
-			 if ($this->session->userdata('admin_login') != 1)
+			 if ($this->session->userdata('user_login') != 1)
               $this->loadUrl('home');
 
-				
 				$data = array('page'=>$page);
 				
-				if (! file_exists(APPPATH.'/views/admin/'.$page.'.php') && ! file_exists(APPPATH.'/views/admin/'.$page.'s.php') ){
+				if (! file_exists(APPPATH.'/views/users/'.$page.'.php') && ! file_exists(APPPATH.'/views/users/'.$page.'s.php') ){
 						show_404();
 				}
 				
@@ -67,16 +66,20 @@ class Admin extends CI_Controller {
 				}
 				$data['settings'] = $this->db->get("setting")->result_array();
 				
+				
 				$this->load->view('templates/header', $data);
-				$this->load->view('admin/'.$page, $data);
+				$this->load->view('users/'.$page, $data);
 				$this->load->view('templates/footer', $data);
 				
         }
 		
         public function home(){
 			$data = array();
-	
-			$this->load->view('index', $data);
+			//var_dump("hello");exit;
+			if ($this->session->userdata('user_login') != 1)
+				$this->load->view('index', $data);
+			else	
+				$this->load->view('users/index', $data);
 				
         }
 		
@@ -172,7 +175,7 @@ class Admin extends CI_Controller {
 		}
 		
 		function get_result(){
-			if ($this->session->userdata('admin_login') != 1)
+			if ($this->session->userdata('user_login') != 1)
               $this->loadUrl('login');
 				
 			  $election_id = $this->input->post('election_id');

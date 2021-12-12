@@ -26,8 +26,8 @@ class Login extends CI_Controller {
 
     //Default function, redirects to logged in user area
     public function index() {
-        if ($this->session->userdata('admin_login') == 1)
-              $this->redirect($this->config->config['base_url'] . 'dashboard');
+        if ($this->session->userdata('user_login') == 1)
+              $this->redirect($this->config->config['base_url'] . 'home');
 
           $this->redirect($this->config->config['base_url'] . 'login');
     }
@@ -36,6 +36,34 @@ class Login extends CI_Controller {
 	
 	/* Login page*/
 	 public function login(){
+		 
+        if ($this->session->userdata('user_login') == 1)
+              $this->redirect($this->config->config['base_url'] . 'home');
+
+        $data = array();
+		$data['p'] = isset($_GET["p"])?$_GET["p"]:"";
+		$data['id'] = isset($_GET["id"])?$_GET["id"]:"";
+	
+		$this->load->view('login', $data);
+	 }
+	
+	
+	/* Login page*/
+	 public function register(){
+		 
+        if ($this->session->userdata('user_login') == 1)
+              $this->redirect($this->config->config['base_url'] . 'dashboard');
+
+        $data = array();
+		$data['p'] = isset($_GET["p"])?$_GET["p"]:"";
+		$data['id'] = isset($_GET["id"])?$_GET["id"]:"";
+	
+		$this->load->view('register', $data);
+	 }
+	
+
+	/* Login page*/
+	 public function adminlogin(){
 		 
         if ($this->session->userdata('admin_login') == 1)
               $this->redirect($this->config->config['base_url'] . 'dashboard');
@@ -58,7 +86,7 @@ class Login extends CI_Controller {
         $email = isset($_POST["username"])?$_POST["username"]:"";
         $password = isset($_POST["password"])?$_POST["password"]:"";
 		$item_id = isset($_POST["id"])?$_POST["id"]:"";
-		$redirect = (isset($_POST["p"]) && $_POST["p"]!="" )?$_POST["p"]:"dashboard";
+		$redirect = (isset($_POST["p"]) && $_POST["p"]!="" )?$_POST["p"]:"home";
 		$redirect = $this->config->config['base_url'].$redirect;
         $response['submitted_data'] = $_POST;
 
@@ -70,6 +98,45 @@ class Login extends CI_Controller {
 			$response['id'] = $item_id;		
         }
 
+        //Replying ajax request with validation response
+        echo json_encode($response);
+    }
+
+	//Ajax login function 
+    function ajax_register(){		
+        $response = array();
+		if (!isset($_POST) || empty($_POST) )
+            $this->redirect($this->config->config['base_url'] . 'login');
+
+        //Recieving post input of email, password from ajax request	
+        $email = isset($_POST["username"])?$_POST["username"]:"";
+        $password = isset($_POST["password"])?$_POST["password"]:"";
+		
+		$redirect = "login";
+		$redirect = $this->config->config['base_url'].$redirect;
+        $response['submitted_data'] = $_POST;
+	
+		$data = $_POST;
+
+		$data['password'] = sha1(md5($password));
+		$data['status'] = "active";
+		$data['date_added'] = date("d/m/Y");
+		unset($data['confirmpassword']);
+		
+		$exist = $this->db->get_where("users",array('username'=>$data['username']))->row_array();
+		
+		//var_dump($data); exit;
+		if($exist!=null){
+			$response['status'] = "Username already in use";
+		}else{
+			//Validating login
+			$created = $this->db->insert("users",$data);
+			if ($created){
+				$response['status'] = "success";
+				$response['url'] = $redirect;
+				//$response['id'] = $item_id;		
+			}
+		}
         //Replying ajax request with validation response
         echo json_encode($response);
     }
@@ -143,6 +210,30 @@ class Login extends CI_Controller {
     //Validating login from ajax request
     function validate_login($email = '', $password = '') {
 		
+        $credential = array('username' => $email, 'password' => sha1(md5($password)),'status'=>'active');
+
+        // Checking login credential for admin
+        $query = $this->db->get_where('users', $credential);
+        if ($query->num_rows() > 0) {
+            $row = $query->row();
+			
+            $this->session->set_userdata('user_login', '1');
+            $this->session->set_userdata('user_id', $row->id);
+            $this->session->set_userdata('name', $row->name);
+            $this->session->set_userdata('username', $row->username);
+            $this->session->set_userdata('login_type', 'user');
+			$this->session->set_userdata('login_user_id', $row->id);
+			
+			return 'success';
+		
+        }
+		
+        return 'invalid';
+    }
+	
+	//Validating login from ajax request
+    function validate_admin_login($email = '', $password = '') {
+		
         $credential = array('email' => $email, 'password' => sha1(md5($password)),'status'=>'active');
 
         // Checking login credential for admin
@@ -191,10 +282,10 @@ class Login extends CI_Controller {
 
     /*     * *****LOGOUT FUNCTION ****** */
     function logout() {
-		
+		//var_dump("logout"); exit;
         $this->session->sess_destroy();
         $this->session->set_flashdata('logout_notification', 'logged_out');
-        $this->redirect($this->config->config['base_url'] . 'home');
+        $this->redirect($this->config->config['base_url'] . 'login');
     }
 
 	function   redirect($url){

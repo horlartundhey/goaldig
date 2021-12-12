@@ -50,19 +50,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 
-$route['(:any)'] = 'admin/view/$1';
-$route['(:any)/(:any)'] = 'admin/view/$1/$2';
-$route['(:any)/(:any)/(:any)'] = 'admin/view/$1/$2/$3';
+//$route['(:any)'] = 'users/view/$1';
+//$route['(:any)/(:any)'] = 'users/view/$1/$2';
+//$route['(:any)/(:any)/(:any)'] = 'users/view/$1/$2/$3';
 
 $route['auth/login'] = 'login/ajax_login';
 $route['auth/register'] = 'login/ajax_register';
 $route['recoverpass'] = 'admin/recoverpass';
 $route['login'] = 'login/login';
-$route['home'] = 'admin/home';
-$route['get_result'] = 'admin/get_result';
+$route['register'] = 'login/register';
+$route['home'] = 'users/home';
+$route['get_result'] = 'users/get_result';
 $route['logout'] = 'login/logout';
 
 
-$route['default_controller'] = 'admin/view';
+$route['default_controller'] = 'users/view';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
