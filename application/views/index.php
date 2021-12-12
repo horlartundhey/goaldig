@@ -17,7 +17,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Red+Hat+Display:wght@400;500;700;900&family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap" rel="stylesheet">
     <link href="<?=$this->config->config['base_url']?>assets/vendors/owl-carousel/owl.carousel.min.css" rel="stylesheet">
     <link href="<?=$this->config->config['base_url']?>assets/vendors/magnific-popup/magnific-popup.min.css" rel="stylesheet">
-<<<<<<< HEAD
+
 
     <link rel="apple-touch-icon" sizes="180x180" href="<?=$this->config->config['base_url']?>assets/images/favico/apple-touch-icon.png">
     
@@ -25,8 +25,7 @@
 <link rel="icon" type="image/png" sizes="16x16" href="<?=$this->config->config['base_url']?>assets/images/favico/favicon-16x16.png">
 <link rel="manifest" href="<?=$this->config->config['base_url']?>assets/images/favico/site.webmanifest">      
 
-=======
->>>>>>> 76b22bef4d0a3547a7d3de7ffed2d23b8be497ab
+
     <!-- Theme style CSS -->      
     <link href="<?=$this->config->config['base_url']?>assets/css/style.css" rel="stylesheet">
 </head>
@@ -147,38 +146,10 @@
                             </div>
                         </div>
                     
-<<<<<<< HEAD
-                    </div>                    
-=======
-                    </div>
-                    <div class="carousel-item">
-                        <div class="container">
-                            <div class="slider-area">
-                                <div class="item">
-                                    <div class="row align-items-center">
-                                        <div class="col-lg-6">
-                                            <div class="left-content">
-                                                <h6 class=" wow fadeInUp">24/7 Call Center Services</h6>
-                                                <h2 class="wow fadeInUp" data-wow-delay="0.3s">Best Investment Time For Investors</h2>
-                                                <p class="wow fadeInUp" data-wow-delay="0.5s">Investing requires saving money to invest, then developing a diversified portfolio. Portfolios need to be adjusted periodically based on life changes but the focus should remain on the long term.</p>
 
-                                                <a href="investment-plan.html" class="theme_btn">Start Invest <span><i class="fal fa-long-arrow-right"></i></span></a>
-                                               
-                                                
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <div class="right-side-images wow fadeInRight" data-wow-delay="0.6s">
-                                                <img src="<?=$this->config->config['base_url']?>assets/images/Image.png" alt="img">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
->>>>>>> 76b22bef4d0a3547a7d3de7ffed2d23b8be497ab
-                    <!--  -->
+                    </div>                    
+
+                   
                 </div>                
             </div>
         </section>
@@ -217,11 +188,9 @@
                     </div>
                     <div class="col-lg-5">
                         <div class="right-side">
-<<<<<<< HEAD
+
                             <img src="<?=$this->config->config['base_url']?>assets/images/soc.jpg" alt="img">
-=======
-                            <img src="<?=$this->config->config['base_url']?>assets/images/about-side.png" alt="img">
->>>>>>> 76b22bef4d0a3547a7d3de7ffed2d23b8be497ab
+
                         </div>
                     </div>
                 </div>
@@ -349,11 +318,8 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="images">
-<<<<<<< HEAD
+
                             <img src="<?=$this->config->config['base_url']?>assets/images/we.jpg" alt="img">
-=======
-                            <img src="<?=$this->config->config['base_url']?>assets/images/history.png" alt="img">
->>>>>>> 76b22bef4d0a3547a7d3de7ffed2d23b8be497ab
                         </div>
                     </div>
                     <div class="col-lg-4">
@@ -452,11 +418,8 @@
                 <div class="row align-items-center">
                     <div class="col-lg-4">
                         <div class="images">
-<<<<<<< HEAD
+
                             <img src="<?=$this->config->config['base_url']?>assets/images/webt.jpg" alt="img">
-=======
-                            <img src="<?=$this->config->config['base_url']?>assets/images/counterup.png" alt="img">
->>>>>>> 76b22bef4d0a3547a7d3de7ffed2d23b8be497ab
                         </div>
                     </div>
                     <div class="col-lg-8">
