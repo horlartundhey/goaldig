@@ -46,10 +46,12 @@
                     <li class="nav-item  <?=(($page=="voter") || $page=="voters")?"active pcoded-trigger":""?>">
                         <a href="javascript:" class="nav-link "><span class="pcoded-micon"><i class="feather icon-user-check"></i></span><span class="pcoded-mtext">Timeline</span></a>
                         
+
                     </li>
 					
                    
 					
+
 					 <li class="nav-item <?=($page=="members")?"active":""?>">
                         <a href="<?=$this->config->config['base_url']?>" class="nav-link "><span class="pcoded-micon"><i class="feather icon-check-square"></i></span><span class="pcoded-mtext">Members List</span></a>
                         
@@ -78,7 +80,9 @@
                             <li class=""><a href="<?=$this->config->config['base_url']?>posts" class="">Compose</a></li>
                             <li class=""><a href="<?=$this->config->config['base_url']?>post" class="">Sent Messages</a></li>
                         </ul>
+
                     </li> -->
+
 				
 				   
                     <li class="nav-item pcoded-menu-caption">
