@@ -45,7 +45,7 @@
 							</div>
 							<div class="form-group">	
 							  <input type="text" required="required" name="username" id="username1" />
-							  <label class="control-label" for="input">User Name</label><i class="mtrl-select"></i>
+							  <label class="control-label" for="input">Email</label><i class="mtrl-select"></i>
 							</div>
 							<div class="form-group">	
 							  <input type="password" required="required" name="password" id="password1"/>

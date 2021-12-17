@@ -27,7 +27,7 @@
 							Goal Digger a Network of Professionals for Growth
 						</p>
 						<div class="friend-logo">
-							<span><img src="<?php echo $this->config->config['base_url']?>social/images/goaldig1.png" alt=""></span>
+							<span><img src="<?php echo $this->config->config['base_url']?>social/images/goaldig2.png" alt="" width="50%"></span>
 						</div>						
 					</div>	
 				</div>
@@ -39,8 +39,8 @@
 						<div id="error-box"></div>
 						<form  method="post" id="form_login"> 
 							<div class="form-group">	
-							  <input type="text"  name="email" id="username" required="required"/>
-							  <label class="control-label" for="input">Username</label><i class="mtrl-select"></i>
+							  <input type="text"  name="username" id="username" required="required"/>
+							  <label class="control-label" for="input">Email</label><i class="mtrl-select"></i>
 							</div>
 							<div class="form-group">	
 							  <input type="password" id="password" name="password" required="required"/>
@@ -68,7 +68,7 @@
 							</div>
 							<div class="form-group">	
 							  <input type="text" required="required" name="username" id="username1" />
-							  <label class="control-label" for="input">User Name</label><i class="mtrl-select"></i>
+							  <label class="control-label" for="input">Email</label><i class="mtrl-select"></i>
 							</div>
 							<div class="form-group">	
 							  <input type="password" required="required" name="password" id="password1"/>
