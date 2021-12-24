@@ -60,6 +60,7 @@ $route['recoverpass'] = 'admin/recoverpass';
 $route['login'] = 'login/login';
 $route['register'] = 'login/register';
 $route['home'] = 'users/home';
+$route['membership'] = 'membership';
 $route['get_result'] = 'users/get_result';
 $route['logout'] = 'login/logout';
 

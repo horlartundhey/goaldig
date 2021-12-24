@@ -25,11 +25,8 @@
 				<a class="" href="#menu"><i class="fa fa-align-justify"></i></a>
 			</span>
 			<span class="mh-text">
-				<a href="index.html" title=""><img src="<?php echo $this->config->config['base_url']?>social/images/goaldig1.png" alt=""></a>
-			</span>
-			<span class="mh-btns-right">
-				<a class="fa fa-sliders" href="#shoppingbag"></a>
-			</span>
+				<a href="index.html" title=""><img src="<?php echo $this->config->config['base_url']?>social/images/goaldig1.png" style="width:30%;" alt=""></a>
+			</span>			
 		</div>
 		<div class="mh-head second">
 			<form class="mh-form">
@@ -39,16 +36,18 @@
 		</div>
 		<nav id="menu" class="res-menu">
 			<ul>
-				<li><span>Home</span>
-					<ul>
-						<li><a href="#" title="">Home Social</a></li>
+				<li><a href="./social/insights.html" title="Dashboard" data-toggle="tooltip" data-placement="right"><i class="ti-magnet"></i></a></li>
+				<li><a href="#" title="" data-toggle="tooltip" data-placement="right"><i class="fa fa-star-o"></i> News feed</a></li>
+				<li><a href="./social/forums-category.html" title="" data-toggle="tooltip" data-placement="right"><i class="ti-stats-up"></i> Resources Center</a></li>
+				<li><a href="./social/knowledge-base.html" title="" data-toggle="tooltip" data-placement="right"><i class="ti-import"></i> Set 2022 Goals</a></li>
+				<li><a href="./social/forum-create-topic.html" title="" data-toggle="tooltip" data-placement="right"><i class="ti-comment-alt"></i> Be a Mentor</a></li>
+				<li><a href="edit-account-setting.html" title="" data-toggle="tooltip" data-placement="right"><i class="ti-panel"></i> Profile Setting</a></li>
+						<!-- <li><a href="#" title="">Home Social</a></li>
 						<li><a href="#" title="">Home Social 2</a></li>
 						<li><a href="#" title="">Home Company</a></li>
 						<li><a href="#" title="">Login page</a></li>
 						<li><a href="<?php echo $this->config->config['base_url']?>auth/logout" title="">Logout Page</a></li>
-						<li><a href="#l" title="">news feed</a></li>
-					</ul>
-				</li>
+						<li><a href="#l" title="">news feed</a></li> -->					
 				
 			</ul>
 		</nav>
