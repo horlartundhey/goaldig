@@ -13,6 +13,7 @@ class Messaging extends CI_Controller
 		
 		$this->data['page_title'] = 'Timeline';
 		$this->load->model('model_messaging');
+		$this->load->model('model_users');
 		$this->supportedMedia = array("image","video","audio");
 	}
 
@@ -24,7 +25,23 @@ class Messaging extends CI_Controller
 			  
 		$user_id = $this->session->userdata('user_id');
 		$data['title'] = "Timeline";
-		$data['posts'] = $this->model_messaging->getArray(array('user_id'=>$this->session->userdata('user_id')));
+		$users = $this->model_users->getArray(array('status'=>'active'));
+		$userarray = array();
+		foreach($users as $user){
+			$userarray[$user['id']] = $user;
+		}
+		
+		$data['users'] = $userarray;
+		$posts = $this->model_messaging->getArray(array('user_id'=>$this->session->userdata('user_id')));
+		foreach($posts as $key=>$value){
+			$posts[$key]['comments'] = $this->model_messaging->getCommentArray(array(
+			'user_id'=>$this->session->userdata('user_id'),
+			'post_id'=>$value['post_id']
+			
+			));
+		}
+		rsort($posts);
+		$data['posts']  = $posts;
 		$this->load->view('timeline/index', $data);
 	}
 
@@ -47,12 +64,17 @@ class Messaging extends CI_Controller
         	$data = array(
         		'content' => $this->input->post('content'),
 				'user_id'=>$this->session->userdata('user_id'),
-				'date_created'=>date("Y-m-d"),
+				'date_created'=>date("F, d Y h:i"),
 				'type'=>'text'
         	);
 			
+			if(isset($_FILES["image"]) && !empty($_FILES["image"])){
+				$data['file'] = $this->upload_file("image","image");
+				$data['type'] = "image";
+			}
+			
         	$create = $this->model_messaging->create($data);
-			/*
+			
 			if($create == true) {
         		$this->session->set_flashdata('success', 'Successfully created');
         		$this->loadUrl('Messaging');
@@ -60,7 +82,7 @@ class Messaging extends CI_Controller
         		$this->session->set_flashdata('errors', 'Error occurred!!');
         		$this->loadUrl('Messaging');
         	}
-			*/
+			/*
 			if($create == true) {
         		$response['success'] = true;
         		$response['messages'] = 'Succesfully created';
@@ -69,15 +91,58 @@ class Messaging extends CI_Controller
         		$response['success'] = false;
         		$response['messages'] = 'Error in the database while creating the brand information';			
         	}
-        	
+        	*/
         }else {
 			$response['success'] = false;
         	foreach ($_POST as $key => $value) {
         		$response['messages'][$key] = form_error($key);
         	}
         }
+		
+		$this->loadUrl('Messaging');
+        //echo json_encode($response);
+	}
+	/*
+	* Its checks the company form validation 
+	* and if the validation is successfully then it inserts the data into the database 
+	* and returns the json format operation messages
+	*/
+	public function createcomment($id)
+	{
 
-        echo json_encode($response);
+
+		$response = array();
+
+
+		$this->form_validation->set_rules('comment', 'Content', 'trim|required');
+		
+        if ($this->form_validation->run() == TRUE) {
+        	$data = array(
+        		'content' => $this->input->post('comment'),
+				'user_id'=>$this->session->userdata('user_id'),
+				'post_id'=>$id,
+				'date_created'=>date("F, d Y h:i"),
+        	);
+			
+        	$create = $this->model_messaging->createcomment($data);
+			
+			if($create == true) {
+        		$this->session->set_flashdata('success', 'Successfully created');
+        		$this->loadUrl('Messaging');
+        	}else {
+        		$this->session->set_flashdata('errors', 'Error occurred!!');
+        		$this->loadUrl('Messaging');
+        	}
+			
+        }else {
+			$response['success'] = false;
+        	foreach ($_POST as $key => $value) {
+        		$response['messages'][$key] = form_error($key);
+        	}
+        }
+		
+		$this->loadUrl('Messaging');
+        //echo json_encode($response);
 	}
 	
 
@@ -105,28 +170,45 @@ class Messaging extends CI_Controller
     */
 	
 	
-		public function upload_file($type)
-    {	
-		$key = 'media_data';
-        $config['upload_path'] = 'resources/'.$type;
+		public function upload_file($type,$key){	
+		//$key = 'media_data';
+        $config['upload_path'] = '/goaldig/resources/'.$type;
         
-		if($type=="slides"){
+		if($type=="image"){
 			$config['allowed_types'] = 'gif|jpg|png';
 			$config['max_size'] = '1000';
-		}else if($type=="sounds"){
+		}else if($type=="music"){
 			$config['allowed_types'] = 'mp3|ogg';
 			$config['max_size'] = '1000000';
-		}else if($type=="videos"){
-			$config['allowed_types'] = 'mp4|wav';
-			$config['max_size'] = '10000000';
 		}
 		
 		
-		$count = count($_FILES[$key]["name"]);
+		//$count = count($_FILES[$key]["name"]);
 		$output = '';
 		$name = uniqid();
 		
-		$bulky = array();	
+		$bulky = array();
+		$config['file_name'] =  $name;
+				
+				
+				
+				$this->load->library('upload', $config);
+				//var_dump($this->upload->do_upload('file'));
+				if ( ! $this->upload->do_upload($key)){
+					$error = $this->upload->display_errors();
+					return $error;
+				}else{
+					
+					//$data = array('upload_data' => $this->upload->data());
+					$type = explode('.', $_FILES[$key]['name']);
+					$type = $type[count($type) - 1];
+					$path = $config['file_name'].'.'.$type;//$config['upload_path'].'/'.$config['file_name'].'.'.$type;
+					
+					$output.=$path.',';
+					
+					//}        
+				}
+		/*		
 		  for($i=0;$i<$count;$i++){
 			
 			if(!empty($_FILES[$key]['name'][$i])){
@@ -167,7 +249,7 @@ class Messaging extends CI_Controller
 				}
 			}
 		  }
-		  
+		  */
 		  
 		  return trim($output,",");
     }

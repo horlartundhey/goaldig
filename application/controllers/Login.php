@@ -27,7 +27,7 @@ class Login extends CI_Controller {
     //Default function, redirects to logged in user area
     public function index() {
         if ($this->session->userdata('user_login') == 1)
-              $this->redirect($this->config->config['base_url'] . 'home');
+              $this->redirect($this->config->config['base_url'] . 'Messaging');
 
           $this->redirect($this->config->config['base_url'] . 'login');
     }
@@ -38,7 +38,7 @@ class Login extends CI_Controller {
 	 public function login(){
 		 
         if ($this->session->userdata('user_login') == 1)
-              $this->redirect($this->config->config['base_url'] . 'home');
+              $this->redirect($this->config->config['base_url'] . 'Messaging');
 
         $data = array();
 		$data['p'] = isset($_GET["p"])?$_GET["p"]:"";
@@ -52,7 +52,7 @@ class Login extends CI_Controller {
 	 public function register(){
 		 
         if ($this->session->userdata('user_login') == 1)
-              $this->redirect($this->config->config['base_url'] . 'dashboard');
+              $this->redirect($this->config->config['base_url'] . 'Messaging');
 
         $data = array();
 		$data['p'] = isset($_GET["p"])?$_GET["p"]:"";
@@ -66,7 +66,7 @@ class Login extends CI_Controller {
 	 public function adminlogin(){
 		 
         if ($this->session->userdata('admin_login') == 1)
-              $this->redirect($this->config->config['base_url'] . 'dashboard');
+              $this->redirect($this->config->config['base_url'] . 'Messaging');
 
         $data = array();
 		$data['p'] = isset($_GET["p"])?$_GET["p"]:"";
@@ -86,7 +86,7 @@ class Login extends CI_Controller {
         $email = isset($_POST["username"])?$_POST["username"]:"";
         $password = isset($_POST["password"])?$_POST["password"]:"";
 		$item_id = isset($_POST["id"])?$_POST["id"]:"";
-		$redirect = (isset($_POST["p"]) && $_POST["p"]!="" )?$_POST["p"]:"home";
+		$redirect = (isset($_POST["p"]) && $_POST["p"]!="" )?$_POST["p"]:"Messaging";
 		$redirect = $this->config->config['base_url'].$redirect;
         $response['submitted_data'] = $_POST;
 

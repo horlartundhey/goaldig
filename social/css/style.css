@@ -3117,7 +3117,7 @@ li.google {
 }
 
 .knowldeg-box {
-    background: rgba(0, 0, 0, 0.1) none repeat scroll 0 0;
+    background: #000000 none repeat scroll 0 0;
     display: inline-block;
     padding: 50px 30px;
     text-align: center;

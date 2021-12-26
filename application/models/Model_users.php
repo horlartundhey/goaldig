@@ -1,6 +1,6 @@
 <?php 
 
-class Model_messaging extends CI_Model
+class Model_users extends CI_Model
 {
 	public function __construct()
 	{
@@ -13,27 +13,16 @@ class Model_messaging extends CI_Model
 	public function getArray($data)
 	{
 
-			$query = $this->db->get_where("post", $data);
+			$query = $this->db->get_where("users", $data);
 			return $query->result_array();
 		
 	}
-	
-	
-	/* get the brand data */
-	public function getCommentArray($data)
-	{
-
-			$query = $this->db->get_where("comments", $data);
-			return $query->result_array();
-		
-	}
-	
 	
 	/* get the brand data */
 	public function get($id)
 	{
 		$data = array('id'=>$id);
-		$query = $this->db->get_where("post", $data);
+		$query = $this->db->get_where("users", $data);
 		return $query->row_array();
 			
 	}
@@ -43,16 +32,7 @@ class Model_messaging extends CI_Model
 	public function create($data)
 	{
 		if($data) {
-			$insert = $this->db->insert('post', $data);
-			return ($insert == true) ? true : false;
-		}
-	}
-
-
-	public function createcomment($data)
-	{
-		if($data) {
-			$insert = $this->db->insert('comments', $data);
+			$insert = $this->db->insert('users', $data);
 			return ($insert == true) ? true : false;
 		}
 	}
@@ -75,11 +55,6 @@ class Model_messaging extends CI_Model
 		}
 	}
 
-	public function countTotalmedia()
-	{
-		$sql = "SELECT * FROM media";
-		$query = $this->db->query($sql);
-		return $query->num_rows();
-	}
+
 
 }

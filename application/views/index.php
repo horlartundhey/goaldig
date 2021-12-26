@@ -81,11 +81,11 @@
                 </nav>
                 <div class="mobile-menu">
                     <ul>
-                        <li><a class="active" href="index.html">Home</a></li>                        
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="blog.html">focus</a></li>
-                        <li><a href="contact-us.html">Events</a></li>
-                        <li><a href=""><span><i class="fa fa-user"></i></span> Member Login </a></li>
+                        <li><a class="active" href="#home">Home</a></li>                        
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#focus">focus</a></li>
+                        <li><a href="#event">Events</a></li>
+                        <li><a href="<?=$this->config->config['base_url']?>login"><span><i class="fa fa-user"></i></span> Member Login </a></li>
                     </ul>
                 </div>
             </div>
@@ -121,7 +121,7 @@
                         <div class="container">
                             <div class="slider-area">
                                 <div class="item">
-                                    <div class>
+                                    <div class id="home">
                                         <h1 class="text-center text-light wow fadeInDown">WELCOME TO GOAL DIGGER PROFESSIONALS NETWORK</h1>
                                         <p class="text-light text-center" style="font-size:20px;"><cite>"You are the average of the five people you spend the most time with".</cite></p>
                                     </div>
@@ -131,12 +131,12 @@
                                             <div class="left-content">                                                                                              
                                             <p class="wow fadeInUp justi" data-wow-delay="0.5s">The law of averages as summed up in those words by motivational speaker and world-renowned author, Jim Rohn, holds true in all aspects of one’s life. The quality of the people that we hang out with constantly has a direct impact on what we become, in our careers also.</p>
 
-                                                <a href="investment-plan.html" class="theme_btn">Register Now <span><i class="fal fa-long-arrow-right"></i></span></a>
+                                                <a href="<?=$this->config->config['base_url']?>login" class="theme_btn">Register Now <span><i class="fal fa-long-arrow-right"></i></span></a>
                                                
                                                 
                                             </div>
                                         </div>
-                                        <div class="col-lg-7">
+                                        <div class="col-lg-6">
                                             <div class="right-side-images wow fadeInRight" data-wow-delay="0.6s">
                                                 <img src="<?=$this->config->config['base_url']?>assets/images/goald.png" alt="img">
                                             </div>
@@ -160,7 +160,7 @@
                 <div class="row align-items-center">
                     <div class="col-lg-7">
                         <div class="left-content">
-                            <div class="heading-title">
+                            <div class="heading-title" id="about">
                                 <h6><span></span> Who are we?</h6>
                                 <h2>About Goal Digger</h2>
                                 <p>Goal digger is a professional network which strives to ensure performance excellence and improve individual productivity through knowledge sharing, inspirational sessions, productivity tools, coaching, mentoring, and training of young and middle level career professionals.</p>
@@ -204,7 +204,7 @@
         <!-- How we work-section end  -->
         <section class="how-we-work-section">
             <div class="container">
-                <div class="heading-title">
+                <div class="heading-title" id="focus">
                     <h6><span></span> Our Focus</h6>
                     <h2>How It Works</h2>
                     <p class="foont">We are professionals from various industries and sectors of the economy, focused on the same thing. We focus on communication, community building and collaboration. </p>
@@ -396,7 +396,7 @@
         <div class="container">
             <div class="heading-title"> 
                               
-                <h2 class="text-light">Other benefits of membership</h2>
+                <h2 class="text-light headl">Other benefits of membership</h2>
                 <p class="text-light justi">We offer growth and development opportunities through various seminars (or webinars), courses, learning sessions, annual workshops, conferences, book reviews and recommendations, and daily updates. Through all of these, members can broaden their knowledge, deepen and strengthen their skills, and develop in-demand skills.</p>
                 <br><br>
                 <p class="text-light justi">Our website is enriched with a wholesome catalogue of resources open exclusively to our registered members. Our members also enjoy discounted access to events, quality research and commentary on career issues, and peer consultations on unique challenges and generating meaningful feedbacks.</p>
@@ -412,7 +412,7 @@
         <!-- counterup-section start  -->
         <section class="counterup-section">
             <div class="container">
-                <div class="heading-title">                    
+                <div class="heading-title" id="event">                    
                     <h2>Our regular events</h2>                   
                 </div>
                 <div class="row align-items-center">
@@ -478,50 +478,25 @@
                 <h2>Who should join?</h2>                
             </div>
             <div class="testimonial_wraper_two owl-carousel">
-                <div class="item">
-                    <div class="quotes">
-                        <img src="<?=$this->config->config['base_url']?>assets/images/icon.svg" alt="img">
-                    </div>
-                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution.</p>
-                    <div class="media">
-                        <div class="images">
-                            <img src="<?=$this->config->config['base_url']?>assets/images/img1.png" alt="img">
-                        </div>
-                        <div class="media-body">
-                            <a href="">Michal Abraham</a>
-                            <small>CEO of GICA</small>
-                            <ul>
-                                <li><a href=""><i class="fas fa-star"></i></a></li>
-                                <li><a href=""><i class="fas fa-star"></i></a></li>
-                                <li><a href=""><i class="fas fa-star"></i></a></li>
-                                <li><a href=""><i class="fas fa-star"></i></a></li>
-                                <li><a href=""><i class="fas fa-star"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
+                <div class="item">                   
+                    <p>We welcome all growth minded individuals dedicated to taking all available opportunities to equip themselves for doing excellently in their chosen career.</p>                   
                 </div>
                 <div class="item">
-                    <div class="quotes">
-                        <img src="<?=$this->config->config['base_url']?>assets/images/icon.svg" alt="img">
-                    </div>
-                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution.</p>
-                    <div class="media">
-                        <div class="images">
-                            <img src="<?=$this->config->config['base_url']?>assets/images/img2.png" alt="img">
-                        </div>
-                        <div class="media-body">
-                            <a href="">Jenifer Smith</a>
-                            <small>Investor</small>
-                            <ul>
-                                <li><a href=""><i class="fas fa-star"></i></a></li>
-                                <li><a href=""><i class="fas fa-star"></i></a></li>
-                                <li><a href=""><i class="fas fa-star"></i></a></li>
-                                <li><a href=""><i class="fas fa-star"></i></a></li>
-                                <li><a href=""><i class="fas fa-star"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
+                    
+                    <p>We welcome individuals who seek opportunities to develop relevant skills, build a strong network, and work towards personal development.</p>                    
                 </div>
+                <div class="item">                    
+                    <p>We welcome professionals who are seeking opportunities to create impact in the society through giving material and other possession for philanthropic activities.</p>                    
+                </div>
+                <div class="item">                    
+                    <p>We welcome experienced individuals, who are committed to providing useful templates to upcoming professionals in their career journey through mentorship, coaching and sponsorship.</p>                    
+                </div>
+                <div class="item">                    
+                    <p>We welcome all growth minded professionals, willing to broaden their horizon in their fields as to what is possible. These individuals are willing to commit their time, talent and resources to advancing themselves and others.</p>                    
+                </div>
+            </div>
+            <div class="text-center">
+                <a href="<?=$this->config->config['base_url']?>membership" class="theme_btn btn-warning btn text-light btn-lg">Membership Plans</a>
             </div>
         </div>
     </section>
@@ -555,8 +530,8 @@
                     <div class="footer-item">
                         <h3>Useful Link</h3>
                         <ul>                          
-                            <li><a href="contact-us.html"><i class="fal fa-angle-right"></i>MEMBER LOGIN</a></li>
-                            <li><a href="contact-us.html"><i class="fal fa-angle-right"></i>REGISTER NOW</a></li>
+                            <li><a href="<?=$this->config->config['base_url']?>login"><i class="fal fa-angle-right"></i>MEMBER LOGIN</a></li>
+                            <li><a href="<?=$this->config->config['base_url']?>login"><i class="fal fa-angle-right"></i>REGISTER NOW</a></li>
                         </ul>
                     </div>
                 </div>
@@ -564,9 +539,9 @@
                     <div class="footer-item contact_item">
                         <h3>Contact Info</h3>
                         <ul>                            
-                            <li><a href="contact-us.html"><i class="fas fa-phone-volume"></i>+234 705 439 4331</a></li>
-                            <li><a href="contact-us.html"><i class="far fa-envelope"></i>info@goaldiggernetwork.ng</a></li>
-                            <li><a href="contact-us.html"><i class="fas fa-globe"></i>www.goaldiggernetwork.ng</a></li>
+                            <li><a href="+234 705 439 4331"><i class="fas fa-phone-volume"></i>+234 705 439 4331</a></li>
+                            <li><a href="info@goaldiggernetwork.ng"><i class="far fa-envelope"></i>info@goaldiggernetwork.ng</a></li>
+                            <li><a href="www.goaldiggernetwork.ng"><i class="fas fa-globe" target="_blank"></i>www.goaldiggernetwork.ng</a></li>
                         </ul>
                     </div>
                 </div>

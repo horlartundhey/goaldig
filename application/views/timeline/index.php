@@ -280,102 +280,33 @@
 									</div>
 								</div><!-- add post new box -->
 								<div class="loadMore">
+								
+								
+								
+								<?php if(isset($posts) && !empty($posts)){
+										foreach($posts as $post){
+									?>
 								<div class="central-meta item">
 									<div class="user-post">
 										<div class="friend-info">
-											<figure>
-												<img src="<?php echo $this->config->config['base_url']?>social/images/resources/friend-avatar10.jpg" alt="">
-											</figure>
-											<div class="friend-name">
-												<ins><a href="time-line.html" title="">Janice Griffith</a></ins>
-												<span>published: june,2 2018 19:PM</span>
-											</div>
-											<div class="post-meta">
-												<img src="<?php echo $this->config->config['base_url']?>social/images/resources/user-post.jpg" alt="">
-												<div class="we-video-info">
-													<ul>
-														<li>
-															<span class="views" data-toggle="tooltip" title="views">
-																<i class="fa fa-eye"></i>
-																<ins>1.2k</ins>
-															</span>
-														</li>
-														<li>
-															<span class="comment" data-toggle="tooltip" title="Comments">
-																<i class="fa fa-comments-o"></i>
-																<ins>52</ins>
-															</span>
-														</li>
-														<li>
-															<span class="like" data-toggle="tooltip" title="like">
-																<i class="ti-heart"></i>
-																<ins>2.2k</ins>
-															</span>
-														</li>
-														<li>
-															<span class="dislike" data-toggle="tooltip" title="dislike">
-																<i class="ti-heart-broken"></i>
-																<ins>200</ins>
-															</span>
-														</li>
-														<li class="social-media">
-															<div class="menu">
-															  <div class="btn trigger"><i class="fa fa-share-alt"></i></div>
-															  <div class="rotater">
-																<div class="btn btn-icon"><a href="#" title=""><i class="fa fa-html5"></i></a></div>
-															  </div>
-															  <div class="rotater">
-																<div class="btn btn-icon"><a href="#" title=""><i class="fa fa-facebook"></i></a></div>
-															  </div>
-															  <div class="rotater">
-																<div class="btn btn-icon"><a href="#" title=""><i class="fa fa-google-plus"></i></a></div>
-															  </div>
-															  <div class="rotater">
-																<div class="btn btn-icon"><a href="#" title=""><i class="fa fa-twitter"></i></a></div>
-															  </div>
-															  <div class="rotater">
-																<div class="btn btn-icon"><a href="#" title=""><i class="fa fa-css3"></i></a></div>
-															  </div>
-															  <div class="rotater">
-																<div class="btn btn-icon"><a href="#" title=""><i class="fa fa-instagram"></i></a>
-																</div>
-															  </div>
-																<div class="rotater">
-																<div class="btn btn-icon"><a href="#" title=""><i class="fa fa-dribbble"></i></a>
-																</div>
-															  </div>
-															  <div class="rotater">
-																<div class="btn btn-icon"><a href="#" title=""><i class="fa fa-pinterest"></i></a>
-																</div>
-															  </div>
-
-															</div>
-														</li>
-													</ul>
-												</div>
-												<div class="description">
-													
-													<p>
-														World's most beautiful car in Curabitur <a href="#" title="">#test drive booking !</a> the most beatuiful car available in america and the saudia arabia, you can book your test drive by our official website
-													</p>
-												</div>
-											</div>
-										</div>
-										
-									</div>
-								</div>
-								<div class="central-meta item">
-									<div class="user-post">
-										<div class="friend-info">
+										  
 											<figure>
 												<img src="<?php echo $this->config->config['base_url']?>social/images/resources/nearly1.jpg" alt="">
 											</figure>
 											<div class="friend-name">
-												<ins><a href="time-line.html" title="">Sara Grey</a></ins>
-												<span>published: june,2 2018 19:PM</span>
+												<ins><a href="time-line.html" title="">
+												<?=isset($users[$post['user_id']])?$users[$post['user_id']]['name']:""?>
+												
+												</a></ins>
+												<span>published: <?=$post['date_created']?></span>
 											</div>
 											<div class="post-meta">
+												<?php if($post['type']=="image"){?>
+												<img src="<?php echo $this->config->config['base_url']?>resources/image/_images/<?=$post['file']?>" alt="">
+												<?php } ?>
+												<?php if($post['type']=="video"){?>
 												<iframe width="" height="315" src="https://www.youtube.com/embed/5JJ_jqqpTMY" allow="autoplay;" allowfullscreen></iframe>
+												<?php } ?>
 												<div class="we-video-info">
 													<ul>
 														<li>
@@ -440,42 +371,36 @@
 												<div class="description">
 													
 													<p>
-														Lonely Cat Enjoying in Summer Curabitur <a href="#" title="">#mypage</a> ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc,
+													<?=$post['content']?>	
 													</p>
 												</div>
 											</div>
 										</div>
 										<div class="coment-area">
 											<ul class="we-comet">
+											<?php 
+											if(isset($post['comments']) && !empty($post['comments'])){
+												foreach($post['comments'] as $comment){
+											?>
 												<li>
 													<div class="comet-avatar">
 														<img src="<?php echo $this->config->config['base_url']?>social/images/resources/comet-1.jpg" alt="">
 													</div>
 													<div class="we-comment">
 														<div class="coment-head">
-															<h5><a href="time-line.html" title="">Jason borne</a></h5>
-															<span>1 year ago</span>
+															<h5><a href="time-line.html" title="">
+															<?=isset($users[$post['user_id']])?$users[$post['user_id']]['name']:""?>
+												
+															</a></h5>
+															<span><?=$comment['date_created']?></span>
 															<a class="we-reply" href="#" title="Reply"><i class="fa fa-reply"></i></a>
 														</div>
-														<p>we are working for the dance and sing songs. this video is very awesome for the youngster. please vote this video and like our channel</p>
+														<p><?=$comment['content']?></p>
 													</div>
 
 												</li>
-												<li>
-													<div class="comet-avatar">
-														<img src="<?php echo $this->config->config['base_url']?>social/images/resources/comet-2.jpg" alt="">
-													</div>
-													<div class="we-comment">
-														<div class="coment-head">
-															<h5><a href="time-line.html" title="">Sophia</a></h5>
-															<span>1 week ago</span>
-															<a class="we-reply" href="#" title="Reply"><i class="fa fa-reply"></i></a>
-														</div>
-														<p>we are working for the dance and sing songs. this video is very awesome for the youngster.
-															<i class="em em-smiley"></i>
-														</p>
-													</div>
-												</li>
+											<?php }} ?>
+												
 												<li>
 													<a href="#" title="" class="showmore underline">more comments</a>
 												</li>
@@ -484,8 +409,8 @@
 														<img src="<?php echo $this->config->config['base_url']?>social/images/resources/comet-2.jpg" alt="">
 													</div>
 													<div class="post-comt-box">
-														<form method="post">
-															<textarea placeholder="Post your comment"></textarea>
+														<form  name="form_<?=$post['post_id']?>" name="form_<?=$post['post_id']?>" action="<?php echo $this->config->config['base_url']?>Messaging/createcomment/<?=$post['post_id']?>" method="post">
+															<textarea id="<?=$post['post_id']?>" name="comment" placeholder="Post your comment"></textarea>
 															<div class="add-smiles">
 																<span class="em em-expressionless" title="add icon"></span>
 															</div>
@@ -512,7 +437,7 @@
 									</div>
 								</div>
 								
-								
+								<?php } } ?>
 								</div>
 							</div><!-- centerl meta -->
 							<div class="col-lg-3">
@@ -802,7 +727,7 @@ function removeFunc(id)
 
 </script>
 	<script src="<?php echo $this->config->config['base_url']?>social/js/main.min.js"></script>
-	<script src="<?php echo $this->config->config['base_url']?>social/js/script.js"></script>
+	<script src="<?php echo $this->config->config['base_url']?>social/js/script.js?v=8"></script>
 	<script src="<?php echo $this->config->config['base_url']?>social/js/map-init.js"></script>
 
 </body>	

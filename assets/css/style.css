@@ -3422,9 +3422,13 @@ body.search.search-results .content-area {
 /*# sourceMappingURL=style.css.map */
 
 .justi{
-  text-align: justify;
+  text-align: justify !important;
 }
 
+.headl{
+  text-transform: uppercase;
+  
+}
 .foont{
   font-size: 10rem;
 }

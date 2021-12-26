@@ -21,23 +21,18 @@
 	
 	<div class="responsive-header">
 		<div class="mh-head first Sticky">
-			<span class="mh-btns-left">
-				<a class="" href="#menu"><i class="fa fa-align-justify"></i></a>
-			</span>
+			
 			<span class="mh-text">
-				<a href="index.html" title=""><img src="images/goaldig1.png" alt=""></a>
-			</span>
-			<span class="mh-btns-right">
-				<a class="fa fa-sliders" href="#shoppingbag"></a>
-			</span>
+				<a href="#" title=""><img src="images/goaldig1.png" style="width:50%;" alt=""></a>
+			</span>			
 		</div>
 		<div class="mh-head second">
 			<form class="mh-form">
 				<input placeholder="search" />
-				<a href="#/" class="fa fa-search"></a>
+				<a href="#" class="fa fa-search"></a>
 			</form>
 		</div>
-		<nav id="menu" class="res-menu">
+		<!-- <nav id="menu" class="res-menu">
 			<ul>
 				<li><span>Home</span>
 					<ul>
@@ -52,12 +47,12 @@
 				
 			</ul>
 		</nav>
-		
+		 -->
 	</div><!-- responsive header -->
 	
 	<div class="topbar stick">
 		<div class="logo">
-			<a title="" href="index.html"><img src="images/goaldig1.png" width="15%" alt=""></a>
+			<a title="" href="#"><img src="images/goaldig1.png" width="15%" alt=""></a>
 		</div>
 		
 		<div class="top-area">
@@ -68,7 +63,7 @@
 				</form>
 			</div>
 			<ul class="setting-area">
-				<li><a href="index.html" title="Home" data-ripple=""><i class="ti-home"></i></a></li>
+				<li><a href="#" title="Home" data-ripple=""><i class="ti-home"></i></a></li>
 				<li>
 					<a href="#" title="Notification" data-ripple="">
 						<i class="ti-bell"></i><span>1</span>
@@ -569,7 +564,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<span class="copyright"><a target="_blank" href="https://www.templateshub.net">Goal Digger</a></span>
+					<span class="copyright"><a target="_blank" href="#">Goal Digger</a></span>
 					<i><img src="images/goaldig2.png" alt="" width="10%"></i>
 				</div>
 			</div>
