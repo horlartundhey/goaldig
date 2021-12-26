@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.3
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 30, 2021 at 05:07 PM
--- Server version: 10.4.14-MariaDB
--- PHP Version: 7.2.34
+-- Generation Time: Dec 26, 2021 at 04:23 PM
+-- Server version: 10.4.13-MariaDB
+-- PHP Version: 7.4.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `evoting_platform`
+-- Database: `goaldig_platform`
 --
 
 -- --------------------------------------------------------
@@ -49,25 +49,6 @@ INSERT INTO `admin` (`admin_id`, `surname`, `othernames`, `status`, `society`, `
 -- --------------------------------------------------------
 
 --
--- Table structure for table `candidate`
---
-
-CREATE TABLE `candidate` (
-  `candidate_id` int(10) NOT NULL,
-  `surname` varchar(128) NOT NULL,
-  `othernames` varchar(256) NOT NULL,
-  `status` varchar(16) NOT NULL,
-  `society` text NOT NULL,
-  `date_added` datetime NOT NULL,
-  `membership_id` varchar(64) NOT NULL,
-  `post_id` text DEFAULT NULL,
-  `election_id` varchar(64) DEFAULT NULL,
-  `image` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `election`
 --
 
@@ -79,6 +60,28 @@ CREATE TABLE `election` (
   `date_end` varchar(64) NOT NULL,
   `posts` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `goals`
+--
+
+CREATE TABLE `goals` (
+  `id` int(11) NOT NULL COMMENT 'Primary Key',
+  `title` varchar(100) NOT NULL COMMENT 'Title',
+  `description` varchar(255) NOT NULL COMMENT 'Description'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `goals`
+--
+
+INSERT INTO `goals` (`id`, `title`, `description`) VALUES
+(1, 'Design Update', 'Send an email update to the team: 9am today'),
+(2, 'Mockup Agency', 'Call the design agency to finalize mockups'),
+(3, 'Recruiters Meeting', 'Touch base with recruiters about new role: Tuesday'),
+(4, 'Engineering Renosance', 'Meet with the engineering team.');
 
 -- --------------------------------------------------------
 
@@ -111,6 +114,31 @@ CREATE TABLE `setting` (
 
 INSERT INTO `setting` (`setting_id`, `system_name`, `system_title`, `logo`) VALUES
 (1, 'Goal Digger', 'Goal Digger Platform', '1.png');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(10) NOT NULL,
+  `name` varchar(128) NOT NULL,
+  `username` varchar(256) NOT NULL,
+  `status` varchar(16) NOT NULL,
+  `password` text NOT NULL,
+  `date_added` datetime NOT NULL,
+  `gender` varchar(64) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `name`, `username`, `status`, `password`, `date_added`, `gender`) VALUES
+(1, 'Ayodele Adedayo', 'ayodelea@proxynetgroup.com', 'active', '90b9aa7e25f80cf4f64e990b78a9fc5ebd6cecad', '0000-00-00 00:00:00', 'male'),
+(6, 'hello world', 'porla', 'active', 'fdc59dfaed0afa05bad4ef8be7b08b003b9caeb3', '0000-00-00 00:00:00', 'male'),
+(7, 'olatee', 'olate@rule.com', 'active', '9fc2155e90f09b18cb1bf25e5608d143203a3379', '0000-00-00 00:00:00', 'male');
 
 -- --------------------------------------------------------
 
@@ -156,16 +184,16 @@ ALTER TABLE `admin`
   ADD PRIMARY KEY (`admin_id`);
 
 --
--- Indexes for table `candidate`
---
-ALTER TABLE `candidate`
-  ADD PRIMARY KEY (`candidate_id`);
-
---
 -- Indexes for table `election`
 --
 ALTER TABLE `election`
   ADD PRIMARY KEY (`election_id`);
+
+--
+-- Indexes for table `goals`
+--
+ALTER TABLE `goals`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `post`
@@ -178,6 +206,12 @@ ALTER TABLE `post`
 --
 ALTER TABLE `setting`
   ADD PRIMARY KEY (`setting_id`);
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `vote`
@@ -202,16 +236,16 @@ ALTER TABLE `admin`
   MODIFY `admin_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `candidate`
---
-ALTER TABLE `candidate`
-  MODIFY `candidate_id` int(10) NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT for table `election`
 --
 ALTER TABLE `election`
   MODIFY `election_id` int(10) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `goals`
+--
+ALTER TABLE `goals`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Primary Key', AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `post`
@@ -224,6 +258,12 @@ ALTER TABLE `post`
 --
 ALTER TABLE `setting`
   MODIFY `setting_id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `vote`
