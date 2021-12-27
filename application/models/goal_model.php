@@ -5,8 +5,9 @@ class goal_model extends CI_Model{
         parent::__construct();
         $this->load->database();
     }
-    
+
     public function get_goals(){
+        $this->db->order_by('id', 'DESC');
         $query = $this->db->get('goals');
         return $query->result_array();
     }

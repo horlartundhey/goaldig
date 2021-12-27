@@ -44,10 +44,10 @@
 				
 				if($create == true) {
 					$this->session->set_flashdata('success', 'Successfully created');
-					$this->loadUrl('Goal');
+					$this->loadUrl('goals');
 				}else {
 					$this->session->set_flashdata('errors', 'Error occurred!!');
-					$this->loadUrl('Goal');
+					$this->loadUrl('goals');
 				}
 				
 				
@@ -68,6 +68,44 @@
 			exit;
 			
 	}
+
+    public function edit($id){
+
+		$data = array();
+            $data["title"] = "Edit this Goal";
+
+			
+			$this->form_validation->set_rules('title', 'Title', 'trim|required');
+			$this->form_validation->set_rules('description', 'Description', 'trim|required');
+
+			if ($this->form_validation->run() == TRUE) {
+				$data = array(
+					'title' => $this->input->post('title'),
+					'description' => $this->input->post('description'),
+					'user_id'=>$this->session->userdata('user_id'),
+					'date_created'=>date("Y-m-d"),
+				);
+				
+				$update = $this->goal_model->update_goal($id,$data);
+				
+				if($update == true) {
+					$this->session->set_flashdata('success', 'Successfully created');
+					$this->loadUrl('goals');
+				}else {
+					$this->session->set_flashdata('errors', 'Error occurred!!');
+					$this->loadUrl('goals');
+				}
+				
+				
+			}else {
+				$errors =array();
+				foreach ($_POST as $key => $value) {
+					$errors[] = form_error($key);
+				}
+				$data['errors'] = implode(",",$errors);
+			}
+            $this->load->view('goals/edit', $data);
+    }
 		
 		
     }

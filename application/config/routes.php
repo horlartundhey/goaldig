@@ -54,7 +54,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 //$route['(:any)/(:any)'] = 'users/view/$1/$2';
 //$route['(:any)/(:any)/(:any)'] = 'users/view/$1/$2/$3';
 
-
+$route['edit/(:any)'] = 'goals/edit/$1';
 $route['create'] = 'goals/create';
 $route['auth/login'] = 'login/ajax_login';
 $route['auth/register'] = 'login/ajax_register';

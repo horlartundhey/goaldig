@@ -9,7 +9,7 @@ class Messaging extends CI_Controller
 		//$this->not_logged_in();
 		$this->load->library('session');
 		$this->load->library('form_validation');
-		$this->load->helper('url');
+		// $this->load->helper('url');
 		
 		$this->data['page_title'] = 'Timeline';
 		$this->load->model('model_messaging');
@@ -172,7 +172,7 @@ class Messaging extends CI_Controller
 	
 		public function upload_file($type,$key){	
 		//$key = 'media_data';
-        $config['upload_path'] = '/goaldig/resources/'.$type;
+        $config['upload_path'] = '/goaldiga/resources/'.$type;
         
 		if($type=="image"){
 			$config['allowed_types'] = 'gif|jpg|png';

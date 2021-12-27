@@ -249,10 +249,11 @@
                         
 						<div class="col-lg-4 col-md-4" style="margin-top: 30px;">
 							<div class="knowldeg-box">
-								<i class="fa fa-file-o"></i>
+								<i class="fa fa-trophy"></i>
 								<span><?php echo $goal['title'];?></span>
 								<p><?php echo $goal['description'];?></p>
-								<a href="#" title="" class="underline">Read More</a>
+								<a href="<?php echo $this->config->config['base_url']?>edit/<?php echo $goal['id'];?>" title="" class="underline btn btn-primary">Edit Goal</a>
+                                <a href="#" title="" class="underline btn btn-danger">Delete Goal</a>
 							</div>                            
 						</div>
                         

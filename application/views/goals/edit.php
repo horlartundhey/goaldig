@@ -234,11 +234,11 @@
 					<div class="col-lg-12">						
                     <div class="central-meta">
 										<div class="editing-info">
-											<h5 class="f-title"><i class="fa fa-check"></i>Add a New Goal</h5>
+											<h5 class="f-title"><i class="fa fa-check"></i>Edit </h5>
 											<p class="login-box-msg" style="color:red"><?=isset($errors)?$errors:""?></p>
-											<form method="post" action="<?php echo $this->config->config['base_url']?>/create">
+											<form method="post" action="<?php echo $this->config->config['base_url']?>/edit/id">
 												<div class="form-group">	
-												  <input type="text" id="input" name="title" required="required"/>
+												  <input type="text" id="input" name="title" required="required" value=""/>
 												  <label class="control-label" for="input">Title</label><i class="mtrl-select"></i>
 												</div>
 												<div class="form-group">	
@@ -246,7 +246,7 @@
 												  <label class="control-label" for="input">Description</label><i class="mtrl-select"></i>
 												</div>												
 												<div class="submit-btns">													
-													<button type="submit" class="mtr-btn"><span>Create</span></button>
+													<button type="submit" class="mtr-btn"><span>Update</span></button>
 												</div>
 											</form>
 										</div>

@@ -148,7 +148,7 @@
 				
 				<li><a href="#" title="News feed" data-toggle="tooltip" data-placement="right"><i class="fa fa-star-o"></i></a></li>
 				<li><a href="./social/forums-category.html" title="Resources Center" data-toggle="tooltip" data-placement="right"><i class="ti-stats-up"></i></a></li>
-				<li><a href="./social/knowledge-base.html" title="Set Goals" data-toggle="tooltip" data-placement="right"><i class="ti-import"></i></a></li>
+				<li><a href="<?php echo $this->config->config['base_url']?>goals" title="Set Goals" data-toggle="tooltip" data-placement="right"><i class="ti-import"></i></a></li>
 				<li><a href="./social/forum-create-topic.html" title="Be a Mentor" data-toggle="tooltip" data-placement="right"><i class="ti-comment-alt"></i></a></li>
 				<li><a href="edit-account-setting.html" title="Profile Setting" data-toggle="tooltip" data-placement="right"><i class="ti-panel"></i></a></li>
 				<!-- <li><a href="faq.html" title="Faq's" data-toggle="tooltip" data-placement="right"><i class="ti-light-bulb"></i></a></li>
