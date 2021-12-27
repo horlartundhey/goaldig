@@ -236,13 +236,13 @@
 										<div class="editing-info">
 											<h5 class="f-title"><i class="fa fa-check"></i>Edit </h5>
 											<p class="login-box-msg" style="color:red"><?=isset($errors)?$errors:""?></p>
-											<form method="post" action="<?php echo $this->config->config['base_url']?>/edit/id">
+											<form method="post" action="<?php echo $this->config->config['base_url']?>/edit/<?=$goal['id']?>">
 												<div class="form-group">	
-												  <input type="text" id="input" name="title" required="required" value=""/>
+												  <input type="text" id="input" name="title" required="required" value="<?=$goal['title']?>"/>
 												  <label class="control-label" for="input">Title</label><i class="mtrl-select"></i>
 												</div>
 												<div class="form-group">	
-												  <input type="text"  required="required" name="description"/>
+												  <input type="text"  required="required" value="<?=$goal['description']?>" name="description"/>
 												  <label class="control-label" for="input">Description</label><i class="mtrl-select"></i>
 												</div>												
 												<div class="submit-btns">													

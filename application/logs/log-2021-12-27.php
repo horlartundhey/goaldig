@@ -302,3 +302,40 @@ ERROR - 2021-12-27 21:46:01 --> 404 Page Not Found: Edit/images
 ERROR - 2021-12-27 21:46:01 --> 404 Page Not Found: Edit/images
 ERROR - 2021-12-27 21:46:01 --> 404 Page Not Found: Edit/images
 ERROR - 2021-12-27 21:46:01 --> 404 Page Not Found: Edit/images
+ERROR - 2021-12-27 21:45:18 --> 404 Page Not Found: Images/resources
+ERROR - 2021-12-27 21:45:18 --> 404 Page Not Found: Images/resources
+ERROR - 2021-12-27 21:45:20 --> 404 Page Not Found: Images/resources
+ERROR - 2021-12-27 21:45:20 --> 404 Page Not Found: Images/resources
+ERROR - 2021-12-27 21:45:20 --> 404 Page Not Found: Images/resources
+ERROR - 2021-12-27 21:45:20 --> 404 Page Not Found: Images/resources
+ERROR - 2021-12-27 21:45:30 --> 404 Page Not Found: Edit/images
+ERROR - 2021-12-27 21:45:30 --> 404 Page Not Found: Edit/images
+ERROR - 2021-12-27 21:45:30 --> 404 Page Not Found: Edit/images
+ERROR - 2021-12-27 21:45:30 --> 404 Page Not Found: Edit/images
+ERROR - 2021-12-27 21:45:30 --> 404 Page Not Found: Edit/images
+ERROR - 2021-12-27 21:45:30 --> 404 Page Not Found: Edit/images
+ERROR - 2021-12-27 21:48:57 --> Severity: error --> Exception: Call to undefined method goal_model::get() C:\xampp\htdocs\goaldig\application\controllers\Goals.php 107
+ERROR - 2021-12-27 21:48:57 --> Severity: Error --> Uncaught TypeError: Argument 1 passed to CI_Exceptions::show_exception() must be an instance of Exception, instance of Error given, called in C:\xampp\htdocs\goaldig\system\core\Common.php on line 658 and defined in C:\xampp\htdocs\goaldig\system\core\Exceptions.php:190
+Stack trace:
+#0 C:\xampp\htdocs\goaldig\system\core\Common.php(658): CI_Exceptions->show_exception(Object(Error))
+#1 [internal function]: _exception_handler(Object(Error))
+#2 {main}
+  thrown C:\xampp\htdocs\goaldig\system\core\Exceptions.php 190
+ERROR - 2021-12-27 21:49:12 --> 404 Page Not Found: Edit/images
+ERROR - 2021-12-27 21:49:12 --> 404 Page Not Found: Edit/images
+ERROR - 2021-12-27 21:49:12 --> 404 Page Not Found: Edit/images
+ERROR - 2021-12-27 21:49:12 --> 404 Page Not Found: Edit/images
+ERROR - 2021-12-27 21:49:12 --> 404 Page Not Found: Edit/images
+ERROR - 2021-12-27 21:49:12 --> 404 Page Not Found: Edit/images
+ERROR - 2021-12-27 21:50:51 --> 404 Page Not Found: Edit/images
+ERROR - 2021-12-27 21:50:51 --> 404 Page Not Found: Edit/images
+ERROR - 2021-12-27 21:50:51 --> 404 Page Not Found: Edit/images
+ERROR - 2021-12-27 21:50:51 --> 404 Page Not Found: Edit/images
+ERROR - 2021-12-27 21:50:51 --> 404 Page Not Found: Edit/images
+ERROR - 2021-12-27 21:50:51 --> 404 Page Not Found: Edit/images
+ERROR - 2021-12-27 21:50:59 --> 404 Page Not Found: Images/resources
+ERROR - 2021-12-27 21:50:59 --> 404 Page Not Found: Images/resources
+ERROR - 2021-12-27 21:50:59 --> 404 Page Not Found: Images/resources
+ERROR - 2021-12-27 21:50:59 --> 404 Page Not Found: Images/resources
+ERROR - 2021-12-27 21:50:59 --> 404 Page Not Found: Images/resources
+ERROR - 2021-12-27 21:50:59 --> 404 Page Not Found: Images/resources

@@ -6,7 +6,11 @@ class goal_model extends CI_Model{
         $this->load->database();
     }
 
-    public function get_goals(){
+    public function get_goals($id=false){
+		if($id){
+			return $this->db->get_where("goals",array('id'=>$id))->row_array();
+		}
+		
         $this->db->order_by('id', 'DESC');
         $query = $this->db->get('goals');
         return $query->result_array();

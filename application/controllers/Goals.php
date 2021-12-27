@@ -104,6 +104,7 @@
 				}
 				$data['errors'] = implode(",",$errors);
 			}
+			$data['goal'] =  $this->goal_model->get_goals($id);
             $this->load->view('goals/edit', $data);
     }
 		
