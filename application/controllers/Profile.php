@@ -1,5 +1,5 @@
 <?php
-    class Goals extends CI_controller{
+    class Profile extends CI_controller{
 
         function __construct(){
             parent::__construct();
@@ -7,7 +7,8 @@
             $this->load->database();
 			$this->load->library('session');
 			$this->load->model('goal_model');
-			$this->load->library('form_validation');
+			$this->load->library('form_validation');		
+			$this->load->model('model_users');
 
         }
 
@@ -15,39 +16,38 @@
 			$data = array();            
             $data["title"] = "Set Goals For 2022";
             //to fetch goals
-            $data['goals'] =$this->goal_model->get_goals();
+            $data['user'] =$this->model_users->get($this->session->userdata('user_id'));
 
             //to route the goals page
-			$this->load->view('goals/index', $data);
+			$this->load->view('users/profile', $data);
             
 				
         }
 
-        public function create(){
+        public function update(){
 
             $data = array();
-            $data["title"] = "Add a New Goal For 2022";
-
-			
-			$this->form_validation->set_rules('title', 'Title', 'trim|required');
-			$this->form_validation->set_rules('description', 'Description', 'trim|required');
+          
+			$this->form_validation->set_rules('name', 'Name', 'trim|required');
 			
 			if ($this->form_validation->run() == TRUE) {
 				$data = array(
-					'title' => $this->input->post('title'),
-					'description' => $this->input->post('description'),
-					'user_id'=>$this->session->userdata('user_id'),
-					'date_created'=>date("Y-m-d"),
+					'name' => $this->input->post('name'),
+					'gender'=>$this->input->post('gender'),
+					'about'=>$this->input->post('about'),
+					'city'=>$this->input->post('city'),
+					'phone'=>$this->input->post('phone'),
+					'country'=>$this->input->post('country'),
 				);
 				
-				$create = $this->goal_model->create_goal($data);
+				$create = $this->model_users->update($this->session->userdata('user_id'),$data);
 				
 				if($create == true) {
 					$this->session->set_flashdata('success', 'Successfully created');
-					$this->loadUrl('goals');
+					$this->loadUrl('Profile');
 				}else {
 					$this->session->set_flashdata('errors', 'Error occurred!!');
-					$this->loadUrl('goals');
+					$this->loadUrl('Profile');
 				}
 				
 				
@@ -58,7 +58,7 @@
 				}
 				$data['errors'] = implode(",",$errors);
 			}
-            $this->load->view('goals/create', $data);
+            $this->load->view('users/profile', $data);
         }
 		
 				

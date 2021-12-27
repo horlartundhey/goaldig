@@ -6,9 +6,9 @@ class goal_model extends CI_Model{
         $this->load->database();
     }
 
-    public function get_goals($id=false){
-		if($id){
-			return $this->db->get_where("goals",array('id'=>$id))->row_array();
+    public function get_goals($param = array()){
+		if(!empty($param)){
+			return $this->db->get_where("goals",$param)->row_array();
 		}
 		
         $this->db->order_by('id', 'DESC');
@@ -19,6 +19,12 @@ class goal_model extends CI_Model{
 	 public function create_goal($data){
         $created = $this->db->insert('goals',$data);
         return $created?true:false;
+    } 
+	
+	public function delete_goal($id){
+        $this->db->where('id',$id);
+		$deleted = $this->db->delete('goals');
+        return $deleted?true:false;
     } 
 	
 	public function update_goal($id,$data){

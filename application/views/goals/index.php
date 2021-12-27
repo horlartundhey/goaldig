@@ -253,7 +253,7 @@
 								<span><?php echo $goal['title'];?></span>
 								<p><?php echo $goal['description'];?></p>
 								<a href="<?php echo $this->config->config['base_url']?>edit/<?php echo $goal['id'];?>" title="" class="underline btn btn-primary">Edit Goal</a>
-                                <a href="#" title="" class="underline btn btn-danger">Delete Goal</a>
+                                <a href="<?php echo $this->config->config['base_url']?>Goals/delete/<?php echo $goal['id'];?>" title="" class="underline btn btn-danger">Delete Goal</a>
 							</div>                            
 						</div>
                         

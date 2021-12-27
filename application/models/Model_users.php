@@ -37,11 +37,11 @@ class Model_users extends CI_Model
 		}
 	}
 
-	public function update($data, $id)
+	public function update($id,$data)
 	{
 		if($data && $id) {
 			$this->db->where('id', $id);
-			$update = $this->db->update('media', $data);
+			$update = $this->db->update('users', $data);
 			return ($update == true) ? true : false;
 		}
 	}
@@ -50,7 +50,7 @@ class Model_users extends CI_Model
 	{
 		if($id) {
 			$this->db->where('id', $id);
-			$delete = $this->db->delete('media');
+			$delete = $this->db->delete('users');
 			return ($delete == true) ? true : false;
 		}
 	}
