@@ -97,6 +97,25 @@
             $this->load->view('users/profile', $data);
         }
 		
+		
+        public function updatepic(){
+			if ($this->session->userdata('user_login') != 1)
+             $this->loadUrl('login');
+			 
+            $data = array();
+          
+			if(isset($_FILES["profile"]) && !empty($_FILES["profile"])){
+				$data['profile_picture'] = $this->upload_file("profile","profile");
+				$create = $this->model_users->update($this->session->userdata('user_id'),$data);			
+			}
+			if(isset($_FILES["cover"]) && !empty($_FILES["cover"])){
+				$data['header'] = $this->upload_file("cover","cover");
+				$create = $this->model_users->update($this->session->userdata('user_id'),$data);			
+			}
+			
+        	$this->loadUrl('Profile');
+        }
+		
 				
 		
 	function   loadUrl($url){
@@ -248,6 +267,47 @@
             
 				
         }
+		
+			
+		public function upload_file($type,$key){	
+		//$key = 'media_data';
+        $config['upload_path'] = '/goaldig/resources/'.$type;
+        
+		$config['allowed_types'] = 'gif|jpg|png';
+		$config['max_size'] = '10000';
+		
+		$output = '';
+		$name = sha1($this->session->userdata('user_id'));
+		$type = explode('.', $_FILES[$key]['name']);
+		if(file_exists($config['upload_path']."/"."_".$type."s/".$name.".".$type)){
+			unlink($config['upload_path']."/"."_".$type."s/".$name.".".$type);
+		}
+		$bulky = array();
+		$config['file_name'] =  $name;
+				
+				
+				
+				$this->load->library('upload', $config);
+				//var_dump($this->upload->do_upload('file'));
+				if ( ! $this->upload->do_upload($key)){
+					$error = $this->upload->display_errors();
+					return $error;
+				}else{
+					
+					//$data = array('upload_data' => $this->upload->data());
+					$type = explode('.', $_FILES[$key]['name']);
+					$type = $type[count($type) - 1];
+					$path = $config['file_name'].'.'.$type;//$config['upload_path'].'/'.$config['file_name'].'.'.$type;
+					
+					$output.=$path.',';
+					
+					//}        
+				}
+	
+		  
+		  return trim($output,",");
+    }
+
 		
 		
     }
