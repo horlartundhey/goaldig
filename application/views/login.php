@@ -51,11 +51,11 @@
 								<input type="checkbox" checked="checked"/><i class="check-box"></i>Always Remember Me.
 							  </label>
 							</div>
-							<a href="#" title="" class="forgot-pwd">Forgot Password?</a>
+							<a href="<?php echo $this->config->config['base_url']?>index" title="" class="already-have">Go back to Home</a>
 							<div class="submit-btns">
 								<button class="mtr-btn signin" type="submit"><span>Login</span></button>
-								<button class="mtr-btn signup" type="button"><span>Register</span></button>
-							</div>
+								<!-- <button class="mtr-btn signup" type="button"><span>Register</span></button> -->								
+							</div>							
 						</form>
 					</div>
 					<div class="log-reg-area reg">
@@ -100,7 +100,10 @@
 							<div class="submit-btns">
 								<button class="mtr-btn" type="submit"><span>Register</span></button>
 							</div>
-						</form>
+							<div>
+							<a href="#">Go Back to Home</a>
+						</div>
+						</form>						
 					</div>
 				</div>
 			</div>

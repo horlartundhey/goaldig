@@ -82,6 +82,12 @@ class Users extends CI_Controller {
 				$this->load->view('users/index', $data);
 				
         }
+		public function membership(){
+			$data = array();
+			$data["title"] = "Welcome to the Membership Plans we have";
+				
+			$this->load->view('membership/index',$data);
+		}
 		
 		
 		function load_data($table){			

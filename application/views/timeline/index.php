@@ -29,7 +29,7 @@
 				<a class="" href="#menu"><i class="fa fa-align-justify"></i></a>
 			</span>
 			<span class="mh-text">
-				<a href="index.html" title=""><img src="<?php echo $this->config->config['base_url']?>social/images/goaldig1.png" alt=""></a>
+				<a href="<?php echo $this->config->config['base_url']?>home" title=""><img src="<?php echo $this->config->config['base_url']?>social/images/goaldig1.png" alt=""></a>
 			</span>
 			<span class="mh-btns-right">
 				<a class="fa fa-sliders" href="#shoppingbag"></a>
@@ -43,7 +43,7 @@
 		</div>
 		<nav id="menu" class="res-menu">
 			<ul>
-				<li><span>Home</span>
+				<li>
 					<ul>
 						<li><a href="#" title="">Home Social</a></li>
 						<li><a href="#" title="">Home Social 2</a></li>
@@ -61,7 +61,7 @@
 	
 	<div class="topbar stick">
 		<div class="logo">
-			<a title="" href="index.html"><img src="<?php echo $this->config->config['base_url']?>social/images/goaldig1.png" width="15%" alt=""></a>
+			<a title="" href="<?php echo $this->config->config['base_url']?>home"><img src="<?php echo $this->config->config['base_url']?>social/images/goaldig1.png" width="15%" alt=""></a>
 		</div>
 		
 		<div class="top-area">
@@ -72,50 +72,8 @@
 				</form>
 			</div>
 			<ul class="setting-area">
-				<li><a href="index.html" title="Home" data-ripple=""><i class="ti-home"></i></a></li>
-				<li>
-					<a href="#" title="Notification" data-ripple="">
-						<i class="ti-bell"></i><span>1</span>
-					</a>
-					<div class="dropdowns">
-						<span>1 New Notification</span>
-						<ul class="drops-menu">
-							<li>
-								<a href="notifications.html" title="">
-									<img src="<?php echo $this->config->config['base_url']?>social/images/resources/thumb-1.jpg" alt="">
-									<div class="mesg-meta">
-										<h6>sarah Loren</h6>
-										<span>Hi, how r u dear ...?</span>
-										<i>2 min ago</i>
-									</div>
-								</a>
-								<span class="tag green">New</span>
-							</li>
-							
-						</ul>
-						<a href="notifications.html" title="" class="more-mesg">view more</a>
-					</div>
-				</li>
-				<li>
-					<a href="#" title="Messages" data-ripple=""><i class="ti-comment"></i><span>1</span></a>
-					<div class="dropdowns">
-						<span> New Messages</span>
-						<ul class="drops-menu">
-							<li>
-								<a href="notifications.html" title="">
-									<img src="<?php echo $this->config->config['base_url']?>social/images/resources/thumb-1.jpg" alt="">
-									<div class="mesg-meta">
-										<h6>sarah Loren</h6>
-										<span>Hi, how r u dear ...?</span>
-										<i>2 min ago</i>
-									</div>
-								</a>
-								<span class="tag green">New</span>
-							</li>							
-						</ul>
-						<a href="messages.html" title="" class="more-mesg">view more</a>
-					</div>
-				</li>
+				<!-- <li><a href="index.html" title="Home" data-ripple=""><i class="ti-home"></i></a></li> -->			
+				
 				<!-- <li><a href="#" title="Languages" data-ripple=""><i class="fa fa-globe"></i></a>
 					<div class="dropdowns languages">
 						<a href="#" title=""><i class="ti-check"></i>English</a>
@@ -128,14 +86,8 @@
 			<div class="user-img">
 				<img src="<?php echo $this->config->config['base_url']?>social/images/resources/admin.jpg" alt="">
 				<span class="status f-online"></span>
-				<div class="user-setting">
-					<a href="#" title=""><span class="status f-online"></span>online</a>
-					<a href="#" title=""><span class="status f-away"></span>away</a>
-					<a href="#" title=""><span class="status f-off"></span>offline</a>
-					<a href="#" title=""><i class="ti-user"></i> view profile</a>
-					<a href="#" title=""><i class="ti-pencil-alt"></i>edit profile</a>
-					<a href="#" title=""><i class="ti-target"></i>activity log</a>
-					<a href="#" title=""><i class="ti-settings"></i>account setting</a>
+				<div class="user-setting">					
+					<a href="<?php echo $this->config->config['base_url']?>Profile" title=""><i class="ti-user"></i> view profile</a>
 					<a href="#" onclick="logout()" title=""><i class="ti-power-off"></i>log out</a>
 				</div>
 			</div>			
@@ -146,7 +98,7 @@
 			<ul class="left-menu">
 				<li><a href="./social/insights.html" title="Dashboard" data-toggle="tooltip" data-placement="right"><i class="ti-magnet"></i></a></li>
 				
-				<li><a href="#" title="News feed" data-toggle="tooltip" data-placement="right"><i class="fa fa-star-o"></i></a></li>
+				<li><a href="<?php echo $this->config->config['base_url']?>home" title="News feed" data-toggle="tooltip" data-placement="right"><i class="fa fa-star-o"></i></a></li>
 				<li><a href="./social/forums-category.html" title="Resources Center" data-toggle="tooltip" data-placement="right"><i class="ti-stats-up"></i></a></li>
 				<li><a href="<?php echo $this->config->config['base_url']?>goals" title="Set Goals" data-toggle="tooltip" data-placement="right"><i class="ti-import"></i></a></li>
 				<li><a href="./social/forum-create-topic.html" title="Be a Mentor" data-toggle="tooltip" data-placement="right"><i class="ti-comment-alt"></i></a></li>
@@ -183,46 +135,7 @@
 											
 										</ul>
 									</div><!-- recent activites -->
-									<div class="widget stick-widget">
-										<h4 class="widget-title">Who's follownig</h4>
-										<ul class="followers">
-											<li>
-												<figure><img src="<?php echo $this->config->config['base_url']?>social/images/resources/friend-avatar2.jpg" alt=""></figure>
-												<div class="friend-meta">
-													<h4><a href="time-line.html" title="">Kelly Bill</a></h4>
-													<a href="#" title="" class="underline">Add Friend</a>
-												</div>
-											</li>
-											<li>
-												<figure><img src="<?php echo $this->config->config['base_url']?>social/images/resources/friend-avatar4.jpg" alt=""></figure>
-												<div class="friend-meta">
-													<h4><a href="time-line.html" title="">Issabel</a></h4>
-													<a href="#" title="" class="underline">Add Friend</a>
-												</div>
-											</li>
-											<li>
-												<figure><img src="<?php echo $this->config->config['base_url']?>social/images/resources/friend-avatar6.jpg" alt=""></figure>
-												<div class="friend-meta">
-													<h4><a href="time-line.html" title="">Andrew</a></h4>
-													<a href="#" title="" class="underline">Add Friend</a>
-												</div>
-											</li>
-											<li>
-												<figure><img src="<?php echo $this->config->config['base_url']?>social/images/resources/friend-avatar8.jpg" alt=""></figure>
-												<div class="friend-meta">
-													<h4><a href="time-line.html" title="">Sophia</a></h4>
-													<a href="#" title="" class="underline">Add Friend</a>
-												</div>
-											</li>
-											<li>
-												<figure><img src="<?php echo $this->config->config['base_url']?>social/images/resources/friend-avatar3.jpg" alt=""></figure>
-												<div class="friend-meta">
-													<h4><a href="time-line.html" title="">Allen</a></h4>
-													<a href="#" title="" class="underline">Add Friend</a>
-												</div>
-											</li>
-										</ul>
-									</div><!-- who's following -->
+									
 								</aside>
 							</div><!-- sidebar -->
 							<div class="col-lg-6">
@@ -286,7 +199,7 @@
 												<img src="<?php echo $this->config->config['base_url']?>social/images/resources/nearly1.jpg" alt="">
 											</figure>
 											<div class="friend-name">
-												<ins><a href="time-line.html" title="">
+												<ins><a href="<?php echo $this->config->config['base_url']?>Profile" title="">
 												<?=isset($users[$post['user_id']])?$users[$post['user_id']]['name']:""?>
 												
 												</a></ins>
@@ -319,44 +232,7 @@
 																<ins>2.2k</ins>
 															</span>
 														</li>
-														<li>
-															<span class="dislike" data-toggle="tooltip" title="dislike">
-																<i class="ti-heart-broken"></i>
-																<ins>200</ins>
-															</span>
-														</li>
-														<li class="social-media">
-															<div class="menu">
-															  <div class="btn trigger"><i class="fa fa-share-alt"></i></div>
-															  <div class="rotater">
-																<div class="btn btn-icon"><a href="#" title=""><i class="fa fa-html5"></i></a></div>
-															  </div>
-															  <div class="rotater">
-																<div class="btn btn-icon"><a href="#" title=""><i class="fa fa-facebook"></i></a></div>
-															  </div>
-															  <div class="rotater">
-																<div class="btn btn-icon"><a href="#" title=""><i class="fa fa-google-plus"></i></a></div>
-															  </div>
-															  <div class="rotater">
-																<div class="btn btn-icon"><a href="#" title=""><i class="fa fa-twitter"></i></a></div>
-															  </div>
-															  <div class="rotater">
-																<div class="btn btn-icon"><a href="#" title=""><i class="fa fa-css3"></i></a></div>
-															  </div>
-															  <div class="rotater">
-																<div class="btn btn-icon"><a href="#" title=""><i class="fa fa-instagram"></i></a>
-																</div>
-															  </div>
-																<div class="rotater">
-																<div class="btn btn-icon"><a href="#" title=""><i class="fa fa-dribbble"></i></a>
-																</div>
-															  </div>
-															  <div class="rotater">
-																<div class="btn btn-icon"><a href="#" title=""><i class="fa fa-pinterest"></i></a>
-																</div>
-															  </div>
-
-															</div>
+														
 														</li>
 													</ul>
 												</div>
@@ -380,7 +256,7 @@
 													</div>
 													<div class="we-comment">
 														<div class="coment-head">
-															<h5><a href="time-line.html" title="">
+															<h5><a href="<?php echo $this->config->config['base_url']?>Profile" title="">
 															<?=isset($users[$post['user_id']])?$users[$post['user_id']]['name']:""?>
 												
 															</a></h5>
@@ -403,7 +279,7 @@
 													<div class="post-comt-box">
 														<form  name="form_<?=$post['post_id']?>" name="form_<?=$post['post_id']?>" action="<?php echo $this->config->config['base_url']?>Messaging/createcomment/<?=$post['post_id']?>" method="post">
 															<textarea id="<?=$post['post_id']?>" name="comment" placeholder="Post your comment"></textarea>
-															<div class="add-smiles">
+															<!-- <div class="add-smiles">
 																<span class="em em-expressionless" title="add icon"></span>
 															</div>
 															<div class="smiles-bunch">
@@ -419,7 +295,7 @@
 																<i class="em em-kissing_heart"></i>
 																<i class="em em-rage"></i>
 																<i class="em em-stuck_out_tongue"></i>
-															</div>
+															</div> -->
 															<button type="submit"></button>
 														</form>	
 													</div>
@@ -435,15 +311,13 @@
 							<div class="col-lg-3">
 								<aside class="sidebar static right">
 									<div class="widget">
-										<h4 class="widget-title">Your profile</h4>	
+										<h4 class="widget-title">Edit Profile</h4>	
 										<div class="your-page">
 											<figure>
-												<a href="#" title=""><img src="<?php echo $this->config->config['base_url']?>social/images/resources/friend-avatar9.jpg" alt=""></a>
+												<a href="<?php echo $this->config->config['base_url']?>Profile" title=""><img src="<?php echo $this->config->config['base_url']?>social/images/resources/friend-avatar9.jpg" alt=""></a>
 											</figure>
 											<div class="page-meta">
-												<a href="./social/edit-account-setting.html" title="" class="underline">My page</a>
-												<span><i class="ti-comment"></i><a href="insight.html" title="">Messages <em>9</em></a></span>
-												<span><i class="ti-bell"></i><a href="insight.html" title="">Notifications <em>2</em></a></span>
+												<a href="<?php echo $this->config->config['base_url']?>Profile" title="" class="underline">My Profile</a>												
 											</div>
 											<div class="page-likes">
 												
@@ -461,7 +335,7 @@
 											</div>
 											<div class="banermeta">
 												<p>
-													Build Your Own connection with us at Goal Digger
+													Helping You Grow 
 												</p>
 																								
 											</div>
@@ -472,12 +346,12 @@
 										<ul class="short-profile">
 											<li>
 												<span>about</span>
-												<p>Hi, i am jhon kates, i am 32 years old and worked as a web developer in microsoft </p>
+												<p><?=isset($users[$post['user_id']])?$users[$post['user_id']]['about']:""?></p>
 											</li>											
-											<li>
+											<!-- <li>
 												<span>favourit Book</span>
 												<p>personal growth</p>
-											</li>
+											</li> -->
 										</ul>
 									</div>
 								</aside>

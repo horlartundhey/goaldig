@@ -63,9 +63,11 @@ $route['login'] = 'login/login';
 $route['register'] = 'login/register';
 $route['goals'] = 'goals/index';
 $route['home'] = 'Messaging/index';
-$route['membership'] = 'membership';
+$route['membership'] = 'membership/index';
 $route['get_result'] = 'users/get_result';
 $route['logout'] = 'login/logout';
+$route['index'] = 'users/home';
+
 
 
 $route['default_controller'] = 'users/view';
