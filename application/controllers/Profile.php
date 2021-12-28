@@ -157,8 +157,9 @@
             $data["title"] = "Edit this Goal";
 
 			
-			$this->form_validation->set_rules('title', 'Title', 'trim|required');
-			$this->form_validation->set_rules('description', 'Description', 'trim|required');
+			$this->form_validation->set_rules('password', 'Password', 'trim|required');
+			$this->form_validation->set_rules('retype-password', 'Confirm Password', 'trim|required');
+			$this->form_validation->set_rules('current-password', 'Current Password', 'trim|required');
 
 			if ($this->form_validation->run() == TRUE) {
 				$data = array(
