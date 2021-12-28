@@ -497,27 +497,14 @@
 								<aside class="sidebar static">
 									<div class="widget">
 										<h4 class="widget-title">Recent Activity</h4>
-										<ul class="activitiez">
-										<?php if(!empty($activities)){
-												foreach($activities as $activity){
-											?>
-											<li>
-												<div class="activity-meta">
-													<i><?=$activity['date']?></i>
-													<span><a title="" href="#"><?=$activity['line']?> </a></span>
-													<h6><a href="#"><?=$activity['name']?>.</a></h6>
-												</div>
-											</li>
-										<?php }} ?>
-											
-										</ul>
+										<?php echo $this->config->config['base_url']."Profile/recentactivities"?>
 									</div>
 									<div class="widget stick-widget">
 										<h4 class="widget-title">Edit info</h4>
 										<ul class="naves">
 											<li>
 												<i class="ti-info-alt"></i>
-												<a href="edit-profile-basic.html" title="">Basic info</a>
+												<a href="<?php echo $this->config->config['base_url']?>Profile" title="">Basic info</a>
 											</li>
 											
 											<li>
@@ -530,7 +517,7 @@
 											</li>
 											<li>
 												<i class="ti-lock"></i>
-												<a href="edit-password.html" title="">change password</a>
+												<a href="<?php echo $this->config->config['base_url']?>Profile/changePassword" title="">change password</a>
 											</li>
 										</ul>
 									</div><!-- settings widget -->										
