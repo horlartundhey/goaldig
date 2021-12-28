@@ -9,10 +9,10 @@
 	<title>Winku Social Network Toolkit</title>
     <link rel="icon" href="images/fav.png" type="image/png" sizes="16x16"> 
     
-    <link rel="stylesheet" href="<?php echo $this->config->config['base_url']?>social/css/main.min.css">
-    <link rel="stylesheet" href="<?php echo $this->config->config['base_url']?>social/css/style.css">
-    <link rel="stylesheet" href="<?php echo $this->config->config['base_url']?>social/css/color.css">
-    <link rel="stylesheet" href="<?php echo $this->config->config['base_url']?>social/css/responsive.css">
+    <link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/color.css">
+    <link rel="stylesheet" href="css/responsive.css">
 
 </head>
 <body>
@@ -469,14 +469,16 @@
 						<div class="timeline-info">
 							<ul>
 								<li class="admin-name">
-								  <h5><?=$user['name']?></h5>
+								  <h5>Janice Griffith</h5>
+								  <span>Group Admin</span>
 								</li>
 								<li>
 									<a class="" href="time-line.html" title="" data-ripple="">time line</a>
 									<a class="" href="timeline-photos.html" title="" data-ripple="">Photos</a>
 									<a class="" href="timeline-videos.html" title="" data-ripple="">Videos</a>
 									<a class="" href="timeline-friends.html" title="" data-ripple="">Friends</a>
-									<a class="" href="#" title="" data-ripple="">about</a>
+									<a class="" href="groups.html" title="" data-ripple="">Groups</a>
+									<a class="" href="about.html" title="" data-ripple="">about</a>
 									<a class="active" href="#" title="" data-ripple="">more</a>
 								</li>
 							</ul>
@@ -487,239 +489,234 @@
 		</div>
 	</section><!-- top area -->
 
-	<section>
-		<div class="gap gray-bg">
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-lg-12">
-						<div class="row" id="page-contents">
-							<div class="col-lg-3">
-								<aside class="sidebar static">
-									<div class="widget">
-										<h4 class="widget-title">Recent Activity</h4>
-										<ul class="activitiez">
-										<?php if(!empty($activities)){
-												foreach($activities as $activity){
-											?>
-											<li>
-												<div class="activity-meta">
-													<i><?=$activity['date']?></i>
-													<span><a title="" href="#"><?=$activity['line']?> </a></span>
-													<h6><a href="#"><?=$activity['name']?>.</a></h6>
-												</div>
-											</li>
-										<?php }} ?>
-											
-										</ul>
-									</div>
-									<div class="widget stick-widget">
-										<h4 class="widget-title">Edit info</h4>
-										<ul class="naves">
-											<li>
-												<i class="ti-info-alt"></i>
-												<a href="edit-profile-basic.html" title="">Basic info</a>
-											</li>
-											
-											<li>
-												<i class="ti-heart"></i>
-												<a href="edit-interest.html" title="">My interests</a>
-											</li>
-											<li>
-												<i class="ti-settings"></i>
-												<a href="edit-account-setting.html" title="">account setting</a>
-											</li>
-											<li>
-												<i class="ti-lock"></i>
-												<a href="edit-password.html" title="">change password</a>
-											</li>
-										</ul>
-									</div><!-- settings widget -->										
-								</aside>
-							</div><!-- sidebar -->
-							<div class="col-lg-6">
-								<div class="central-meta">
-									<div class="editing-info">
-										<h5 class="f-title"><i class="ti-info-alt"></i> Edit Basic Information</h5>
-										<span style="color:red"><?=isset($errors)?$errors:""?></span>
-										<form method="post" action="<?php echo $this->config->config['base_url']?>Profile/update">
-											<div class="form-group">	
-											  <input type="text" id="input" value="<?=$user['name']?>" name="name" required="required"/>
-											  <label class="control-label" for="input">Name</label><i class="mtrl-select"></i>
-											</div>
-											
-											<div class="form-group">	
-											  <input type="text" name="email" disabled value="<?=$user['username']?>" required="required"/>
-											  <label class="control-label" for="input"><?=$user['username']?>
-											  </label><i class="mtrl-select"></i>
-											</div>
-											<div class="form-group">	
-											  <input type="text" required="required" value="<?=$user['phone']?>" name="phone" />
-											  <label class="control-label" for="input">Phone No.</label><i class="mtrl-select"></i>
-											</div>
-											
-											<div class="form-radio">
-											  <div class="radio">
-												<label>
-												  <input type="radio" value="male" <?=($user['gender']=="male")?"checked":""?> checked="checked" name="gender"><i class="check-box"></i>Male
-												</label>
-											  </div>
-											  <div class="radio">
-												<label>
-												  <input type="radio" <?=($user['gender']=="female")?"checked":""?> value="female" name="gender"><i class="check-box"></i>Female
-												</label>
-											  </div>
-											</div>
-											<div class="form-group">	
-											  <input type="text" value="<?=$user['city']?>" name="city" required="required"/>
-											  <label class="control-label" for="input">City</label><i class="mtrl-select"></i>
-											</div>
-											<div class="form-group">	
-											  <select name="country">
-												<option value="">Country</option>
-												  
-												  <option <?=($user['country']=="NGA")?"selected":""?> value="NGA">Nigeria</option>
-												  
-											  </select>
-											</div>
-											<div class="form-group">	
-											  <textarea rows="4" id="textarea"  name="about" required="required"><?=$user['about']?></textarea>
-											  <label class="control-label" for="textarea">About Me</label><i class="mtrl-select"></i>
-											</div>
-											<div class="submit-btns">
-												<button type="button" class="mtr-btn"><span>Cancel</span></button>
-												<button type="submit" class="mtr-btn"><span>Update</span></button>
-											</div>
-										</form>
-									</div>
-								</div>	
-							</div><!-- centerl meta -->
-							<div class="col-lg-3">
-								<aside class="sidebar static">
-									<div class="widget">
-											<h4 class="widget-title">Your page</h4>	
-											<div class="your-page">
-												<figure>
-													<a title="" href="#"><img alt="" src="images/resources/friend-avatar9.jpg"></a>
-												</figure>
-												<div class="page-meta">
-													<a class="underline" title="" href="#">My page</a>
-													<span><i class="ti-comment"></i>Messages <em>9</em></span>
-													<span><i class="ti-bell"></i>Notifications <em>2</em></span>
-												</div>
-												<div class="page-likes">
-													<ul class="nav nav-tabs likes-btn">
-														<li class="nav-item"><a data-toggle="tab" href="#link1" class="active">likes</a></li>
-														 <li class="nav-item"><a data-toggle="tab" href="#link2" class="">views</a></li>
-													</ul>
-													<!-- Tab panes -->
-													<div class="tab-content">
-													  <div id="link1" class="tab-pane active fade show">
-														<span><i class="ti-heart"></i>884</span>
-														  <a title="weekly-likes" href="#">35 new likes this week</a>
-														  <div class="users-thumb-list">
-														  	<a data-toggle="tooltip" title="" href="#" data-original-title="Anderw">
-																<img alt="" src="images/resources/userlist-1.jpg">  
-															</a>
-															<a data-toggle="tooltip" title="" href="#" data-original-title="frank">
-																<img alt="" src="images/resources/userlist-2.jpg">  
-															</a>
-															<a data-toggle="tooltip" title="" href="#" data-original-title="Sara">
-																<img alt="" src="images/resources/userlist-3.jpg">  
-															</a>
-															<a data-toggle="tooltip" title="" href="#" data-original-title="Amy">
-																<img alt="" src="images/resources/userlist-4.jpg">  
-															</a>
-															<a data-toggle="tooltip" title="" href="#" data-original-title="Ema">
-																<img alt="" src="images/resources/userlist-5.jpg">  
-															</a>
-															<a data-toggle="tooltip" title="" href="#" data-original-title="Sophie">
-																<img alt="" src="images/resources/userlist-6.jpg">  
-															</a>
-															<a data-toggle="tooltip" title="" href="#" data-original-title="Maria">
-																<img alt="" src="images/resources/userlist-7.jpg">  
-															</a>  
-														  </div>
-													  </div>
-													  <div id="link2" class="tab-pane fade">
-														  <span><i class="ti-eye"></i>445</span>
-														  <a title="weekly-likes" href="#">440 new views this week</a>
-														  <div class="users-thumb-list">
-														  	<a data-toggle="tooltip" title="" href="#" data-original-title="Anderw">
-																<img alt="" src="images/resources/userlist-1.jpg">  
-															</a>
-															<a data-toggle="tooltip" title="" href="#" data-original-title="frank">
-																<img alt="" src="images/resources/userlist-2.jpg">  
-															</a>
-															<a data-toggle="tooltip" title="" href="#" data-original-title="Sara">
-																<img alt="" src="images/resources/userlist-3.jpg">  
-															</a>
-															<a data-toggle="tooltip" title="" href="#" data-original-title="Amy">
-																<img alt="" src="images/resources/userlist-4.jpg">  
-															</a>
-															<a data-toggle="tooltip" title="" href="#" data-original-title="Ema">
-																<img alt="" src="images/resources/userlist-5.jpg">  
-															</a>
-															<a data-toggle="tooltip" title="" href="#" data-original-title="Sophie">
-																<img alt="" src="images/resources/userlist-6.jpg">  
-															</a>
-															<a data-toggle="tooltip" title="" href="#" data-original-title="Maria">
-																<img alt="" src="images/resources/userlist-7.jpg">  
-															</a>  
-														  </div>
-													  </div>
+		<section>
+			<div class="gap gray-bg">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="row" id="page-contents">
+								<div class="col-lg-3">
+									<aside class="sidebar static">
+										<div class="widget">
+											<h4 class="widget-title">Recent Activity</h4>
+											<ul class="activitiez">
+												<li>
+													<div class="activity-meta">
+														<i>10 hours Ago</i>
+														<span><a title="" href="#">Commented on Video posted </a></span>
+														<h6>by <a href="time-line.html">black demon.</a></h6>
 													</div>
-												</div>
-											</div>
+												</li>
+												<li>
+													<div class="activity-meta">
+														<i>30 Days Ago</i>
+														<span><a title="" href="#">Posted your status. “Hello guys, how are you?”</a></span>
+													</div>
+												</li>
+												<li>
+													<div class="activity-meta">
+														<i>2 Years Ago</i>
+														<span><a title="" href="#">Share a video on her timeline.</a></span>
+														<h6>"<a href="#">you are so funny mr.been.</a>"</h6>
+													</div>
+												</li>
+											</ul>
 										</div>
-									<div class="widget stick-widget">
-										<h4 class="widget-title">Who's follownig</h4>
-										<ul class="followers">
-											<li>
-												<figure><img src="images/resources/friend-avatar2.jpg" alt=""></figure>
-												<div class="friend-meta">
-													<h4><a href="time-line.html" title="">Kelly Bill</a></h4>
-													<a href="#" title="" class="underline">Add Friend</a>
+										<div class="widget stick-widget">
+											<h4 class="widget-title">Edit info</h4>
+											<ul class="naves">
+												<li>
+													<i class="ti-info-alt"></i>
+													<a href="edit-profile-basic.html" title="">Basic info</a>
+												</li>
+												<li>
+													<i class="ti-mouse-alt"></i>
+													<a href="edit-work-eductation.html" title="">Education & Work</a>
+												</li>
+												<li>
+													<i class="ti-heart"></i>
+													<a href="edit-interest.html" title="">My interests</a>
+												</li>
+												<li>
+													<i class="ti-settings"></i>
+													<a href="edit-account-setting.html" title="">account setting</a>
+												</li>
+												<li>
+													<i class="ti-lock"></i>
+													<a href="edit-password.html" title="">change password</a>
+												</li>
+											</ul>
+										</div><!-- settings widget -->										
+									</aside>
+								</div><!-- sidebar -->
+								<div class="col-lg-6">
+									<div class="central-meta">
+										<div class="editing-info">
+											<h5 class="f-title"><i class="ti-lock"></i>Change Password</h5>
+											
+											<form method="post">
+												<div class="form-group">	
+												  <input type="password" id="input" required="required"/>
+												  <label class="control-label" for="input">New password</label><i class="mtrl-select"></i>
 												</div>
-											</li>
-											<li>
-												<figure><img src="images/resources/friend-avatar4.jpg" alt=""></figure>
-												<div class="friend-meta">
-													<h4><a href="time-line.html" title="">Issabel</a></h4>
-													<a href="#" title="" class="underline">Add Friend</a>
+												<div class="form-group">	
+												  <input type="password" required="required"/>
+												  <label class="control-label" for="input">Confirm password</label><i class="mtrl-select"></i>
 												</div>
-											</li>
-											<li>
-												<figure><img src="images/resources/friend-avatar6.jpg" alt=""></figure>
-												<div class="friend-meta">
-													<h4><a href="time-line.html" title="">Andrew</a></h4>
-													<a href="#" title="" class="underline">Add Friend</a>
+												<div class="form-group">	
+												  <input type="password" required="required"/>
+												  <label class="control-label" for="input">Current password</label><i class="mtrl-select"></i>
 												</div>
-											</li>
-											<li>
-												<figure><img src="images/resources/friend-avatar8.jpg" alt=""></figure>
-												<div class="friend-meta">
-													<h4><a href="time-line.html" title="">Sophia</a></h4>
-													<a href="#" title="" class="underline">Add Friend</a>
+												<a class="forgot-pwd underline" title="" href="#">Forgot Password?</a>
+												<div class="submit-btns">
+													<button type="button" class="mtr-btn"><span>Cancel</span></button>
+													<button type="button" class="mtr-btn"><span>Update</span></button>
 												</div>
-											</li>
-											<li>
-												<figure><img src="images/resources/friend-avatar3.jpg" alt=""></figure>
-												<div class="friend-meta">
-													<h4><a href="time-line.html" title="">Allen</a></h4>
-													<a href="#" title="" class="underline">Add Friend</a>
-												</div>
-											</li>
-										</ul>
-									</div><!-- who's following -->
-								</aside>
-							</div><!-- sidebar -->
-						</div>	
+											</form>
+										</div>
+									</div>	
+								</div><!-- centerl meta -->
+								<div class="col-lg-3">
+									<aside class="sidebar static">
+										<div class="widget">
+											<div class="banner medium-opacity bluesh">
+											<div style="background-image: url(images/resources/baner-widgetbg.jpg)" class="bg-image"></div>
+											<div class="baner-top">
+												<span><img src="images/book-icon.png" alt=""></span>
+												<i class="fa fa-ellipsis-h"></i>
+											</div>
+											<div class="banermeta">
+												<p>
+													create your own favourit page.
+												</p>
+												<span>like them all</span>
+												<a href="#" title="" data-ripple="">start now!</a>
+											</div>
+										</div>											
+										</div>
+										<div class="widget stick-widget">
+											<h4 class="widget-title">Who's follownig</h4>
+											<ul class="followers">
+												<li>
+													<figure><img src="images/resources/friend-avatar2.jpg" alt=""></figure>
+													<div class="friend-meta">
+														<h4><a href="time-line.html" title="">Kelly Bill</a></h4>
+														<a href="#" title="" class="underline">Add Friend</a>
+													</div>
+												</li>
+												<li>
+													<figure><img src="images/resources/friend-avatar4.jpg" alt=""></figure>
+													<div class="friend-meta">
+														<h4><a href="time-line.html" title="">Issabel</a></h4>
+														<a href="#" title="" class="underline">Add Friend</a>
+													</div>
+												</li>
+												<li>
+													<figure><img src="images/resources/friend-avatar6.jpg" alt=""></figure>
+													<div class="friend-meta">
+														<h4><a href="time-line.html" title="">Andrew</a></h4>
+														<a href="#" title="" class="underline">Add Friend</a>
+													</div>
+												</li>
+												<li>
+													<figure><img src="images/resources/friend-avatar8.jpg" alt=""></figure>
+													<div class="friend-meta">
+														<h4><a href="time-line.html" title="">Sophia</a></h4>
+														<a href="#" title="" class="underline">Add Friend</a>
+													</div>
+												</li>
+												<li>
+													<figure><img src="images/resources/friend-avatar3.jpg" alt=""></figure>
+													<div class="friend-meta">
+														<h4><a href="time-line.html" title="">Allen</a></h4>
+														<a href="#" title="" class="underline">Add Friend</a>
+													</div>
+												</li>
+											</ul>
+										</div><!-- who's following -->
+									</aside>
+								</div><!-- sidebar -->
+							</div>	
+						</div>
+					</div>
+				</div>
+			</div>	
+		</section>
+
+		<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4 col-md-4">
+					<div class="widget">
+						<div class="foot-logo">
+							<div class="logo">
+								<a href="index-2.html" title=""><img src="images/logo.png" alt=""></a>
+							</div>	
+							<p>
+								The trio took this simple idea and built it into the world’s leading carpooling platform.
+							</p>
+						</div>
+						<ul class="location">
+							<li>
+								<i class="ti-map-alt"></i>
+								<p>33 new montgomery st.750 san francisco, CA USA 94105.</p>
+							</li>
+							<li>
+								<i class="ti-mobile"></i>
+								<p>+1-56-346 345</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-2 col-md-4">
+					<div class="widget">
+						<div class="widget-title"><h4>follow</h4></div>
+						<ul class="list-style">
+							<li><i class="fa fa-facebook-square"></i> <a href="https://web.facebook.com/shopcircut/" title="">facebook</a></li>
+							<li><i class="fa fa-twitter-square"></i><a href="https://twitter.com/login?lang=en" title="">twitter</a></li>
+							<li><i class="fa fa-instagram"></i><a href="https://www.instagram.com/?hl=en" title="">instagram</a></li>
+							<li><i class="fa fa-google-plus-square"></i> <a href="https://plus.google.com/discover" title="">Google+</a></li>
+							<li><i class="fa fa-pinterest-square"></i> <a href="https://www.pinterest.com/" title="">Pintrest</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-2 col-md-4">
+					<div class="widget">
+						<div class="widget-title"><h4>Navigate</h4></div>
+						<ul class="list-style">
+							<li><a href="about.html" title="">about us</a></li>
+							<li><a href="contact.html" title="">contact us</a></li>
+							<li><a href="terms.html" title="">terms & Conditions</a></li>
+							<li><a href="#" title="">RSS syndication</a></li>
+							<li><a href="sitemap.html" title="">Sitemap</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-2 col-md-4">
+					<div class="widget">
+						<div class="widget-title"><h4>useful links</h4></div>
+						<ul class="list-style">
+							<li><a href="#" title="">leasing</a></li>
+							<li><a href="#" title="">submit route</a></li>
+							<li><a href="#" title="">how does it work?</a></li>
+							<li><a href="#" title="">agent listings</a></li>
+							<li><a href="#" title="">view All</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-2 col-md-4">
+					<div class="widget">
+						<div class="widget-title"><h4>download apps</h4></div>
+						<ul class="colla-apps">
+							<li><a href="https://play.google.com/store?hl=en" title=""><i class="fa fa-android"></i>android</a></li>
+							<li><a href="https://www.apple.com/lae/ios/app-store/" title=""><i class="ti-apple"></i>iPhone</a></li>
+							<li><a href="https://www.microsoft.com/store/apps" title=""><i class="fa fa-windows"></i>Windows</a></li>
+						</ul>
 					</div>
 				</div>
 			</div>
-		</div>	
-	</section>
-
+		</div>
+	</footer><!-- footer -->
 	<div class="bottombar">
 		<div class="container">
 			<div class="row">
@@ -793,13 +790,10 @@
 					<label for="switch111" data-on-label="ON" data-off-label="OFF"></label>
 				</div>
 			</form>
-		</div><!-- side panel -->		
+		</div><!-- side panel -->	
 	
-	<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-	<script src="<?php echo $this->config->config['base_url']?>social/js/main.min.js"></script>
-	<script src="<?php echo $this->config->config['base_url']?>social/js/script.js"></script>
-	<script src="<?php echo $this->config->config['base_url']?>social/js/map-init.js"></script>
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8c55_YHLvDHGACkQscgbGLtLRdxBDCfI"></script>
+	<script src="js/main.min.js"></script>
+	<script src="js/script.js"></script>
 
 </body>	
 

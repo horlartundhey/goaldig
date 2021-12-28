@@ -39,6 +39,27 @@ class Model_messaging extends CI_Model
 	}
 
 
+	/* get the brand data */
+	public function getRecentActivities()
+	{
+		$this->db->order_by("date_created","desc");
+		$this->db->limit(5);
+		$query = $this->db->get("post");
+		$posts =  $query->result_array();
+		
+		$this->db->order_by("date_created","desc");
+		$this->db->limit(5);
+		$query = $this->db->get("comments");
+		$comments =  $query->result_array();
+		
+		$result = array_merge($posts,$comments);
+		return $result;
+		
+		
+			
+	}
+
+
 
 	public function create($data)
 	{

@@ -9,6 +9,7 @@
 			$this->load->model('goal_model');
 			$this->load->library('form_validation');		
 			$this->load->model('model_users');
+			$this->load->model('model_messaging');
 
         }
 
@@ -17,7 +18,37 @@
             $data["title"] = "Set Goals For 2022";
             //to fetch goals
             $data['user'] =$this->model_users->get($this->session->userdata('user_id'));
-
+			$activities = $this->model_messaging->getRecentActivities();
+			
+			$users = $this->model_users->getArray(array('status'=>'active'));
+			$userarray = array();
+			foreach($users as $user){
+				$userarray[$user['id']] = $user;
+			}
+			
+			$activitylist = array();
+			foreach($activities as $activity){
+				if(isset($userarray[$activity['user_id']])){
+					$user = $userarray[$activity['user_id']];
+					$post = array(
+						'name'=>$user['name'],
+						'content'=>$activity['content'],
+						'date'=>$activity['date_created']
+						);
+					if(isset($activity['type']) && $activity['type']=="text"){
+						$post['line'] = "Posted your status. “".$activity['content']."”";
+					}else if(isset($activity['type']) && $activity['type']=="image"){
+						$post['line'] = "Shared image on timeline. ";
+					}else if(isset($activity['type']) && $activity['type']=="video"){
+						$post['line'] = "Shared video on timeline. ";
+					}else{
+						$post['line'] = "Commented on post";
+					}
+					$activitylist[] = $post;
+				}
+			}
+			
+			$data['activities'] = $activitylist;
             //to route the goals page
 			$this->load->view('users/profile', $data);
             
