@@ -169,7 +169,7 @@
 					'date_created'=>date("Y-m-d"),
 				);
 				
-				$update = $this->goal_model->update_goal($id,$data);
+				$update = $this->goal_model->update_goal($id, $data);
 				
 				if($update == true) {
 					$this->session->set_flashdata('success', 'Successfully created');

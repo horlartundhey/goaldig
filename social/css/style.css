@@ -3071,7 +3071,8 @@ li.google {
 /*--- knowledge base page ---*/
 
 .color-bg {
-    color: #fff;
+    color: #000;
+    background-color: #fff;
 }
 
 .faq-top {
@@ -3087,7 +3088,9 @@ li.google {
     position: relative;
     width: 100%;
 }
-
+.page {
+    padding-top: 191px;
+}
 .faq-top form input {
     border: medium none;
     display: inline-block;
@@ -3106,10 +3109,11 @@ li.google {
 }
 
 .faq-top > h1 {
-    font-size: 60px;
-    font-weight: 300;
+    font-size: 65px;
+    font-weight: 400;
     margin-bottom: 30px;
     text-transform: capitalize;
+    color: #fff;
 }
 
 .know-box {
@@ -3117,10 +3121,11 @@ li.google {
 }
 
 .knowldeg-box {
-    background: #000000 none repeat scroll 0 0;
+    background: #fff none repeat scroll 0 0;
     display: inline-block;
     padding: 50px 30px;
     text-align: center;
+    border-radius: 5%;
 }
 
 .knowldeg-box > i {
@@ -3138,7 +3143,7 @@ li.google {
 }
 
 .knowldeg-box > p {
-    color: #e6e6e6;
+    color: #000;
     font-size: 17px;
     margin-top: 10px;
     margin-bottom: 30px;

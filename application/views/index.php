@@ -67,6 +67,7 @@
                             <li><a href="#focus">Focus</a>                               
                             </li>
                             <li><a href="#event">Events</a></li>
+                            <li><a href="<?=$this->config->config['base_url']?>membership">Membership Plans</a></li>
                             <li><a href="<?=$this->config->config['base_url']?>login"><span><i class="fa fa-user"></i></span> Member Login</a></li>
 
                         </ul>
