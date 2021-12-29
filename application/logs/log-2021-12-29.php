@@ -60,3 +60,32 @@ ERROR - 2021-12-29 03:18:22 --> 404 Page Not Found: Profile/social
 ERROR - 2021-12-29 03:19:19 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
 ERROR - 2021-12-29 03:19:19 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
 ERROR - 2021-12-29 03:19:38 --> 404 Page Not Found: Membership/index
+ERROR - 2021-12-29 03:38:11 --> 404 Page Not Found: Images/resources
+ERROR - 2021-12-29 03:38:11 --> 404 Page Not Found: Images/logo2.png
+ERROR - 2021-12-29 03:38:11 --> 404 Page Not Found: Images/resources
+ERROR - 2021-12-29 03:38:11 --> 404 Page Not Found: Images/resources
+ERROR - 2021-12-29 03:38:11 --> 404 Page Not Found: Images/resources
+ERROR - 2021-12-29 03:38:11 --> 404 Page Not Found: Images/resources
+ERROR - 2021-12-29 03:38:11 --> 404 Page Not Found: Images/resources
+ERROR - 2021-12-29 03:38:25 --> Could not find the language line "upload_no_image_selected"
+ERROR - 2021-12-29 03:38:25 --> upload_no_image_selected
+ERROR - 2021-12-29 03:38:37 --> 404 Page Not Found: Images/resources
+ERROR - 2021-12-29 03:38:37 --> 404 Page Not Found: Images/resources
+ERROR - 2021-12-29 03:38:37 --> 404 Page Not Found: Images/resources
+ERROR - 2021-12-29 03:38:37 --> 404 Page Not Found: Images/logo2.png
+ERROR - 2021-12-29 03:38:37 --> 404 Page Not Found: Images/resources
+ERROR - 2021-12-29 03:38:37 --> 404 Page Not Found: Images/resources
+ERROR - 2021-12-29 03:38:37 --> 404 Page Not Found: Images/resources
+ERROR - 2021-12-29 03:45:49 --> Severity: Notice --> Undefined index: header C:\xampp\htdocs\goaldiga\application\views\users\profile.php 448
+ERROR - 2021-12-29 03:45:49 --> Severity: Notice --> Undefined index: header C:\xampp\htdocs\goaldiga\application\views\users\profile.php 449
+ERROR - 2021-12-29 03:45:49 --> Severity: Notice --> Undefined index: profile_picture C:\xampp\htdocs\goaldiga\application\views\users\profile.php 469
+ERROR - 2021-12-29 03:45:50 --> Severity: Notice --> Undefined index: profile_picture C:\xampp\htdocs\goaldiga\application\views\users\profile.php 470
+ERROR - 2021-12-29 03:45:50 --> 404 Page Not Found: Images/resources
+ERROR - 2021-12-29 03:45:50 --> 404 Page Not Found: Images/logo2.png
+ERROR - 2021-12-29 03:45:50 --> 404 Page Not Found: Images/resources
+ERROR - 2021-12-29 03:45:50 --> 404 Page Not Found: Images/resources
+ERROR - 2021-12-29 03:45:50 --> 404 Page Not Found: Images/resources
+ERROR - 2021-12-29 03:45:50 --> 404 Page Not Found: Images/resources
+ERROR - 2021-12-29 03:45:50 --> 404 Page Not Found: Images/resources
+ERROR - 2021-12-29 03:45:50 --> 404 Page Not Found: Images/logo2.png
+ERROR - 2021-12-29 03:45:50 --> 404 Page Not Found: Images/resources

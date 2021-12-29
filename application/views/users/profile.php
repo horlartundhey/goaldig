@@ -13,6 +13,13 @@
     <link rel="stylesheet" href="<?php echo $this->config->config['base_url']?>social/css/style.css">
     <link rel="stylesheet" href="<?php echo $this->config->config['base_url']?>social/css/color.css">
     <link rel="stylesheet" href="<?php echo $this->config->config['base_url']?>social/css/responsive.css">
+	
+	
+    <link rel="stylesheet" href="<?php echo $this->config->config['base_url']?>assets/js/jquery-3.5.1.min.js">
+	<script src="<?php echo $this->config->config['base_url']?>assets/js/jquery-3.5.1.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>var $j = jQuery.noConflict(true);</script>
+
 
 </head>
 <body>
@@ -437,14 +444,21 @@
 	
 	<section >
 		<div class="feature-photo">
-			<figure><img src="social/images/resources/timeline-1.jpg" alt=""></figure>
+			<figure>
+			<?php if(file_exists("resources/cover/_covers/".$user['header'])){?>
+					<img src="resources/cover/_covers/<?=$user['header']?>?v=<?=time()?>" alt="">
+								<?php }else{ ?>
+								<img src="social/images/resources/timeline-1.jpg" alt="">
+								<?php } ?>
+			</figure>
 			<div class="add-btn">				
 			</div>
-			<form class="edit-phto">
+			<form class="edit-phto" enctype="multipart/form-data"  name="cover_form" action="<?php echo $this->config->config['base_url']?>Profile/updatepic" id="cover_form" method="post">
+								
 				<i class="fa fa-camera-retro"></i>
 				<label class="fileContainer">
 					Edit Cover Photo
-				<input type="file"/>
+					<input type="file" name="cover" id="cover_pic" />
 				</label>
 			</form>
 			<div class="container-fluid">
@@ -452,12 +466,16 @@
 					<div class="col-lg-2 col-sm-3">
 						<div class="user-avatar">
 							<figure>
+								<?php if(file_exists("resources/profile/_profiles/".$user['profile_picture'])){?>
+								<img src="resources/profile/_profiles/<?=$user['profile_picture']?>?v=<?=time()?>" alt="">
+								<?php }else{ ?>
 								<img src="social/images/resources/user-avatar.jpg" alt="">
-								<form class="edit-phto">
+								<?php } ?>
+								<form class="edit-phto" enctype="multipart/form-data"  name="picture_form" action="<?php echo $this->config->config['base_url']?>Profile/updatepic" id="picture_form" method="post">
 									<i class="fa fa-camera-retro"></i>
 									<label class="fileContainer">
 										Edit Display Photo
-										<input type="file"/>
+										<input type="file" name="profile" id="profile_pic" />
 									</label>
 								</form>
 							</figure>
@@ -597,6 +615,26 @@
 			location.href="<?php echo $this->config->config['base_url']?>logout";
 		}
 	</script>
+	<script type="text/javascript">
+
+$(document).ready(function() {
+
+  // submit the create from 
+  $("#profile_pic").on('change', function() {
+    $("#picture_form").submit();
+
+  });
+
+  // submit the create from 
+  $("#cover_pic").on('change', function() {
+    $("#cover_form").submit();
+
+  });
+
+});
+
+
+</script>
 	<script src="<?php echo $this->config->config['base_url']?>social/js/main.min.js"></script>
 	<script src="<?php echo $this->config->config['base_url']?>social/js/script.js"></script>
 	<script src="<?php echo $this->config->config['base_url']?>social/js/map-init.js"></script>
