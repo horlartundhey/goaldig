@@ -86,6 +86,7 @@
                         <li><a href="#about">About Us</a></li>
                         <li><a href="#focus">focus</a></li>
                         <li><a href="#event">Events</a></li>
+                        <li><a href="<?=$this->config->config['base_url']?>membership">Membership Plans</a></li>
                         <li><a href="<?=$this->config->config['base_url']?>login"><span><i class="fa fa-user"></i></span> Member Login </a></li>
                     </ul>
                 </div>
@@ -532,7 +533,7 @@
                         <h3>Useful Link</h3>
                         <ul>                          
                             <li><a href="<?=$this->config->config['base_url']?>login"><i class="fal fa-angle-right"></i>MEMBER LOGIN</a></li>
-                            <li><a href="<?=$this->config->config['base_url']?>login"><i class="fal fa-angle-right"></i>REGISTER NOW</a></li>
+                            <!-- <li><a href="<?=$this->config->config['base_url']?>login"><i class="fal fa-angle-right"></i>REGISTER NOW</a></li> -->
                         </ul>
                     </div>
                 </div>

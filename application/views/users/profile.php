@@ -298,7 +298,7 @@
 									<div class="mesg-meta">
 										<h6>sarah Loren</h6>
 										<span>Hi, how r u dear ...?</span>
-										<i>2 min ago</i>
+										<i>2 min ago</i>	
 									</div>
 								</a>
 								<span class="tag green">New</span>
@@ -440,13 +440,12 @@
 			</div>
 			<span class="ti-menu main-menu" data-ripple=""></span>
 		</div>
-	</div><!-- topbar -->
-	
+	</div><!-- topbar -->	
 	<section >
 		<div class="feature-photo">
 			<figure>
 			<?php if(file_exists("resources/cover/_covers/".$user['header'])){?>
-					<img src="resources/cover/_covers/<?=$user['header']?>?v=<?=time()?>" alt="">
+					<img src="resources/cover/_covers/<?=$user['header']?>?v=<?=time()?>" alt="" style="height: 30%;">
 								<?php }else{ ?>
 								<img src="social/images/resources/timeline-1.jpg" alt="">
 								<?php } ?>
@@ -467,7 +466,7 @@
 						<div class="user-avatar">
 							<figure>
 								<?php if(file_exists("resources/profile/_profiles/".$user['profile_picture'])){?>
-								<img src="resources/profile/_profiles/<?=$user['profile_picture']?>?v=<?=time()?>" alt="">
+								<img src="resources/profile/_profiles/<?=$user['profile_picture']?>?v=<?=time()?>" alt="" style="width: 100%;">
 								<?php }else{ ?>
 								<img src="social/images/resources/user-avatar.jpg" alt="">
 								<?php } ?>
@@ -476,16 +475,20 @@
 									<label class="fileContainer">
 										Edit Display Photo
 										<input type="file" name="profile" id="profile_pic" />
+										
 									</label>
 								</form>
+								
 							</figure>
+							
 						</div>
+						<h5><?=$user['name']?></h5>
 					</div>
 					<div class="col-lg-10 col-sm-9">
 						<div class="timeline-info">						
 							<ul>
 								<li class="admin-name">
-								  <h5><?=$user['name']?></h5>
+								  <!-- <h5><?=$user['name']?></h5> -->
 								</li>
 								<!-- <li>
 									<h5><?=$user['name']?></h5>

@@ -86,7 +86,7 @@ class Users extends CI_Controller {
 			$data = array();
 			$data["title"] = "Welcome to the Membership Plans we have";
 				
-			$this->load->view('membership/index',$data);
+			$this->load->view('membership',$data);
 		}
 		
 		

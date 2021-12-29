@@ -67,6 +67,7 @@
                             <li><a href="#focus">Focus</a>                               
                             </li>
                             <li><a href="#event">Events</a></li>
+                            <li><a href="<?=$this->config->config['base_url']?>membership">Membership Plans</a></li>
                             <li><a href="<?=$this->config->config['base_url']?>login"><span><i class="fa fa-user"></i></span> Member Login</a></li>
 
                         </ul>
@@ -85,12 +86,88 @@
                         <li><a href="#about">About Us</a></li>
                         <li><a href="#focus">focus</a></li>
                         <li><a href="#event">Events</a></li>
+                        <li><a href="<?=$this->config->config['base_url']?>membership">Membership Plans</a></li>
                         <li><a href="<?=$this->config->config['base_url']?>login"><span><i class="fa fa-user"></i></span> Member Login </a></li>
                     </ul>
                 </div>
             </div>
         </header>
 
+        <div class="page-title-area overlay-bg style-1" style="background-color :#5e35b1">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-12 text-center">
+                        <h3 class="title">  Membership Plans</h3>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <section class="pricing-section">
+        <div class="container">
+            <div class="heading-title">
+               
+                <h2>Start your journey to building Professional growth  in your carrer by being a part of this community.</h2>
+                <p>Experience Growth, Resources,Mentorship Programmes, Hnagouts, Business Connections and Most of All Financial Growth.</p>
+            </div>
+            
+              <div class="tab-content" id="pills-tabContent1">
+                <div class="tab-pane fade show active" id="pills-home1" style="overflow: visible;">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="pracing-item ">
+                                <div class="top-left">                                    
+                                </div>
+                                <div class="top-area">
+                                    <img src="<?=$this->config->config['base_url']?>assets/images/icon001.svg" alt="">
+                                    <p>CLASSIC</p>
+                                </div>
+                                <ul>
+                                    <li><span><i class="fal fa-check"></i></span><strong>N30,000 PER ANNUM</strong></li>
+                                    <li><span><i class="fal fa-check"></i></span>Book Review Sessions</li>
+                                    <li><span><i class="fal fa-check"></i></span>Monthly KSS Sessions</li>
+                                    <li><span><i class="fal fa-check"></i></span>Mentoring Program</li>
+                                    <li><span><i class="fal fa-check"></i></span>Daily Growth Topics</li>
+                                    <li><span><i class="fal fa-check"></i></span>Career Opportunities / Job Links</li>
+                                    <li><span><i class="fal fa-check"></i></span>Annual Goal Setting Workshop</li>
+                                    <li><span><i class="fal fa-check"></i></span>Quaterly KSS with Industry Experts</li>
+                                </ul>
+                                <a href="" class="buy-now">Sign Up Now</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="pracing-item active">
+                                <div class="top-left">
+                                    <!-- <p>7.50%</p> -->
+                                </div>
+                                <div class="top-area">
+                                    <img src="<?=$this->config->config['base_url']?>assets/images/icon02.svg" alt="">
+                                    <p>Gold</p>
+                                </div>
+                                <ul>
+                                    <li><span><i class="fal fa-check"></i></span><strong>N70,000 PER ANNUM</strong></li>
+                                    <li><span><i class="fal fa-check"></i></span>Book Review Sessions</li>
+                                    <li><span><i class="fal fa-check"></i></span>Monthly KSS Sessions</li>
+                                    <li><span><i class="fal fa-check"></i></span>Mentoring Program</li>
+                                    <li><span><i class="fal fa-check"></i></span>Daily Growth Topics</li>
+                                    <li><span><i class="fal fa-check"></i></span>Career Opportunities / Job Links</li>
+                                    <li><span><i class="fal fa-check"></i></span>Annual Goal Setting Workshop</li>
+                                    <li><span><i class="fal fa-check"></i></span>Quaterly Webinars with Industry Experts</li>
+                                    <li><span><i class="fal fa-check"></i></span>Annual Workshop (35k for Gold Members, 45k for others)</li>
+                                    <li><span><i class="fal fa-check"></i></span>Annual Goal Book (5K for Gold members, 6k for others)</li>
+                                    <!-- <li><span><i class="fal fa-check"></i></span>Quaterly Webinars with Industry Experts</li> -->
+                                </ul>
+                                <a href="" class="buy-now">Sign Up Now</a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+              </div>
+        </div>
+    </section>
 
 
 
@@ -120,7 +197,7 @@
                         <h3>Useful Link</h3>
                         <ul>                          
                             <li><a href="<?=$this->config->config['base_url']?>login"><i class="fal fa-angle-right"></i>MEMBER LOGIN</a></li>
-                            <li><a href="<?=$this->config->config['base_url']?>login"><i class="fal fa-angle-right"></i>REGISTER NOW</a></li>
+                            <!-- <li><a href="<?=$this->config->config['base_url']?>login"><i class="fal fa-angle-right"></i>REGISTER NOW</a></li> -->
                         </ul>
                     </div>
                 </div>

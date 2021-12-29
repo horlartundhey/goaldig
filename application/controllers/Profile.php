@@ -271,7 +271,7 @@
 			
 		public function upload_file($type,$key){	
 		//$key = 'media_data';
-        $config['upload_path'] = '/goaldig/resources/'.$type;
+        $config['upload_path'] = '/goaldiga/resources/'.$type;
         
 		$config['allowed_types'] = 'gif|jpg|png';
 		$config['max_size'] = '10000';
