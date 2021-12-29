@@ -24,6 +24,8 @@ class Messaging extends CI_Controller
              $this->loadUrl('login');
 			  
 		$user_id = $this->session->userdata('user_id');
+		$data['user'] =$this->model_users->get($this->session->userdata('user_id'));
+			
 		$data['title'] = "Timeline";
 		$users = $this->model_users->getArray(array('status'=>'active'));
 		$userarray = array();
@@ -32,7 +34,7 @@ class Messaging extends CI_Controller
 		}
 		
 		$data['users'] = $userarray;
-		$posts = $this->model_messaging->getArray(array('user_id'=>$this->session->userdata('user_id')));
+		$posts = $this->model_messaging->getArray(array());
 		foreach($posts as $key=>$value){
 			$posts[$key]['comments'] = $this->model_messaging->getCommentArray(array(
 			'user_id'=>$this->session->userdata('user_id'),
@@ -90,7 +92,7 @@ class Messaging extends CI_Controller
 		$response = array();
 
 
-		$this->form_validation->set_rules('content', 'Content', 'trim|required');
+		$this->form_validation->set_rules('post', 'Content', 'trim|required');
 		
         if ($this->form_validation->run() == TRUE) {
         	$data = array(
@@ -100,12 +102,13 @@ class Messaging extends CI_Controller
 				'type'=>'text'
         	);
 			
+			//var_dump($_FILES); exit;
 			if(isset($_FILES["image"]) && !empty($_FILES["image"])){
 				$data['file'] = $this->upload_file("image","image");
 				$data['type'] = "image";
 			}
 			
-        	$create = $this->model_messaging->create($data);
+        	$create = $this->model_messaging->create($data);	
 			
 			if($create == true) {
         		$this->session->set_flashdata('success', 'Successfully created');

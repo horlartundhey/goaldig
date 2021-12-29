@@ -42,7 +42,7 @@ class Admin extends CI_Controller {
 		
         public function view($page = 'dashboard',$param2='',$param3=''){
 			 if ($this->session->userdata('admin_login') != 1)
-              $this->loadUrl('home');
+              $this->loadUrl('index');
 
 				
 				$data = array('page'=>$page);

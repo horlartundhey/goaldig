@@ -54,6 +54,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 //$route['(:any)/(:any)'] = 'users/view/$1/$2';
 //$route['(:any)/(:any)/(:any)'] = 'users/view/$1/$2/$3';
 
+
+$route['index'] = 'users/home';
+
 $route['edit/(:any)'] = 'goals/edit/$1';
 $route['create'] = 'goals/create';
 $route['auth/login'] = 'login/ajax_login';
@@ -66,7 +69,7 @@ $route['home'] = 'Messaging/index';
 $route['membership'] = 'users/membership';
 $route['get_result'] = 'users/get_result';
 $route['logout'] = 'login/logout';
-$route['index'] = 'users/home';
+
 
 
 

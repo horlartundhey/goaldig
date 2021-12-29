@@ -444,10 +444,11 @@
 	<section >
 		<div class="feature-photo">
 			<figure>
-			<?php if(file_exists("resources/cover/_covers/".$user['header'])){?>
+			<?php if(isset($user['header']) && $user['header']!="" && 
+			file_exists("resources/cover/_covers/".$user['header'])){?>
 					<img src="resources/cover/_covers/<?=$user['header']?>?v=<?=time()?>" alt="" style="height: 30%;">
 								<?php }else{ ?>
-								<img src="social/images/resources/timeline-1.jpg" alt="">
+								<img src="<?php echo $this->config->config['base_url']?>social/images/resources/breadcum.png" alt="">
 								<?php } ?>
 			</figure>
 			<div class="add-btn">				
@@ -465,10 +466,12 @@
 					<div class="col-lg-2 col-sm-3">
 						<div class="user-avatar">
 							<figure>
-								<?php if(file_exists("resources/profile/_profiles/".$user['profile_picture'])){?>
-								<img src="resources/profile/_profiles/<?=$user['profile_picture']?>?v=<?=time()?>" alt="" style="width: 100%;">
+							<?php if(isset($user['profile_picture']) && $user['profile_picture']!="" &&
+file_exists("resources/profile/_profiles/".$user['profile_picture'])){?>
+								<img src="
+resources/profile/_profiles/<?=$user['profile_picture']?>?v=<?=time()?>" alt="">
 								<?php }else{ ?>
-								<img src="social/images/resources/user-avatar.jpg" alt="">
+								<img src="<?php echo $this->config->config['base_url']?>social/images/resources/noimage.jpg" alt="">
 								<?php } ?>
 								<form class="edit-phto" enctype="multipart/form-data"  name="picture_form" action="<?php echo $this->config->config['base_url']?>Profile/updatepic" id="picture_form" method="post">
 									<i class="fa fa-camera-retro"></i>

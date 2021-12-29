@@ -42,7 +42,7 @@ class Users extends CI_Controller {
 		
         public function view($page = 'dashboard',$param2='',$param3=''){
 			 if ($this->session->userdata('user_login') != 1)
-              $this->loadUrl('home');
+              $this->loadUrl('index');
 
 				$data = array('page'=>$page);
 				
@@ -79,7 +79,7 @@ class Users extends CI_Controller {
 			if ($this->session->userdata('user_login') != 1)
 				$this->load->view('index', $data);
 			else	
-				$this->load->view('users/index', $data);
+				$this->load->view('index', $data);
 				
         }
 		public function membership(){
