@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="" />
     <meta name="keywords" content="" />
-	<title>Winku Social Network Toolkit</title>
-    <link rel="icon" href="images/fav.png" type="image/png" sizes="16x16"> 
+	<title>Goal Digger Network</title>
+    <link rel="icon" href="<?php echo $this->config->config['base_url']?>social/<?php echo $this->config->config['base_url']?>./social/images/fav.png" type="image/png" sizes="16x16"> 
     
     <link rel="stylesheet" href="<?php echo $this->config->config['base_url']?>social/css/main.min.css">
     <link rel="stylesheet" href="<?php echo $this->config->config['base_url']?>social/css/style.css">
@@ -16,7 +16,7 @@
 
 </head>
 <body>
-<!--<div class="se-pre-con"></div>-->
+<!--<div class="se-pre-con"></div>-->	
 <div class="theme-layout">
 	
 	<div class="responsive-header">
@@ -209,7 +209,7 @@
 	
 	<div class="topbar stick">
 		<div class="logo">
-			<a title="" href="newsfeed.html"><img src="images/logo.png" alt=""></a>
+		<a title="" href="<?php echo $this->config->config['base_url']?>home"><img src="<?php echo $this->config->config['base_url']?>social/images/goaldig1.png" width="15%" alt=""></a>
 		</div>
 		
 		<div class="top-area">
@@ -435,12 +435,10 @@
 		</div>
 	</div><!-- topbar -->
 	
-	<section>
+	<section >
 		<div class="feature-photo">
-			<figure><img src="images/resources/timeline-1.jpg" alt=""></figure>
-			<div class="add-btn">
-				<span>1205 followers</span>
-				<a href="#" title="" data-ripple="">Add Friend</a>
+			<figure><img src="social/images/resources/timeline-1.jpg" alt=""></figure>
+			<div class="add-btn">				
 			</div>
 			<form class="edit-phto">
 				<i class="fa fa-camera-retro"></i>
@@ -454,7 +452,7 @@
 					<div class="col-lg-2 col-sm-3">
 						<div class="user-avatar">
 							<figure>
-								<img src="images/resources/user-avatar.jpg" alt="">
+								<img src="social/images/resources/user-avatar.jpg" alt="">
 								<form class="edit-phto">
 									<i class="fa fa-camera-retro"></i>
 									<label class="fileContainer">
@@ -466,20 +464,14 @@
 						</div>
 					</div>
 					<div class="col-lg-10 col-sm-9">
-						<div class="timeline-info">
+						<div class="timeline-info">						
 							<ul>
 								<li class="admin-name">
 								  <h5><?=$user['name']?></h5>
 								</li>
-								<li>
-									<a class="" href="time-line.html" title="" data-ripple="">time line</a>
-									<a class="" href="timeline-photos.html" title="" data-ripple="">Photos</a>
-									<a class="" href="timeline-videos.html" title="" data-ripple="">Videos</a>
-									<a class="" href="timeline-friends.html" title="" data-ripple="">Friends</a>
-									<a class="" href="groups.html" title="" data-ripple="">Groups</a>
-									<a class="" href="about.html" title="" data-ripple="">about</a>
-									<a class="active" href="#" title="" data-ripple="">more</a>
-								</li>
+								<!-- <li>
+									<h5><?=$user['name']?></h5>
+								</li> -->
 							</ul>
 						</div>
 					</div>
@@ -503,26 +495,21 @@
 										<div class="widget stick-widget">
 											<h4 class="widget-title">Edit info</h4>
 											<ul class="naves">
-												<li>
-													<i class="ti-info-alt"></i>
-													<a href="edit-profile-basic.html" title="">Basic info</a>
-												</li>
-												<li>
-													<i class="ti-mouse-alt"></i>
-													<a href="edit-work-eductation.html" title="">Education & Work</a>
-												</li>
-												<li>
-													<i class="ti-heart"></i>
-													<a href="edit-interest.html" title="">My interests</a>
-												</li>
-												<li>
-													<i class="ti-settings"></i>
-													<a href="edit-account-setting.html" title="">account setting</a>
-												</li>
-												<li>
-													<i class="ti-lock"></i>
-													<a href="edit-password.html" title="">change password</a>
-												</li>
+											<li>
+												<i class="ti-info-alt"></i>
+												<a href="<?php echo $this->config->config['base_url']?>Profile" title="">Basic info</a>
+											</li>
+											
+											
+											<li>
+												<i class="ti-lock"></i>
+												<a href="<?php echo $this->config->config['base_url']?>Profile/changePassword" title="">change password</a>
+											</li>
+
+											<li>
+												<i class="ti-settings"></i>
+												<a href="#" onclick="logout()" title=""><i class="ti-power-off"></i>log out</a>
+											</li>
 											</ul>
 										</div><!-- settings widget -->										
 									</aside>
@@ -564,54 +551,11 @@
 												<i class="fa fa-ellipsis-h"></i>
 											</div>
 											<div class="banermeta">
-												<p>
-													create your own favourit page.
-												</p>
-												<span>like them all</span>
-												<a href="#" title="" data-ripple="">start now!</a>
+												<p>Build your Own Profile. </p>																							
 											</div>
 										</div>											
 										</div>
-										<div class="widget stick-widget">
-											<h4 class="widget-title">Who's follownig</h4>
-											<ul class="followers">
-												<li>
-													<figure><img src="images/resources/friend-avatar2.jpg" alt=""></figure>
-													<div class="friend-meta">
-														<h4><a href="time-line.html" title="">Kelly Bill</a></h4>
-														<a href="#" title="" class="underline">Add Friend</a>
-													</div>
-												</li>
-												<li>
-													<figure><img src="images/resources/friend-avatar4.jpg" alt=""></figure>
-													<div class="friend-meta">
-														<h4><a href="time-line.html" title="">Issabel</a></h4>
-														<a href="#" title="" class="underline">Add Friend</a>
-													</div>
-												</li>
-												<li>
-													<figure><img src="images/resources/friend-avatar6.jpg" alt=""></figure>
-													<div class="friend-meta">
-														<h4><a href="time-line.html" title="">Andrew</a></h4>
-														<a href="#" title="" class="underline">Add Friend</a>
-													</div>
-												</li>
-												<li>
-													<figure><img src="images/resources/friend-avatar8.jpg" alt=""></figure>
-													<div class="friend-meta">
-														<h4><a href="time-line.html" title="">Sophia</a></h4>
-														<a href="#" title="" class="underline">Add Friend</a>
-													</div>
-												</li>
-												<li>
-													<figure><img src="images/resources/friend-avatar3.jpg" alt=""></figure>
-													<div class="friend-meta">
-														<h4><a href="time-line.html" title="">Allen</a></h4>
-														<a href="#" title="" class="underline">Add Friend</a>
-													</div>
-												</li>
-											</ul>
-										</div><!-- who's following -->
+										
 									</aside>
 								</div><!-- sidebar -->
 							</div>	
@@ -621,84 +565,26 @@
 			</div>	
 		</section>
 
-	<div class="bottombar">
+		<div class="bottombar">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<span class="copyright"><a target="_blank" href="https://www.templateshub.net">Templates Hub</a></span>
-					<i><img src="images/credit-cards.png" alt=""></i>
+					<span class="copyright"><a target="_blank" href="<?php echo $this->config->config['base_url']?>home">Goal Digger</a></span>
+					<i><img src="<?php echo $this->config->config['base_url']?>social/images/goaldig2.png" alt="" width="10%"></i>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
-	<div class="side-panel">
-			<h4 class="panel-title">General Setting</h4>
-			<form method="post">
-				<div class="setting-row">
-					<span>use night mode</span>
-					<input type="checkbox" id="nightmode1"/> 
-					<label for="nightmode1" data-on-label="ON" data-off-label="OFF"></label>
-				</div>
-				<div class="setting-row">
-					<span>Notifications</span>
-					<input type="checkbox" id="switch22" /> 
-					<label for="switch22" data-on-label="ON" data-off-label="OFF"></label>
-				</div>
-				<div class="setting-row">
-					<span>Notification sound</span>
-					<input type="checkbox" id="switch33" /> 
-					<label for="switch33" data-on-label="ON" data-off-label="OFF"></label>
-				</div>
-				<div class="setting-row">
-					<span>My profile</span>
-					<input type="checkbox" id="switch44" /> 
-					<label for="switch44" data-on-label="ON" data-off-label="OFF"></label>
-				</div>
-				<div class="setting-row">
-					<span>Show profile</span>
-					<input type="checkbox" id="switch55" /> 
-					<label for="switch55" data-on-label="ON" data-off-label="OFF"></label>
-				</div>
-			</form>
-			<h4 class="panel-title">Account Setting</h4>
-			<form method="post">
-				<div class="setting-row">
-					<span>Sub users</span>
-					<input type="checkbox" id="switch66" /> 
-					<label for="switch66" data-on-label="ON" data-off-label="OFF"></label>
-				</div>
-				<div class="setting-row">
-					<span>personal account</span>
-					<input type="checkbox" id="switch77" /> 
-					<label for="switch77" data-on-label="ON" data-off-label="OFF"></label>
-				</div>
-				<div class="setting-row">
-					<span>Business account</span>
-					<input type="checkbox" id="switch88" /> 
-					<label for="switch88" data-on-label="ON" data-off-label="OFF"></label>
-				</div>
-				<div class="setting-row">
-					<span>Show me online</span>
-					<input type="checkbox" id="switch99" /> 
-					<label for="switch99" data-on-label="ON" data-off-label="OFF"></label>
-				</div>
-				<div class="setting-row">
-					<span>Delete history</span>
-					<input type="checkbox" id="switch101" /> 
-					<label for="switch101" data-on-label="ON" data-off-label="OFF"></label>
-				</div>
-				<div class="setting-row">
-					<span>Expose author name</span>
-					<input type="checkbox" id="switch111" /> 
-					<label for="switch111" data-on-label="ON" data-off-label="OFF"></label>
-				</div>
-			</form>
-		</div><!-- side panel -->	
-	
+</div>			
+	<script>
+		function logout(){
+			location.href="<?php echo $this->config->config['base_url']?>logout";
+		}
+	</script>
 	<script src="<?php echo $this->config->config['base_url']?>social/js/main.min.js"></script>
 	<script src="<?php echo $this->config->config['base_url']?>social/js/script.js"></script>
+	<script src="<?php echo $this->config->config['base_url']?>social/js/map-init.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8c55_YHLvDHGACkQscgbGLtLRdxBDCfI"></script>
 
 </body>	
-
 </html>

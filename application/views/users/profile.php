@@ -209,7 +209,7 @@
 	
 	<div class="topbar stick">
 		<div class="logo">
-			<a title="" href="newsfeed.html"><img src="images/logo.png" alt=""></a>
+		<a title="" href="<?php echo $this->config->config['base_url']?>home"><img src="<?php echo $this->config->config['base_url']?>social/images/goaldig1.png" width="15%" alt=""></a>
 		</div>
 		
 		<div class="top-area">
