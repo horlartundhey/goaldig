@@ -87,9 +87,9 @@
 			<?php if(isset($user['profile_picture']) && $user['profile_picture']!="" &&
 file_exists("resources/profile/_profiles/".$user['profile_picture'])){?>
 								<img src="
-resources/profile/_profiles/<?=$user['profile_picture']?>?v=<?=time()?>" alt="" style="width:60%;">
+resources/profile/_profiles/<?=$user['profile_picture']?>?v=<?=time()?>" alt="" style="width:48px">
 								<?php }else{ ?>
-								<img src="<?php echo $this->config->config['base_url']?>social/images/resources/noimage.jpg"  style="width:40%;" alt="">
+								<img src="<?php echo $this->config->config['base_url']?>social/images/resources/noimage.jpg"  style="width:48px;" alt="">
 								<?php } ?>
 				<span class="status f-online"></span>
 				<div class="user-setting">					
