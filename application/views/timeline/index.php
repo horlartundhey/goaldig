@@ -336,7 +336,15 @@ resources/profile/_profiles/<?=$users[$post['user_id']]
 										<h4 class="widget-title">Edit Profile</h4>	
 										<div class="your-page">
 											<figure>
-												<a href="<?php echo $this->config->config['base_url']?>Profile" title=""><img src="<?php echo $this->config->config['base_url']?>social/images/resources/friend-avatar9.jpg" alt=""></a>
+												<a href="<?php echo $this->config->config['base_url']?>Profile" title="">
+												<?php if(isset($user['profile_picture']) && $user['profile_picture']!="" &&
+file_exists("resources/profile/_profiles/".$user['profile_picture'])){?>
+								<img src="
+resources/profile/_profiles/<?=$user['profile_picture']?>?v=<?=time()?>" alt="">
+								<?php }else{ ?>
+								<img src="<?php echo $this->config->config['base_url']?>social/images/resources/noimage.jpg" alt="">
+								<?php } ?>
+											</a>
 											</figure>
 											<div class="page-meta">
 												<a href="<?php echo $this->config->config['base_url']?>Profile" title="" class="underline">My Profile</a>												
