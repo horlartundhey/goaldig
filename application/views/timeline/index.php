@@ -87,9 +87,9 @@
 			<?php if(isset($user['profile_picture']) && $user['profile_picture']!="" &&
 file_exists("resources/profile/_profiles/".$user['profile_picture'])){?>
 								<img src="
-resources/profile/_profiles/<?=$user['profile_picture']?>?v=<?=time()?>" alt="" style="width:60%;">
+resources/profile/_profiles/<?=$user['profile_picture']?>?v=<?=time()?>" alt="" style="width:48px">
 								<?php }else{ ?>
-								<img src="<?php echo $this->config->config['base_url']?>social/images/resources/noimage.jpg"  style="width:40%;" alt="">
+								<img src="<?php echo $this->config->config['base_url']?>social/images/resources/noimage.jpg"  style="width:48px;" alt="">
 								<?php } ?>
 				<span class="status f-online"></span>
 				<div class="user-setting">					
@@ -104,7 +104,7 @@ resources/profile/_profiles/<?=$user['profile_picture']?>?v=<?=time()?>" alt="" 
 			<ul class="left-menu">
 				<!-- <li><a href="./social/insights.html" title="Dashboard" data-toggle="tooltip" data-placement="right"><i class="ti-magnet"></i></a></li>				 -->
 				<li><a href="<?php echo $this->config->config['base_url']?>home" title="News feed" data-toggle="tooltip" data-placement="right"><i class="fa fa-star-o"></i></a></li>
-				<li><a href="./social/forums-category.html" title="Resources Center" data-toggle="tooltip" data-placement="right"><i class="ti-stats-up"></i></a></li>
+				<li><a href="<?php echo $this->config->config['base_url']?>ResourceCenter" title="Resources Center" data-toggle="tooltip" data-placement="right"><i class="ti-stats-up"></i></a></li>
 				<li><a href="<?php echo $this->config->config['base_url']?>goals" title="Set Goals" data-toggle="tooltip" data-placement="right"><i class="ti-import"></i></a></li>
 				<!-- <li><a href="./social/forum-create-topic.html" title="Mentoring Session" data-toggle="tooltip" data-placement="right"><i class="ti-comment-alt"></i></a></li> -->
 				<li><a href="<?php echo $this->config->config['base_url']?>Profile" title="Profile Setting" data-toggle="tooltip" data-placement="right"><i class="ti-panel"></i></a></li>
@@ -301,23 +301,7 @@ resources/profile/_profiles/<?=$users[$post['user_id']]
 													<div class="post-comt-box">
 														<form  name="form_<?=$post['post_id']?>" name="form_<?=$post['post_id']?>" action="<?php echo $this->config->config['base_url']?>Messaging/createcomment/<?=$post['post_id']?>" method="post">
 															<textarea id="<?=$post['post_id']?>" name="comment" placeholder="Post your comment"></textarea>
-															<!-- <div class="add-smiles">
-																<span class="em em-expressionless" title="add icon"></span>
-															</div>
-															<div class="smiles-bunch">
-																<i class="em em---1"></i>
-																<i class="em em-smiley"></i>
-																<i class="em em-anguished"></i>
-																<i class="em em-laughing"></i>
-																<i class="em em-angry"></i>
-																<i class="em em-astonished"></i>
-																<i class="em em-blush"></i>
-																<i class="em em-disappointed"></i>
-																<i class="em em-worried"></i>
-																<i class="em em-kissing_heart"></i>
-																<i class="em em-rage"></i>
-																<i class="em em-stuck_out_tongue"></i>
-															</div> -->
+															
 															<button type="submit"></button>
 														</form>	
 													</div>
