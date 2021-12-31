@@ -104,7 +104,7 @@ resources/profile/_profiles/<?=$user['profile_picture']?>?v=<?=time()?>" alt="" 
 			<ul class="left-menu">
 				<!-- <li><a href="./social/insights.html" title="Dashboard" data-toggle="tooltip" data-placement="right"><i class="ti-magnet"></i></a></li>				 -->
 				<li><a href="<?php echo $this->config->config['base_url']?>home" title="News feed" data-toggle="tooltip" data-placement="right"><i class="fa fa-star-o"></i></a></li>
-				<li><a href="./social/forums-category.html" title="Resources Center" data-toggle="tooltip" data-placement="right"><i class="ti-stats-up"></i></a></li>
+				<li><a href="<?php echo $this->config->config['base_url']?>ResourceCenter" title="Resources Center" data-toggle="tooltip" data-placement="right"><i class="ti-stats-up"></i></a></li>
 				<li><a href="<?php echo $this->config->config['base_url']?>goals" title="Set Goals" data-toggle="tooltip" data-placement="right"><i class="ti-import"></i></a></li>
 				<!-- <li><a href="./social/forum-create-topic.html" title="Mentoring Session" data-toggle="tooltip" data-placement="right"><i class="ti-comment-alt"></i></a></li> -->
 				<li><a href="<?php echo $this->config->config['base_url']?>Profile" title="Profile Setting" data-toggle="tooltip" data-placement="right"><i class="ti-panel"></i></a></li>
