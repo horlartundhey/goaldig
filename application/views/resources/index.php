@@ -61,13 +61,13 @@
 	
 	<div class="topbar transparent">
 		<div class="logo">
-			<a title="" href="index.html"><img src="<?php echo $this->config->config['base_url']?>social/images/goaldig1.png" width="15%" alt=""></a>
+			<a title="" href="<?php echo $this->config->config['base_url']?>home"><img src="<?php echo $this->config->config['base_url']?>social/images/goaldig1.png" width="15%" alt=""></a>
 		</div>			
 	</div><!-- topbar transparent header -->
 	
 	<section>
 		<div class="ext-gap bluesh high-opacity">
-			<div class="content-bg-wrap" style="background: url(images/resources/animated-bg2.png)"></div>
+			<div class="content-bg-wrap" style="background: url(<?php echo $this->config->config['base_url']?>social/images/resources/animated-bg2.png)"></div>
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-lg-12">
@@ -195,7 +195,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<span class="copyright"><a target="_blank" href="https://www.templateshub.net">Goal Digger</a></span>
+					<span class="copyright"><a target="_blank" href="<?php echo $this->config->config['base_url']?>home">Goal Digger</a></span>
 					<i><img src="<?php echo $this->config->config['base_url']?>social/images/goaldig2.png" alt="" width="10%"></i>
 				</div>
 			</div>

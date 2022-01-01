@@ -61,7 +61,7 @@
                         <a href="index.html" class="brand"><img src="<?=$this->config->config['base_url']?>assets/images/goaldig1.png" alt="img" width="25%"></a>
                         <ul class="desktop-menu">
 
-                            <li><a class="active" href="#home">Home</a>                                
+                            <li><a href="<?=$this->config->config['base_url']?>index">Home</a></li>                               
                             </li>                            
                             <li><a href="#about">About Us</a></li>
                             <li><a href="#focus">Focus</a>                               
@@ -82,7 +82,7 @@
                 </nav>
                 <div class="mobile-menu">
                     <ul>
-                        <li><a class="active" href="#home">Home</a></li>                        
+                    <li><a href="<?=$this->config->config['base_url']?>index">Home</a></li>
                         <li><a href="#about">About Us</a></li>
                         <li><a href="#focus">focus</a></li>
                         <li><a href="#event">Events</a></li>
@@ -133,7 +133,7 @@
                                     <li><span><i class="fal fa-check"></i></span>Annual Goal Setting Workshop</li>
                                     <li><span><i class="fal fa-check"></i></span>Quaterly KSS with Industry Experts</li>
                                 </ul>
-                                <a href="" class="buy-now">Sign Up Now</a>
+                                <a href="https://flutterwave.com/pay/nlo1wcxxxqg5" class="buy-now">Sign Up Now</a>
                             </div>
                         </div>
                         <div class="col-lg-6">
@@ -158,7 +158,7 @@
                                     <li><span><i class="fal fa-check"></i></span>Annual Goal Book (5K for Gold members, 6k for others)</li>
                                     <!-- <li><span><i class="fal fa-check"></i></span>Quaterly Webinars with Industry Experts</li> -->
                                 </ul>
-                                <a href="" class="buy-now">Sign Up Now</a>
+                                <a href="https://flutterwave.com/pay/nlo1wcxxxqg5" class="buy-now">Sign Up Now</a>
                             </div>
                         </div>
                         

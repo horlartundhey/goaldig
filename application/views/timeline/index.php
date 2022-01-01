@@ -42,7 +42,7 @@
 			</form>
 		</div>
 		<nav id="menu" class="res-menu">
-			<ul>
+			<ul>				
 				<li>
 					<ul>
 						<li><a href="#" title="">Home Social</a></li>
@@ -382,7 +382,7 @@ resources/profile/_profiles/<?=$user['profile_picture']?>?v=<?=time()?>" alt="">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<span class="copyright"><a target="_blank" href="https://www.templateshub.net">Goal Digger</a></span>
+					<span class="copyright"><a target="_blank" href="<?php echo $this->config->config['base_url']?>home">Goal Digger</a></span>
 					<i><img src="<?php echo $this->config->config['base_url']?>social/images/goaldig2.png" alt="" width="10%"></i>
 				</div>
 			</div>
