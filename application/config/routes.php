@@ -67,6 +67,7 @@ $route['register'] = 'login/register';
 $route['goals'] = 'goals/index';
 $route['home'] = 'Messaging/index';
 $route['membership'] = 'users/membership';
+$route['network'] = 'network/index';
 $route['get_result'] = 'users/get_result';
 $route['logout'] = 'login/logout';
 

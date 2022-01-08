@@ -88,6 +88,13 @@ class Users extends CI_Controller {
 				
 			$this->load->view('membership',$data);
 		}
+
+		public function network(){
+			$data = array();
+			$data["title"] = "Networking is as Important to us as our Goals";
+				
+			$this->load->view('network/index', $data);
+		}
 		
 		
 		function load_data($table){			

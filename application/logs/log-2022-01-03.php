@@ -1,0 +1,89 @@
+<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
+
+ERROR - 2022-01-03 11:25:33 --> Could not find the language line "upload_no_image_selected"
+ERROR - 2022-01-03 11:25:33 --> upload_no_image_selected
+ERROR - 2022-01-03 11:26:11 --> Could not find the language line "upload_no_image_selected"
+ERROR - 2022-01-03 11:26:11 --> upload_no_image_selected
+ERROR - 2022-01-03 11:28:50 --> 404 Page Not Found: Images/resources
+ERROR - 2022-01-03 11:28:50 --> 404 Page Not Found: Images/resources
+ERROR - 2022-01-03 11:28:50 --> 404 Page Not Found: Images/resources
+ERROR - 2022-01-03 11:28:50 --> 404 Page Not Found: Images/resources
+ERROR - 2022-01-03 11:28:50 --> 404 Page Not Found: Images/resources
+ERROR - 2022-01-03 11:28:50 --> 404 Page Not Found: Images/resources
+ERROR - 2022-01-03 11:28:50 --> 404 Page Not Found: Images/resources
+ERROR - 2022-01-03 11:28:50 --> 404 Page Not Found: Images/resources
+ERROR - 2022-01-03 11:28:50 --> 404 Page Not Found: Images/resources
+ERROR - 2022-01-03 11:28:50 --> 404 Page Not Found: Images/resources
+ERROR - 2022-01-03 11:28:50 --> 404 Page Not Found: Images/resources
+ERROR - 2022-01-03 11:28:50 --> 404 Page Not Found: Images/resources
+ERROR - 2022-01-03 11:29:20 --> 404 Page Not Found: Edit/images
+ERROR - 2022-01-03 11:29:20 --> 404 Page Not Found: Edit/images
+ERROR - 2022-01-03 11:29:20 --> 404 Page Not Found: Edit/images
+ERROR - 2022-01-03 11:29:20 --> 404 Page Not Found: Edit/images
+ERROR - 2022-01-03 11:29:20 --> 404 Page Not Found: Edit/images
+ERROR - 2022-01-03 11:29:20 --> 404 Page Not Found: Edit/images
+ERROR - 2022-01-03 11:29:20 --> 404 Page Not Found: Edit/images
+ERROR - 2022-01-03 11:29:20 --> 404 Page Not Found: Edit/images
+ERROR - 2022-01-03 11:29:21 --> 404 Page Not Found: Edit/images
+ERROR - 2022-01-03 11:29:21 --> 404 Page Not Found: Edit/images
+ERROR - 2022-01-03 11:29:21 --> 404 Page Not Found: Edit/images
+ERROR - 2022-01-03 11:29:21 --> 404 Page Not Found: Edit/images
+ERROR - 2022-01-03 11:29:31 --> 404 Page Not Found: Edit/images
+ERROR - 2022-01-03 11:29:31 --> 404 Page Not Found: Edit/images
+ERROR - 2022-01-03 11:29:31 --> 404 Page Not Found: Edit/images
+ERROR - 2022-01-03 11:29:31 --> 404 Page Not Found: Edit/images
+ERROR - 2022-01-03 11:29:31 --> 404 Page Not Found: Edit/images
+ERROR - 2022-01-03 11:29:31 --> 404 Page Not Found: Edit/images
+ERROR - 2022-01-03 11:29:31 --> 404 Page Not Found: Edit/images
+ERROR - 2022-01-03 11:29:31 --> 404 Page Not Found: Edit/images
+ERROR - 2022-01-03 11:29:31 --> 404 Page Not Found: Edit/images
+ERROR - 2022-01-03 11:29:31 --> 404 Page Not Found: Edit/images
+ERROR - 2022-01-03 11:29:31 --> 404 Page Not Found: Edit/images
+ERROR - 2022-01-03 11:29:31 --> 404 Page Not Found: Edit/images
+ERROR - 2022-01-03 11:29:40 --> 404 Page Not Found: Edit/images
+ERROR - 2022-01-03 11:29:40 --> 404 Page Not Found: Edit/images
+ERROR - 2022-01-03 11:29:41 --> 404 Page Not Found: Edit/images
+ERROR - 2022-01-03 11:29:41 --> 404 Page Not Found: Edit/images
+ERROR - 2022-01-03 11:29:41 --> 404 Page Not Found: Edit/images
+ERROR - 2022-01-03 11:29:41 --> 404 Page Not Found: Edit/images
+ERROR - 2022-01-03 11:29:41 --> 404 Page Not Found: Edit/images
+ERROR - 2022-01-03 11:29:41 --> 404 Page Not Found: Edit/images
+ERROR - 2022-01-03 11:29:41 --> 404 Page Not Found: Edit/images
+ERROR - 2022-01-03 11:29:41 --> 404 Page Not Found: Edit/images
+ERROR - 2022-01-03 11:29:41 --> 404 Page Not Found: Edit/images
+ERROR - 2022-01-03 11:29:41 --> 404 Page Not Found: Edit/images
+ERROR - 2022-01-03 11:29:49 --> 404 Page Not Found: Edit/images
+ERROR - 2022-01-03 11:29:49 --> 404 Page Not Found: Edit/images
+ERROR - 2022-01-03 11:29:49 --> 404 Page Not Found: Edit/images
+ERROR - 2022-01-03 11:29:49 --> 404 Page Not Found: Edit/images
+ERROR - 2022-01-03 11:29:49 --> 404 Page Not Found: Edit/images
+ERROR - 2022-01-03 11:29:49 --> 404 Page Not Found: Edit/images
+ERROR - 2022-01-03 11:29:49 --> 404 Page Not Found: Edit/images
+ERROR - 2022-01-03 11:29:49 --> 404 Page Not Found: Edit/images
+ERROR - 2022-01-03 11:29:49 --> 404 Page Not Found: Edit/images
+ERROR - 2022-01-03 11:29:49 --> 404 Page Not Found: Edit/images
+ERROR - 2022-01-03 11:29:49 --> 404 Page Not Found: Edit/images
+ERROR - 2022-01-03 11:29:49 --> 404 Page Not Found: Edit/images
+ERROR - 2022-01-03 11:30:07 --> 404 Page Not Found: Images/resources
+ERROR - 2022-01-03 11:30:07 --> 404 Page Not Found: Images/resources
+ERROR - 2022-01-03 11:30:07 --> 404 Page Not Found: Images/resources
+ERROR - 2022-01-03 11:30:07 --> 404 Page Not Found: Images/resources
+ERROR - 2022-01-03 11:30:07 --> 404 Page Not Found: Images/resources
+ERROR - 2022-01-03 11:30:07 --> 404 Page Not Found: Images/resources
+ERROR - 2022-01-03 11:30:07 --> 404 Page Not Found: Images/resources
+ERROR - 2022-01-03 11:30:07 --> 404 Page Not Found: Images/resources
+ERROR - 2022-01-03 11:30:07 --> 404 Page Not Found: Images/resources
+ERROR - 2022-01-03 11:30:07 --> 404 Page Not Found: Images/resources
+ERROR - 2022-01-03 11:30:07 --> 404 Page Not Found: Images/resources
+ERROR - 2022-01-03 11:30:27 --> 404 Page Not Found: Images/resources
+ERROR - 2022-01-03 11:30:27 --> 404 Page Not Found: Images/resources
+ERROR - 2022-01-03 11:30:27 --> 404 Page Not Found: Images/resources
+ERROR - 2022-01-03 11:30:27 --> 404 Page Not Found: Images/resources
+ERROR - 2022-01-03 11:30:27 --> 404 Page Not Found: Images/resources
+ERROR - 2022-01-03 11:30:27 --> 404 Page Not Found: Images/resources
+ERROR - 2022-01-03 11:30:27 --> 404 Page Not Found: Images/resources
+ERROR - 2022-01-03 11:32:33 --> Severity: Notice --> Array to string conversion C:\xampp\htdocs\goaldiga\application\controllers\Profile.php 282
+ERROR - 2022-01-03 11:32:33 --> Severity: Notice --> Array to string conversion C:\xampp\htdocs\goaldiga\application\controllers\Profile.php 282
+ERROR - 2022-01-03 11:37:01 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+ERROR - 2022-01-03 11:37:02 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+ERROR - 2022-01-03 11:37:03 --> 404 Page Not Found: Assets/css
