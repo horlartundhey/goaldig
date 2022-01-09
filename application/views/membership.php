@@ -115,52 +115,28 @@
               <div class="tab-content" id="pills-tabContent1">
                 <div class="tab-pane fade show active" id="pills-home1" style="overflow: visible;">
                     <div class="row">
+						<?php foreach($plans as $plan){
+								$features = explode(",",$plan['features']);
+						?>
                         <div class="col-lg-6">
                             <div class="pracing-item ">
                                 <div class="top-left">                                    
                                 </div>
                                 <div class="top-area">
-                                    <img src="<?=$this->config->config['base_url']?>assets/images/icon001.svg" alt="">
-                                    <p>CLASSIC</p>
+                                    <img src="<?=$this->config->config['base_url']?>assets/images/<?=$plan['logo']?>" alt="">
+                                    <p><?=$plan['name']?></p>
                                 </div>
                                 <ul>
-                                    <li><span><i class="fal fa-check"></i></span><strong>N30,000 PER ANNUM</strong></li>
-                                    <li><span><i class="fal fa-check"></i></span>Book Review Sessions</li>
-                                    <li><span><i class="fal fa-check"></i></span>Monthly KSS Sessions</li>
-                                    <li><span><i class="fal fa-check"></i></span>Mentoring Program</li>
-                                    <li><span><i class="fal fa-check"></i></span>Daily Growth Topics</li>
-                                    <li><span><i class="fal fa-check"></i></span>Career Opportunities / Job Links</li>
-                                    <li><span><i class="fal fa-check"></i></span>Annual Goal Setting Workshop</li>
-                                    <li><span><i class="fal fa-check"></i></span>Quaterly KSS with Industry Experts</li>
+                                    <li><span><i class="fal fa-check"></i></span><strong>N<?=number_format($plan['price'],2)?> PER ANNUM</strong></li>
+									<?php foreach($features as $feature){?>
+                                    <li><span><i class="fal fa-check"></i></span><?=$feature?></li>
+                                    <?php } ?>
                                 </ul>
-                                <a href="" class="buy-now">Sign Up Now</a>
+                                <a href="<?=$this->config->config['base_url']?>register?id=<?=$plan['id']?>" class="buy-now">Sign Up Now</a>
                             </div>
                         </div>
-                        <div class="col-lg-6">
-                            <div class="pracing-item active">
-                                <div class="top-left">
-                                    <!-- <p>7.50%</p> -->
-                                </div>
-                                <div class="top-area">
-                                    <img src="<?=$this->config->config['base_url']?>assets/images/icon02.svg" alt="">
-                                    <p>Gold</p>
-                                </div>
-                                <ul>
-                                    <li><span><i class="fal fa-check"></i></span><strong>N70,000 PER ANNUM</strong></li>
-                                    <li><span><i class="fal fa-check"></i></span>Book Review Sessions</li>
-                                    <li><span><i class="fal fa-check"></i></span>Monthly KSS Sessions</li>
-                                    <li><span><i class="fal fa-check"></i></span>Mentoring Program</li>
-                                    <li><span><i class="fal fa-check"></i></span>Daily Growth Topics</li>
-                                    <li><span><i class="fal fa-check"></i></span>Career Opportunities / Job Links</li>
-                                    <li><span><i class="fal fa-check"></i></span>Annual Goal Setting Workshop</li>
-                                    <li><span><i class="fal fa-check"></i></span>Quaterly Webinars with Industry Experts</li>
-                                    <li><span><i class="fal fa-check"></i></span>Annual Workshop (35k for Gold Members, 45k for others)</li>
-                                    <li><span><i class="fal fa-check"></i></span>Annual Goal Book (5K for Gold members, 6k for others)</li>
-                                    <!-- <li><span><i class="fal fa-check"></i></span>Quaterly Webinars with Industry Experts</li> -->
-                                </ul>
-                                <a href="" class="buy-now">Sign Up Now</a>
-                            </div>
-                        </div>
+						<?php } ?>
+                  
                         
                     </div>
                 </div>

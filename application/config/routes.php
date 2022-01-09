@@ -67,6 +67,8 @@ $route['register'] = 'login/register';
 $route['goals'] = 'goals/index';
 $route['home'] = 'Messaging/index';
 $route['membership'] = 'users/membership';
+$route['completed'] = 'users/completed';
+$route['transaction/completed'] = 'users/complete_flutter_transaction';
 $route['get_result'] = 'users/get_result';
 $route['logout'] = 'login/logout';
 

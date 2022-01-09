@@ -36,49 +36,18 @@
 				<div class="login-reg-bg">
 					
 					<div class="log-reg-area regg">
-						<h2 class="log-title">Register</h2>
+						<h2 class="log-title">Registration Successful</h2>
 						<div id="error-box2"></div>
-						<form  method="post" id="registerform"> 
-							<div class="form-group">	
-							  <input type="text" required="required" name="name" id="name" />
-							  <label class="control-label" for="input">First & Last Name</label><i class="mtrl-select"></i>
+							<div class="alert alert-success alert-dismissible" id="error-box2" >
+								<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+								<span aria-hidden="true">×</span></button>
+								<i class="fa fa-warning"></i><b> Registration successfull</b><br/>
+								<a>Your payment has been received</a>
 							</div>
-							<div class="form-group">	
-							  <input type="text" required="required" name="username" id="username1" />
-							  <label class="control-label" for="input">Email</label><i class="mtrl-select"></i>
-							</div>
-							<div class="form-group">	
-							  <input type="password" required="required" name="password" id="password1"/>
-							  <label class="control-label" for="input">Password</label><i class="mtrl-select"></i>
-							</div>
-							<div class="form-group">	
-							  <input type="password" required="required" name="confirmpassword" id="confirm-password"/>
-							  <label class="control-label" for="input">Confirm Password</label><i class="mtrl-select"></i>
-							</div>
-							<div class="form-radio">
-							  <div class="radio">
-								<label>
-								  <input type="radio" name="gender" value="male" checked="checked"/><i class="check-box"></i>Male
-								</label>
-							  </div>
-							  <div class="radio">
-								<label>
-								  <input type="radio"  name="gender" value="female"  /><i class="check-box"></i>Female
-								</label>
-							  </div>
-							</div>
-							
-							<div class="checkbox">
-							  <label>
-								<input type="hidden" name="plan" id="plan" value="<?=$plan_id?>" />
-								<input type="checkbox" checked="checked"/><i class="check-box"></i>Accept Terms & Conditions ?
-							  </label>
-							</div>
-							<a href="#" title="" class="already-have">Already have an account?</a>
 							<div class="submit-btns">
-								<button class="mtr-btn" type="submit"><span>Register</span></button>
+								<a href="<?php echo $this->config->config['base_url']?>login" class="mtr-btn" type="submit"><span>Login to Continue</span></a>
 							</div>
-						</form>
+										
 					</div>
 				</div>
 			</div>
@@ -95,7 +64,7 @@
      <script src="<?php echo $this->config->config['base_url']?>backend/assets/js/pcoded.min.js"></script>
      <script src="<?php echo $this->config->config['base_url']?>backend/assets/js/sweetalert.min.js"></script>
      
-	<script type="text/javascript" src="<?= $this->config->config['base_url']?>js/login.js?v=649"></script>
+	<script type="text/javascript" src="<?= $this->config->config['base_url']?>js/login.js?v=699"></script>
 </body>	
 
 </html>

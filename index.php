@@ -286,6 +286,7 @@ switch (ENVIRONMENT)
 	}
 
 	define('VIEWPATH', $view_folder);
+	define('FLUTTER_SEC_KEY', 'FLWSECK-7b39dc4a1e8ce70d3037a6c03fff42ed-X');
 
 /*
  * --------------------------------------------------------------------

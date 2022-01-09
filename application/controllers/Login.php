@@ -54,10 +54,17 @@ class Login extends CI_Controller {
         if ($this->session->userdata('user_login') == 1)
               $this->redirect($this->config->config['base_url'] . 'Messaging');
 
+		$id = isset($_GET['id'])?$_GET['id']:"";
+		$plan = $this->db->get_where("plans",array('id'=>$id))->row_array();
+		
+		if($plan==null){
+			 $this->redirect($this->config->config['base_url']);
+		}
+		
         $data = array();
 		$data['p'] = isset($_GET["p"])?$_GET["p"]:"";
 		$data['id'] = isset($_GET["id"])?$_GET["id"]:"";
-	
+		$data['plan_id']=$id;
 		$this->load->view('register', $data);
 	 }
 	
@@ -124,21 +131,37 @@ class Login extends CI_Controller {
 		unset($data['confirmpassword']);
 		
 		$exist = $this->db->get_where("users",array('username'=>$data['username']))->row_array();
-		
+		$id = isset($_POST['plan'])?$_POST['plan']:"";
+		$plan = $this->db->get_where("plans",array('id'=>$id))->row_array();
 		//var_dump($data); exit;
+		if($plan==null){
+			$response['status'] = "Invalid plan";
+			echo json_encode($response); exit;
+		}
 		if($exist!=null){
 			$response['status'] = "Username already in use";
 		}else{
 			//Validating login
-			$created = $this->db->insert("users",$data);
-			if ($created){
-				$response['status'] = "success";
-				$response['url'] = $redirect;
+			$data['plan_id'] = $id;
+			$data['type'] = "subscription";
+			$data['amount'] = $plan['price'];
+			
+			//var_dump($data);
+			$url = $this->crud_model->get_flutter_payment_url($data['amount'],$data['username'],$data);
+			$url = json_decode($url,true);
+			//var_dump($url);
+			//$created = $this->db->insert("users",$data);
+			//if ($created){
+				$response['status'] = $url['message'];
+				if(isset($url['url'])){
+					$response['status']="success";
+					$response['url'] = $url['url'];//redirect;
+				}
 				//$response['id'] = $item_id;		
-			}
+			//}
 		}
         //Replying ajax request with validation response
-        echo json_encode($response);
+        echo json_encode($response); exit;
     }
 
 	  //Ajax login function 
