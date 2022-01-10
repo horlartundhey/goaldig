@@ -67,12 +67,11 @@ $route['register'] = 'login/register';
 $route['goals'] = 'goals/index';
 $route['home'] = 'Messaging/index';
 $route['membership'] = 'users/membership';
-<<<<<<< HEAD
+
 $route['completed'] = 'users/completed';
 $route['transaction/completed'] = 'users/complete_flutter_transaction';
-=======
+
 $route['network'] = 'network/index';
->>>>>>> 5b6199109c4a05d57c6479ab38c2189508c6c284
 $route['get_result'] = 'users/get_result';
 $route['logout'] = 'login/logout';
 
