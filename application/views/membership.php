@@ -61,7 +61,7 @@
                         <a href="index.html" class="brand"><img src="<?=$this->config->config['base_url']?>assets/images/goaldig1.png" alt="img" width="25%"></a>
                         <ul class="desktop-menu">
 
-                            <li><a class="active" href="#home">Home</a>                                
+                            <li><a href="<?=$this->config->config['base_url']?>index">Home</a></li>                               
                             </li>                            
                             <li><a href="#about">About Us</a></li>
                             <li><a href="#focus">Focus</a>                               
@@ -82,7 +82,7 @@
                 </nav>
                 <div class="mobile-menu">
                     <ul>
-                        <li><a class="active" href="#home">Home</a></li>                        
+                    <li><a href="<?=$this->config->config['base_url']?>index">Home</a></li>
                         <li><a href="#about">About Us</a></li>
                         <li><a href="#focus">focus</a></li>
                         <li><a href="#event">Events</a></li>
@@ -132,7 +132,36 @@
                                     <li><span><i class="fal fa-check"></i></span><?=$feature?></li>
                                     <?php } ?>
                                 </ul>
+<<<<<<< HEAD
                                 <a href="<?=$this->config->config['base_url']?>register?id=<?=$plan['id']?>" class="buy-now">Sign Up Now</a>
+=======
+                                <a href="https://flutterwave.com/pay/nlo1wcxxxqg5" class="buy-now">Sign Up Now</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="pracing-item active">
+                                <div class="top-left">
+                                    <!-- <p>7.50%</p> -->
+                                </div>
+                                <div class="top-area">
+                                    <img src="<?=$this->config->config['base_url']?>assets/images/icon02.svg" alt="">
+                                    <p>Gold</p>
+                                </div>
+                                <ul>
+                                    <li><span><i class="fal fa-check"></i></span><strong>N70,000 PER ANNUM</strong></li>
+                                    <li><span><i class="fal fa-check"></i></span>Book Review Sessions</li>
+                                    <li><span><i class="fal fa-check"></i></span>Monthly KSS Sessions</li>
+                                    <li><span><i class="fal fa-check"></i></span>Mentoring Program</li>
+                                    <li><span><i class="fal fa-check"></i></span>Daily Growth Topics</li>
+                                    <li><span><i class="fal fa-check"></i></span>Career Opportunities / Job Links</li>
+                                    <li><span><i class="fal fa-check"></i></span>Annual Goal Setting Workshop</li>
+                                    <li><span><i class="fal fa-check"></i></span>Quaterly Webinars with Industry Experts</li>
+                                    <li><span><i class="fal fa-check"></i></span>Annual Workshop (35k for Gold Members, 45k for others)</li>
+                                    <li><span><i class="fal fa-check"></i></span>Annual Goal Book (5K for Gold members, 6k for others)</li>
+                                    <!-- <li><span><i class="fal fa-check"></i></span>Quaterly Webinars with Industry Experts</li> -->
+                                </ul>
+                                <a href="https://flutterwave.com/pay/nlo1wcxxxqg5" class="buy-now">Sign Up Now</a>
+>>>>>>> 5b6199109c4a05d57c6479ab38c2189508c6c284
                             </div>
                         </div>
 						<?php } ?>

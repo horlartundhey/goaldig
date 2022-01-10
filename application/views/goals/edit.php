@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="<?php echo $this->config->config['base_url']?>social/css/style.css">
     <link rel="stylesheet" href="<?php echo $this->config->config['base_url']?>social/css/color.css">
     <link rel="stylesheet" href="<?php echo $this->config->config['base_url']?>social/css/responsive.css">
+	<script src="http://cdn.ckeditor.com/4.17.1/standard/ckeditor.js"></script>
 </head>
 <body>
 <!--<div class="se-pre-con"></div>-->
@@ -242,7 +243,7 @@
 												  <label class="control-label" for="input">Title</label><i class="mtrl-select"></i>
 												</div>
 												<div class="form-group">	
-												  <input type="text"  required="required" value="<?=$goal['description']?>" name="description"/>
+												  <input type="text"   required="required" value="<?=$goal['description']?>" name="description"/>
 												  <label class="control-label" for="input">Description</label><i class="mtrl-select"></i>
 												</div>												
 												<div class="submit-btns">													
@@ -273,6 +274,9 @@
 			location.href="<?php echo $this->config->config['base_url']?>logout";
 		}
 	</script>
+	 <script>
+                CKEDITOR.replace( 'editor1' );
+            </script>
 	<script src="<?php echo $this->config->config['base_url']?>social/js/main.min.js"></script>
 	<script src="<?php echo $this->config->config['base_url']?>social/js/script.js"></script>
 	<script src="<?php echo $this->config->config['base_url']?>social/js/map-init.js"></script>

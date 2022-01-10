@@ -90,6 +90,13 @@ class Users extends CI_Controller {
 			$data['plans'] = $this->db->get("plans")->result_array();
 			$this->load->view('membership',$data);
 		}
+
+		public function network(){
+			$data = array();
+			$data["title"] = "Networking is as Important to us as our Goals";
+				
+			$this->load->view('network/index', $data);
+		}
 		
 		public function completed(){
 			if($this->session->flashdata('completed_message')==null || $this->session->flashdata('completed_message')==""){

@@ -184,13 +184,13 @@ class ResourceCenter extends CI_Controller
 	
 		public function upload_file($type,$key){	
 		//$key = 'media_data';
-        $config['upload_path'] = '/goaldig/resources/'.$type;
+        $config['upload_path'] = '/goaldiga/resources/'.$type;
         
 		if($type=="imageres"){
-			$config['allowed_types'] = 'gif|jpg|png';
-			$config['max_size'] = '1000';
+			$config['allowed_types'] = 'gif|jpg|png|PNG|jpeg';
+			$config['max_size'] = '10000';
 		}else if($type=="documentres"){
-			$config['allowed_types'] = 'mp3|ogg|pdf|doc|docx|';
+			$config['allowed_types'] = 'mp3|ogg|pdf|doc|docx|gif|jpg|png|PNG|jpeg';
 			$config['max_size'] = '1000000';
 		}
 		

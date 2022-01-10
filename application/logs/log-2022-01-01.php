@@ -1,0 +1,32 @@
+<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
+
+ERROR - 2022-01-01 14:48:29 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+ERROR - 2022-01-01 14:48:31 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+ERROR - 2022-01-01 14:48:37 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+ERROR - 2022-01-01 14:48:41 --> 404 Page Not Found: Assets/css
+ERROR - 2022-01-01 15:00:55 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+ERROR - 2022-01-01 15:00:56 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+ERROR - 2022-01-01 15:01:00 --> 404 Page Not Found: Assets/css
+ERROR - 2022-01-01 15:01:43 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+ERROR - 2022-01-01 15:01:44 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+ERROR - 2022-01-01 15:01:45 --> 404 Page Not Found: Assets/css
+ERROR - 2022-01-01 15:03:41 --> 404 Page Not Found: Images/resources
+ERROR - 2022-01-01 15:03:41 --> 404 Page Not Found: Images/resources
+ERROR - 2022-01-01 15:03:41 --> 404 Page Not Found: Images/resources
+ERROR - 2022-01-01 15:03:41 --> 404 Page Not Found: Images/resources
+ERROR - 2022-01-01 15:03:41 --> 404 Page Not Found: Images/resources
+ERROR - 2022-01-01 15:03:41 --> 404 Page Not Found: Images/resources
+ERROR - 2022-01-01 15:03:55 --> 404 Page Not Found: Images/resources
+ERROR - 2022-01-01 15:03:55 --> 404 Page Not Found: Images/resources
+ERROR - 2022-01-01 15:03:55 --> 404 Page Not Found: Images/logo2.png
+ERROR - 2022-01-01 15:03:55 --> 404 Page Not Found: Images/resources
+ERROR - 2022-01-01 15:03:55 --> 404 Page Not Found: Images/resources
+ERROR - 2022-01-01 15:03:55 --> 404 Page Not Found: Images/resources
+ERROR - 2022-01-01 15:03:55 --> 404 Page Not Found: Images/resources
+ERROR - 2022-01-01 15:03:56 --> 404 Page Not Found: Images/resources
+ERROR - 2022-01-01 15:03:56 --> 404 Page Not Found: Images/resources
+ERROR - 2022-01-01 15:03:56 --> 404 Page Not Found: Images/logo2.png
+ERROR - 2022-01-01 15:03:56 --> 404 Page Not Found: Images/resources
+ERROR - 2022-01-01 15:03:56 --> 404 Page Not Found: Images/resources
+ERROR - 2022-01-01 15:03:56 --> 404 Page Not Found: Images/resources
+ERROR - 2022-01-01 15:03:56 --> 404 Page Not Found: Images/resources

@@ -23,36 +23,21 @@
 <!--<div class="se-pre-con"></div>-->
 <div class="theme-layout">
 	
-	<div class="responsive-header">
+<div class="responsive-header">
 		<div class="mh-head first Sticky">
 			<span class="mh-btns-left">
 				<a class="" href="#menu"><i class="fa fa-align-justify"></i></a>
 			</span>
 			<span class="mh-text">
-				<a href="<?php echo $this->config->config['base_url']?>home" title=""><img src="<?php echo $this->config->config['base_url']?>social/images/goaldig1.png" alt=""></a>
-			</span>
-			<span class="mh-btns-right">
-				<a class="fa fa-sliders" href="#shoppingbag"></a>
-			</span>
-		</div>
-		<div class="mh-head second">
-			<form class="mh-form">
-				<input placeholder="search" />
-				<a href="#/" class="fa fa-search"></a>
-			</form>
-		</div>
+				<a href="<?php echo $this->config->config['base_url']?>home"><img src="<?=$this->config->config['base_url']?>assets/images/goaldig1.png" width="25%" alt=""></a>
+			</span>			
+		</div>		
 		<nav id="menu" class="res-menu">
 			<ul>
-				<li>
-					<ul>
-						<li><a href="#" title="">Home Social</a></li>
-						<li><a href="#" title="">Home Social 2</a></li>
-						<li><a href="#" title="">Home Company</a></li>
-						<li><a href="#" title="">Login page</a></li>
-						<li><a href="<?php echo $this->config->config['base_url']?>auth/logout" title="">Logout Page</a></li>
-						<li><a href="#l" title="">news feed</a></li>
-					</ul>
-				</li>
+			<li><a style="" href="<?php echo $this->config->config['base_url']?>home">HOME</a></li>		
+						<li><a href="<?php echo $this->config->config['base_url']?>ResourceCenter" >Resources Center</a></li>
+				<li><a href="<?php echo $this->config->config['base_url']?>goals" >Set Goals</a></li>
+				<li><a href="<?php echo $this->config->config['base_url']?>Profile" >Profile Setting</a></li>
 				
 			</ul>
 		</nav>
@@ -72,16 +57,7 @@
 				</form>
 			</div>
 			<ul class="setting-area">
-				<!-- <li><a href="index.html" title="Home" data-ripple=""><i class="ti-home"></i></a></li> -->			
 				
-				<!-- <li><a href="#" title="Languages" data-ripple=""><i class="fa fa-globe"></i></a>
-					<div class="dropdowns languages">
-						<a href="#" title=""><i class="ti-check"></i>English</a>
-						<a href="#" title="">Arabic</a>
-						<a href="#" title="">Dutch</a>
-						<a href="#" title="">French</a>
-					</div>
-				</li> -->
 			</ul>
 			<div class="user-img">
 			<?php if(isset($user['profile_picture']) && $user['profile_picture']!="" &&
@@ -108,11 +84,11 @@ resources/profile/_profiles/<?=$user['profile_picture']?>?v=<?=time()?>" alt="" 
 				<li><a href="<?php echo $this->config->config['base_url']?>goals" title="Set Goals" data-toggle="tooltip" data-placement="right"><i class="ti-import"></i></a></li>
 				<!-- <li><a href="./social/forum-create-topic.html" title="Mentoring Session" data-toggle="tooltip" data-placement="right"><i class="ti-comment-alt"></i></a></li> -->
 				<li><a href="<?php echo $this->config->config['base_url']?>Profile" title="Profile Setting" data-toggle="tooltip" data-placement="right"><i class="ti-panel"></i></a></li>
-				<!-- <li><a href="faq.html" title="Faq's" data-toggle="tooltip" data-placement="right"><i class="ti-light-bulb"></i></a></li>
-				<li><a href="timeline-friends.html" title="Friends" data-toggle="tooltip" data-placement="right"><i class="ti-themify-favicon"></i></a></li>
+				<li><a href="<?php echo $this->config->config['base_url']?>network" title="Network" data-toggle="tooltip" data-placement="right"><i class="ti-light-bulb"></i></a></li>
+				<!-- <li><a href="timeline-friends.html" title="Friends" data-toggle="tooltip" data-placement="right"><i class="ti-themify-favicon"></i></a></li>
 				<li><a href="widgets.html" title="Widgets" data-toggle="tooltip" data-placement="right"><i class="ti-eraser"></i></a></li>
-				<li><a href="notifications.html" title="Notification" data-toggle="tooltip" data-placement="right"><i class="ti-bookmark-alt"></i></a></li>
-			</ul> -->
+				<li><a href="notifications.html" title="Notification" data-toggle="tooltip" data-placement="right"><i class="ti-bookmark-alt"></i></a></li> -->
+			</ul>
 		</div>
 	</div>	
 	<section>
@@ -301,23 +277,7 @@ resources/profile/_profiles/<?=$users[$post['user_id']]
 													<div class="post-comt-box">
 														<form  name="form_<?=$post['post_id']?>" name="form_<?=$post['post_id']?>" action="<?php echo $this->config->config['base_url']?>Messaging/createcomment/<?=$post['post_id']?>" method="post">
 															<textarea id="<?=$post['post_id']?>" name="comment" placeholder="Post your comment"></textarea>
-															<!-- <div class="add-smiles">
-																<span class="em em-expressionless" title="add icon"></span>
-															</div>
-															<div class="smiles-bunch">
-																<i class="em em---1"></i>
-																<i class="em em-smiley"></i>
-																<i class="em em-anguished"></i>
-																<i class="em em-laughing"></i>
-																<i class="em em-angry"></i>
-																<i class="em em-astonished"></i>
-																<i class="em em-blush"></i>
-																<i class="em em-disappointed"></i>
-																<i class="em em-worried"></i>
-																<i class="em em-kissing_heart"></i>
-																<i class="em em-rage"></i>
-																<i class="em em-stuck_out_tongue"></i>
-															</div> -->
+															
 															<button type="submit"></button>
 														</form>	
 													</div>
@@ -336,7 +296,15 @@ resources/profile/_profiles/<?=$users[$post['user_id']]
 										<h4 class="widget-title">Edit Profile</h4>	
 										<div class="your-page">
 											<figure>
-												<a href="<?php echo $this->config->config['base_url']?>Profile" title=""><img src="<?php echo $this->config->config['base_url']?>social/images/resources/friend-avatar9.jpg" alt=""></a>
+												<a href="<?php echo $this->config->config['base_url']?>Profile" title="">
+												<?php if(isset($user['profile_picture']) && $user['profile_picture']!="" &&
+file_exists("resources/profile/_profiles/".$user['profile_picture'])){?>
+								<img src="
+resources/profile/_profiles/<?=$user['profile_picture']?>?v=<?=time()?>" alt="">
+								<?php }else{ ?>
+								<img src="<?php echo $this->config->config['base_url']?>social/images/resources/noimage.jpg" alt="">
+								<?php } ?>
+											</a>
 											</figure>
 											<div class="page-meta">
 												<a href="<?php echo $this->config->config['base_url']?>Profile" title="" class="underline">My Profile</a>												
@@ -390,7 +358,7 @@ resources/profile/_profiles/<?=$users[$post['user_id']]
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<span class="copyright"><a target="_blank" href="https://www.templateshub.net">Goal Digger</a></span>
+					<span class="copyright"><a target="_blank" href="<?php echo $this->config->config['base_url']?>home">Goal Digger</a></span>
 					<i><img src="<?php echo $this->config->config['base_url']?>social/images/goaldig2.png" alt="" width="10%"></i>
 				</div>
 			</div>

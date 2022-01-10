@@ -32,27 +32,13 @@
 			<span class="mh-text">
 				<a href="index.html" title=""><img src="<?php echo $this->config->config['base_url']?>social/images/goaldig1.png" style="width:30%;" alt=""></a>
 			</span>			
-		</div>
-		<div class="mh-head second">
-			<form class="mh-form">
-				<input placeholder="search" />
-				<a href="#/" class="fa fa-search"></a>
-			</form>
-		</div>
+		</div>		
 		<nav id="menu" class="res-menu">
-			<ul>
-				<li><a href="./social/insights.html" title="Dashboard" data-toggle="tooltip" data-placement="right"><i class="ti-magnet"></i></a></li>
-				<li><a href="#" title="" data-toggle="tooltip" data-placement="right"><i class="fa fa-star-o"></i> News feed</a></li>
-				<li><a href="./social/forums-category.html" title="" data-toggle="tooltip" data-placement="right"><i class="ti-stats-up"></i> Resources Center</a></li>
-				<li><a href="./social/knowledge-base.html" title="" data-toggle="tooltip" data-placement="right"><i class="ti-import"></i> Set 2022 Goals</a></li>
-				<li><a href="./social/forum-create-topic.html" title="" data-toggle="tooltip" data-placement="right"><i class="ti-comment-alt"></i> Be a Mentor</a></li>
-				<li><a href="edit-account-setting.html" title="" data-toggle="tooltip" data-placement="right"><i class="ti-panel"></i> Profile Setting</a></li>
-						<!-- <li><a href="#" title="">Home Social</a></li>
-						<li><a href="#" title="">Home Social 2</a></li>
-						<li><a href="#" title="">Home Company</a></li>
-						<li><a href="#" title="">Login page</a></li>
-						<li><a href="<?php echo $this->config->config['base_url']?>auth/logout" title="">Logout Page</a></li>
-						<li><a href="#l" title="">news feed</a></li> -->					
+		<ul>
+			<li><a style="" href="<?php echo $this->config->config['base_url']?>home">HOME</a></li>		
+						<li><a href="<?php echo $this->config->config['base_url']?>ResourceCenter" >Resources Center</a></li>
+				<li><a href="<?php echo $this->config->config['base_url']?>goals" >Set Goals</a></li>
+				<li><a href="<?php echo $this->config->config['base_url']?>Profile" >Profile Setting</a></li>
 				
 			</ul>
 		</nav>
@@ -61,13 +47,13 @@
 	
 	<div class="topbar transparent">
 		<div class="logo">
-			<a title="" href="index.html"><img src="<?php echo $this->config->config['base_url']?>social/images/goaldig1.png" width="15%" alt=""></a>
+			<a title="" href="<?php echo $this->config->config['base_url']?>home"><img src="<?php echo $this->config->config['base_url']?>social/images/goaldig1.png" width="15%" alt=""></a>
 		</div>			
 	</div><!-- topbar transparent header -->
 	
 	<section>
 		<div class="ext-gap bluesh high-opacity">
-			<div class="content-bg-wrap" style="background: url(images/resources/animated-bg2.png)"></div>
+			<div class="content-bg-wrap" style="background: url(<?php echo $this->config->config['base_url']?>social/images/resources/animated-bg2.png)"></div>
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-lg-12">
@@ -195,7 +181,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<span class="copyright"><a target="_blank" href="https://www.templateshub.net">Goal Digger</a></span>
+					<span class="copyright"><a target="_blank" href="<?php echo $this->config->config['base_url']?>home">Goal Digger</a></span>
 					<i><img src="<?php echo $this->config->config['base_url']?>social/images/goaldig2.png" alt="" width="10%"></i>
 				</div>
 			</div>

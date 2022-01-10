@@ -1,44 +1,307 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 
-ERROR - 2021-12-31 08:26:12 --> 404 Page Not Found: Images/resources
-ERROR - 2021-12-31 08:26:26 --> The upload path does not appear to be valid.
-ERROR - 2021-12-31 08:29:45 --> 404 Page Not Found: Images/resources
-ERROR - 2021-12-31 08:29:59 --> Severity: Notice --> Undefined property: ResourceCenter::$model_resource C:\xampp\htdocs\goaldig\application\controllers\ResourceCenter.php 77
-ERROR - 2021-12-31 08:29:59 --> Severity: error --> Exception: Call to a member function create() on null C:\xampp\htdocs\goaldig\application\controllers\ResourceCenter.php 77
-ERROR - 2021-12-31 08:29:59 --> Severity: Error --> Uncaught TypeError: Argument 1 passed to CI_Exceptions::show_exception() must be an instance of Exception, instance of Error given, called in C:\xampp\htdocs\goaldig\system\core\Common.php on line 658 and defined in C:\xampp\htdocs\goaldig\system\core\Exceptions.php:190
+ERROR - 2021-12-31 12:50:33 --> 404 Page Not Found: Images/resources
+ERROR - 2021-12-31 12:51:47 --> The upload path does not appear to be valid.
+ERROR - 2021-12-31 12:52:14 --> The upload path does not appear to be valid.
+ERROR - 2021-12-31 12:56:23 --> 404 Page Not Found: Images/resources
+ERROR - 2021-12-31 12:56:28 --> 404 Page Not Found: Images/resources
+ERROR - 2021-12-31 12:56:31 --> The upload path does not appear to be valid.
+ERROR - 2021-12-31 12:56:41 --> 404 Page Not Found: Images/resources
+ERROR - 2021-12-31 12:57:02 --> The upload path does not appear to be valid.
+ERROR - 2021-12-31 13:01:19 --> Query error: Table 'goaldig_platform.candidate' doesn't exist - Invalid query: SELECT *
+FROM `candidate`
+ERROR - 2021-12-31 13:01:32 --> Query error: Table 'goaldig_platform.candidate' doesn't exist - Invalid query: SELECT *
+FROM `candidate`
+ERROR - 2021-12-31 13:04:40 --> Severity: error --> Exception: Call to undefined method Users::load_data() C:\xampp\htdocs\goaldiga\application\controllers\Users.php 60
+ERROR - 2021-12-31 13:04:40 --> Severity: Error --> Uncaught TypeError: Argument 1 passed to CI_Exceptions::show_exception() must be an instance of Exception, instance of Error given, called in C:\xampp\htdocs\goaldiga\system\core\Common.php on line 658 and defined in C:\xampp\htdocs\goaldiga\system\core\Exceptions.php:190
 Stack trace:
-#0 C:\xampp\htdocs\goaldig\system\core\Common.php(658): CI_Exceptions->show_exception(Object(Error))
+#0 C:\xampp\htdocs\goaldiga\system\core\Common.php(658): CI_Exceptions->show_exception(Object(Error))
 #1 [internal function]: _exception_handler(Object(Error))
 #2 {main}
-  thrown C:\xampp\htdocs\goaldig\system\core\Exceptions.php 190
-ERROR - 2021-12-31 08:30:55 --> Query error: Unknown column 'title' in 'field list' - Invalid query: INSERT INTO `resources` (`title`, `user_id`, `date_created`, `type`) VALUES ('http://google.com', '6', 'December, 31 2021 08:30', 'text')
-ERROR - 2021-12-31 08:31:42 --> 404 Page Not Found: Images/resources
-ERROR - 2021-12-31 08:32:28 --> 404 Page Not Found: Images/resources
-ERROR - 2021-12-31 08:32:59 --> 404 Page Not Found: Images/resources
-ERROR - 2021-12-31 08:38:41 --> 404 Page Not Found: Images/resources
-ERROR - 2021-12-31 08:39:37 --> 404 Page Not Found: Images/resources
-ERROR - 2021-12-31 08:39:58 --> 404 Page Not Found: Images/resources
-ERROR - 2021-12-31 08:40:17 --> 404 Page Not Found: Images/resources
-ERROR - 2021-12-31 08:41:26 --> 404 Page Not Found: Images/resources
-ERROR - 2021-12-31 08:41:39 --> The upload path does not appear to be valid.
-ERROR - 2021-12-31 08:42:07 --> The upload path does not appear to be valid.
-ERROR - 2021-12-31 08:42:11 --> The upload path does not appear to be valid.
-ERROR - 2021-12-31 08:42:15 --> 404 Page Not Found: Images/resources
-ERROR - 2021-12-31 08:42:25 --> The upload path does not appear to be valid.
-ERROR - 2021-12-31 08:42:49 --> 404 Page Not Found: Images/resources
-ERROR - 2021-12-31 08:45:22 --> 404 Page Not Found: Images/resources
-ERROR - 2021-12-31 08:46:39 --> 404 Page Not Found: Images/resources
-ERROR - 2021-12-31 08:47:06 --> 404 Page Not Found: Images/resources
-ERROR - 2021-12-31 08:47:36 --> 404 Page Not Found: Forum-open-topichtml/index
-ERROR - 2021-12-31 08:49:19 --> 404 Page Not Found: Images/resources
-ERROR - 2021-12-31 08:56:12 --> Severity: error --> Exception: syntax error, unexpected end of file C:\xampp\htdocs\goaldig\application\views\resources\index.php 219
-ERROR - 2021-12-31 08:56:12 --> Severity: Error --> Uncaught TypeError: Argument 1 passed to CI_Exceptions::show_exception() must be an instance of Exception, instance of ParseError given, called in C:\xampp\htdocs\goaldig\system\core\Common.php on line 658 and defined in C:\xampp\htdocs\goaldig\system\core\Exceptions.php:190
-Stack trace:
-#0 C:\xampp\htdocs\goaldig\system\core\Common.php(658): CI_Exceptions->show_exception(Object(ParseError))
-#1 [internal function]: _exception_handler(Object(ParseError))
-#2 {main}
-  thrown C:\xampp\htdocs\goaldig\system\core\Exceptions.php 190
-ERROR - 2021-12-31 08:56:22 --> 404 Page Not Found: Images/resources
-ERROR - 2021-12-31 08:56:46 --> 404 Page Not Found: Images/resources
-ERROR - 2021-12-31 08:57:54 --> 404 Page Not Found: Images/resources
-ERROR - 2021-12-31 08:58:15 --> 404 Page Not Found: Images/resources
+  thrown C:\xampp\htdocs\goaldiga\system\core\Exceptions.php 190
+ERROR - 2021-12-31 13:05:26 --> 404 Page Not Found: Js/map-init.js
+ERROR - 2021-12-31 13:05:26 --> 404 Page Not Found: Js/main.min.js
+ERROR - 2021-12-31 13:05:26 --> 404 Page Not Found: Css/responsive.css
+ERROR - 2021-12-31 13:05:26 --> 404 Page Not Found: Js/script.js
+ERROR - 2021-12-31 13:05:26 --> 404 Page Not Found: Css/main.min.css
+ERROR - 2021-12-31 13:05:26 --> 404 Page Not Found: Css/color.css
+ERROR - 2021-12-31 13:05:26 --> 404 Page Not Found: Images/resources
+ERROR - 2021-12-31 13:05:26 --> 404 Page Not Found: Images/resources
+ERROR - 2021-12-31 13:05:26 --> 404 Page Not Found: Images/resources
+ERROR - 2021-12-31 13:05:26 --> 404 Page Not Found: Images/resources
+ERROR - 2021-12-31 13:05:26 --> 404 Page Not Found: Images/resources
+ERROR - 2021-12-31 13:05:26 --> 404 Page Not Found: Images/resources
+ERROR - 2021-12-31 13:05:26 --> 404 Page Not Found: Images/goaldig1.png
+ERROR - 2021-12-31 13:05:26 --> 404 Page Not Found: Js/main.min.js
+ERROR - 2021-12-31 13:05:26 --> 404 Page Not Found: Css/responsive.css
+ERROR - 2021-12-31 13:05:26 --> 404 Page Not Found: Css/main.min.css
+ERROR - 2021-12-31 13:05:26 --> 404 Page Not Found: Images/book-icon.png
+ERROR - 2021-12-31 13:05:26 --> 404 Page Not Found: Css/color.css
+ERROR - 2021-12-31 13:05:26 --> 404 Page Not Found: Images/resources
+ERROR - 2021-12-31 13:05:26 --> 404 Page Not Found: Images/resources
+ERROR - 2021-12-31 13:05:26 --> 404 Page Not Found: Images/resources
+ERROR - 2021-12-31 13:05:26 --> 404 Page Not Found: Images/resources
+ERROR - 2021-12-31 13:05:26 --> 404 Page Not Found: Images/resources
+ERROR - 2021-12-31 13:05:26 --> 404 Page Not Found: Images/goaldig2.png
+ERROR - 2021-12-31 13:05:26 --> 404 Page Not Found: Backend/assets
+ERROR - 2021-12-31 13:05:26 --> 404 Page Not Found: Images/resources
+ERROR - 2021-12-31 13:05:26 --> 404 Page Not Found: Images/resources
+ERROR - 2021-12-31 13:05:26 --> 404 Page Not Found: Images/resources
+ERROR - 2021-12-31 13:05:26 --> 404 Page Not Found: Images/resources
+ERROR - 2021-12-31 13:05:26 --> 404 Page Not Found: Logojpg/index
+ERROR - 2021-12-31 13:05:27 --> 404 Page Not Found: Js/script.js
+ERROR - 2021-12-31 13:05:27 --> 404 Page Not Found: Backend/assets
+ERROR - 2021-12-31 13:05:27 --> 404 Page Not Found: Fonts/fontawesome-webfont.woff
+ERROR - 2021-12-31 13:05:27 --> 404 Page Not Found: Js/map-init.js
+ERROR - 2021-12-31 13:05:27 --> 404 Page Not Found: Fonts/fontawesome-webfont.ttf
+ERROR - 2021-12-31 13:05:27 --> 404 Page Not Found: Backend/assets
+ERROR - 2021-12-31 13:05:28 --> 404 Page Not Found: Images/fav.png
+ERROR - 2021-12-31 13:05:53 --> 404 Page Not Found: Images/goaldig1.png
+ERROR - 2021-12-31 13:05:54 --> 404 Page Not Found: Images/resources
+ERROR - 2021-12-31 13:05:54 --> 404 Page Not Found: Css/main.min.css
+ERROR - 2021-12-31 13:05:54 --> 404 Page Not Found: Images/resources
+ERROR - 2021-12-31 13:05:54 --> 404 Page Not Found: Images/resources
+ERROR - 2021-12-31 13:05:54 --> 404 Page Not Found: Logojpg/index
+ERROR - 2021-12-31 13:05:54 --> 404 Page Not Found: Js/map-init.js
+ERROR - 2021-12-31 13:05:54 --> 404 Page Not Found: Js/script.js
+ERROR - 2021-12-31 13:05:54 --> 404 Page Not Found: Css/responsive.css
+ERROR - 2021-12-31 13:05:54 --> 404 Page Not Found: Images/resources
+ERROR - 2021-12-31 13:05:54 --> 404 Page Not Found: Js/main.min.js
+ERROR - 2021-12-31 13:05:54 --> 404 Page Not Found: Css/color.css
+ERROR - 2021-12-31 13:05:54 --> 404 Page Not Found: Images/resources
+ERROR - 2021-12-31 13:05:54 --> 404 Page Not Found: Images/goaldig2.png
+ERROR - 2021-12-31 13:05:54 --> 404 Page Not Found: Images/resources
+ERROR - 2021-12-31 13:05:54 --> 404 Page Not Found: Images/resources
+ERROR - 2021-12-31 13:05:54 --> 404 Page Not Found: Images/resources
+ERROR - 2021-12-31 13:05:54 --> 404 Page Not Found: Images/resources
+ERROR - 2021-12-31 13:05:54 --> 404 Page Not Found: Images/resources
+ERROR - 2021-12-31 13:05:54 --> 404 Page Not Found: Images/resources
+ERROR - 2021-12-31 13:05:54 --> 404 Page Not Found: Js/script.js
+ERROR - 2021-12-31 13:05:54 --> 404 Page Not Found: Images/resources
+ERROR - 2021-12-31 13:05:54 --> 404 Page Not Found: Fonts/fontawesome-webfont.woff
+ERROR - 2021-12-31 13:05:54 --> 404 Page Not Found: Images/resources
+ERROR - 2021-12-31 13:05:54 --> 404 Page Not Found: Images/book-icon.png
+ERROR - 2021-12-31 13:05:54 --> 404 Page Not Found: Images/resources
+ERROR - 2021-12-31 13:05:54 --> 404 Page Not Found: Js/map-init.js
+ERROR - 2021-12-31 13:05:54 --> 404 Page Not Found: Images/resources
+ERROR - 2021-12-31 13:05:54 --> 404 Page Not Found: Fonts/fontawesome-webfont.ttf
+ERROR - 2021-12-31 13:18:49 --> 404 Page Not Found: Users/index
+ERROR - 2021-12-31 13:19:01 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+ERROR - 2021-12-31 13:19:03 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+ERROR - 2021-12-31 13:19:07 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+ERROR - 2021-12-31 13:19:07 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+ERROR - 2021-12-31 13:23:52 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+ERROR - 2021-12-31 13:23:55 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+ERROR - 2021-12-31 13:23:55 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+ERROR - 2021-12-31 13:24:07 --> 404 Page Not Found: Assets/css
+ERROR - 2021-12-31 13:40:06 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+ERROR - 2021-12-31 13:40:07 --> 404 Page Not Found: Assets/css
+ERROR - 2021-12-31 13:40:46 --> 404 Page Not Found: Images/icon3.png
+ERROR - 2021-12-31 13:40:46 --> 404 Page Not Found: Images/icon4.png
+ERROR - 2021-12-31 13:40:46 --> 404 Page Not Found: Images/icon1.png
+ERROR - 2021-12-31 13:40:46 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+ERROR - 2021-12-31 13:40:46 --> 404 Page Not Found: Images/icon2.png
+ERROR - 2021-12-31 13:40:47 --> 404 Page Not Found: Assets/css
+ERROR - 2021-12-31 13:41:28 --> 404 Page Not Found: Images/icon3.png
+ERROR - 2021-12-31 13:41:28 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+ERROR - 2021-12-31 13:41:29 --> 404 Page Not Found: Images/icon1.png
+ERROR - 2021-12-31 13:41:29 --> 404 Page Not Found: Images/icon4.png
+ERROR - 2021-12-31 13:41:29 --> 404 Page Not Found: Images/icon2.png
+ERROR - 2021-12-31 13:41:29 --> 404 Page Not Found: Assets/css
+ERROR - 2021-12-31 13:42:20 --> 404 Page Not Found: Images/icon4.png
+ERROR - 2021-12-31 13:42:20 --> 404 Page Not Found: Images/icon2.png
+ERROR - 2021-12-31 13:42:20 --> 404 Page Not Found: Images/icon1.png
+ERROR - 2021-12-31 13:42:20 --> 404 Page Not Found: Images/icon3.png
+ERROR - 2021-12-31 13:42:20 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+ERROR - 2021-12-31 13:42:21 --> 404 Page Not Found: Assets/css
+ERROR - 2021-12-31 13:42:37 --> 404 Page Not Found: Images/icon1.png
+ERROR - 2021-12-31 13:42:37 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+ERROR - 2021-12-31 13:42:37 --> 404 Page Not Found: Images/icon2.png
+ERROR - 2021-12-31 13:42:37 --> 404 Page Not Found: Images/icon4.png
+ERROR - 2021-12-31 13:42:37 --> 404 Page Not Found: Images/icon3.png
+ERROR - 2021-12-31 13:42:37 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+ERROR - 2021-12-31 13:42:38 --> 404 Page Not Found: Assets/css
+ERROR - 2021-12-31 13:43:44 --> 404 Page Not Found: Images/icon3.png
+ERROR - 2021-12-31 13:43:44 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+ERROR - 2021-12-31 13:43:44 --> 404 Page Not Found: Images/icon1.png
+ERROR - 2021-12-31 13:43:44 --> 404 Page Not Found: Images/icon2.png
+ERROR - 2021-12-31 13:43:44 --> 404 Page Not Found: Images/icon4.png
+ERROR - 2021-12-31 13:43:45 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+ERROR - 2021-12-31 13:43:45 --> 404 Page Not Found: Assets/css
+ERROR - 2021-12-31 13:47:33 --> 404 Page Not Found: Images/icon4.png
+ERROR - 2021-12-31 13:47:33 --> 404 Page Not Found: Images/icon2.png
+ERROR - 2021-12-31 13:47:33 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+ERROR - 2021-12-31 13:47:33 --> 404 Page Not Found: Images/icon3.png
+ERROR - 2021-12-31 13:47:33 --> 404 Page Not Found: Images/icon1.png
+ERROR - 2021-12-31 13:47:34 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+ERROR - 2021-12-31 13:47:34 --> 404 Page Not Found: Assets/css
+ERROR - 2021-12-31 13:49:10 --> 404 Page Not Found: Images/icon1.png
+ERROR - 2021-12-31 13:49:10 --> 404 Page Not Found: Images/icon3.png
+ERROR - 2021-12-31 13:49:10 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+ERROR - 2021-12-31 13:49:10 --> 404 Page Not Found: Images/icon2.png
+ERROR - 2021-12-31 13:49:10 --> 404 Page Not Found: Images/icon4.png
+ERROR - 2021-12-31 13:49:11 --> 404 Page Not Found: Assets/css
+ERROR - 2021-12-31 13:51:03 --> 404 Page Not Found: Images/icon4.png
+ERROR - 2021-12-31 13:51:03 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+ERROR - 2021-12-31 13:51:03 --> 404 Page Not Found: Images/icon3.png
+ERROR - 2021-12-31 13:51:03 --> 404 Page Not Found: Images/icon2.png
+ERROR - 2021-12-31 13:51:03 --> 404 Page Not Found: Images/icon1.png
+ERROR - 2021-12-31 13:51:04 --> 404 Page Not Found: Assets/css
+ERROR - 2021-12-31 13:51:47 --> 404 Page Not Found: Images/05.svg
+ERROR - 2021-12-31 13:51:47 --> 404 Page Not Found: Images/icon2.png
+ERROR - 2021-12-31 13:51:47 --> 404 Page Not Found: Images/icon1.png
+ERROR - 2021-12-31 13:51:47 --> 404 Page Not Found: Images/icon3.png
+ERROR - 2021-12-31 13:51:47 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+ERROR - 2021-12-31 13:51:47 --> 404 Page Not Found: Images/icon4.png
+ERROR - 2021-12-31 13:51:47 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+ERROR - 2021-12-31 13:51:48 --> 404 Page Not Found: Assets/css
+ERROR - 2021-12-31 13:52:28 --> 404 Page Not Found: Images/icon3.png
+ERROR - 2021-12-31 13:52:28 --> 404 Page Not Found: Images/icon1.png
+ERROR - 2021-12-31 13:52:28 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+ERROR - 2021-12-31 13:52:28 --> 404 Page Not Found: Images/icon2.png
+ERROR - 2021-12-31 13:52:28 --> 404 Page Not Found: Images/icon4.png
+ERROR - 2021-12-31 13:52:29 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+ERROR - 2021-12-31 13:52:29 --> 404 Page Not Found: Assets/css
+ERROR - 2021-12-31 13:56:42 --> 404 Page Not Found: Images/icon1.png
+ERROR - 2021-12-31 13:56:42 --> 404 Page Not Found: Images/icon4.png
+ERROR - 2021-12-31 13:56:42 --> 404 Page Not Found: Images/icon2.png
+ERROR - 2021-12-31 13:56:42 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+ERROR - 2021-12-31 13:56:42 --> 404 Page Not Found: Images/icon3.png
+ERROR - 2021-12-31 13:56:43 --> 404 Page Not Found: Assets/css
+ERROR - 2021-12-31 13:57:29 --> 404 Page Not Found: Images/icon4.png
+ERROR - 2021-12-31 13:57:29 --> 404 Page Not Found: Images/icon1.png
+ERROR - 2021-12-31 13:57:29 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+ERROR - 2021-12-31 13:57:29 --> 404 Page Not Found: Images/icon3.png
+ERROR - 2021-12-31 13:57:29 --> 404 Page Not Found: Images/icon2.png
+ERROR - 2021-12-31 13:57:30 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+ERROR - 2021-12-31 13:57:30 --> 404 Page Not Found: Assets/css
+ERROR - 2021-12-31 13:57:41 --> 404 Page Not Found: Images/icon1.png
+ERROR - 2021-12-31 13:57:41 --> 404 Page Not Found: Images/icon3.png
+ERROR - 2021-12-31 13:57:41 --> 404 Page Not Found: Images/icon2.png
+ERROR - 2021-12-31 13:57:41 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+ERROR - 2021-12-31 13:57:41 --> 404 Page Not Found: Images/icon4.png
+ERROR - 2021-12-31 13:57:42 --> 404 Page Not Found: Assets/css
+ERROR - 2021-12-31 13:59:31 --> 404 Page Not Found: Images/icon1.png
+ERROR - 2021-12-31 13:59:31 --> 404 Page Not Found: Images/icon3.png
+ERROR - 2021-12-31 13:59:31 --> 404 Page Not Found: Images/icon2.png
+ERROR - 2021-12-31 13:59:31 --> 404 Page Not Found: Images/icon4.png
+ERROR - 2021-12-31 13:59:31 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+ERROR - 2021-12-31 13:59:31 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+ERROR - 2021-12-31 13:59:32 --> 404 Page Not Found: Assets/css
+ERROR - 2021-12-31 14:00:47 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+ERROR - 2021-12-31 14:00:47 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+ERROR - 2021-12-31 14:00:48 --> 404 Page Not Found: Assets/css
+ERROR - 2021-12-31 14:01:21 --> 404 Page Not Found: Images/01Icon.svg
+ERROR - 2021-12-31 14:01:21 --> 404 Page Not Found: Images/history.png
+ERROR - 2021-12-31 14:01:21 --> 404 Page Not Found: Images/02.svg
+ERROR - 2021-12-31 14:01:21 --> 404 Page Not Found: Images/04.svg
+ERROR - 2021-12-31 14:01:21 --> 404 Page Not Found: Images/03.svg
+ERROR - 2021-12-31 14:01:21 --> 404 Page Not Found: Images/06.svg
+ERROR - 2021-12-31 14:01:21 --> 404 Page Not Found: Images/05.svg
+ERROR - 2021-12-31 14:01:21 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+ERROR - 2021-12-31 14:01:22 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+ERROR - 2021-12-31 14:01:22 --> 404 Page Not Found: Assets/css
+ERROR - 2021-12-31 14:02:51 --> 404 Page Not Found: Images/04.svg
+ERROR - 2021-12-31 14:02:51 --> 404 Page Not Found: Images/03.svg
+ERROR - 2021-12-31 14:02:51 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+ERROR - 2021-12-31 14:02:51 --> 404 Page Not Found: Images/01Icon.svg
+ERROR - 2021-12-31 14:02:51 --> 404 Page Not Found: Images/history.png
+ERROR - 2021-12-31 14:02:51 --> 404 Page Not Found: Images/06.svg
+ERROR - 2021-12-31 14:02:51 --> 404 Page Not Found: Images/02.svg
+ERROR - 2021-12-31 14:02:51 --> 404 Page Not Found: Images/05.svg
+ERROR - 2021-12-31 14:02:52 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+ERROR - 2021-12-31 14:02:53 --> 404 Page Not Found: Assets/css
+ERROR - 2021-12-31 14:04:02 --> 404 Page Not Found: Images/05.svg
+ERROR - 2021-12-31 14:04:02 --> 404 Page Not Found: Images/02.svg
+ERROR - 2021-12-31 14:04:02 --> 404 Page Not Found: Images/04.svg
+ERROR - 2021-12-31 14:04:02 --> 404 Page Not Found: Images/06.svg
+ERROR - 2021-12-31 14:04:02 --> 404 Page Not Found: Images/history.png
+ERROR - 2021-12-31 14:04:02 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+ERROR - 2021-12-31 14:04:02 --> 404 Page Not Found: Images/03.svg
+ERROR - 2021-12-31 14:04:03 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+ERROR - 2021-12-31 14:04:04 --> 404 Page Not Found: Assets/css
+ERROR - 2021-12-31 14:06:10 --> 404 Page Not Found: Images/04.svg
+ERROR - 2021-12-31 14:06:10 --> 404 Page Not Found: Images/06.svg
+ERROR - 2021-12-31 14:06:10 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+ERROR - 2021-12-31 14:06:10 --> 404 Page Not Found: Images/history.png
+ERROR - 2021-12-31 14:06:10 --> 404 Page Not Found: Images/05.svg
+ERROR - 2021-12-31 14:06:10 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+ERROR - 2021-12-31 14:06:11 --> 404 Page Not Found: Assets/css
+ERROR - 2021-12-31 14:11:45 --> 404 Page Not Found: Images/06.svg
+ERROR - 2021-12-31 14:11:45 --> 404 Page Not Found: Images/05.svg
+ERROR - 2021-12-31 14:11:45 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+ERROR - 2021-12-31 14:11:45 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+ERROR - 2021-12-31 14:11:46 --> 404 Page Not Found: Assets/css
+ERROR - 2021-12-31 14:14:10 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+ERROR - 2021-12-31 14:14:11 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+ERROR - 2021-12-31 14:14:11 --> 404 Page Not Found: Assets/css
+ERROR - 2021-12-31 14:14:28 --> 404 Page Not Found: Images/05.svg
+ERROR - 2021-12-31 14:14:28 --> 404 Page Not Found: Images/06.svg
+ERROR - 2021-12-31 14:14:28 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+ERROR - 2021-12-31 14:14:29 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+ERROR - 2021-12-31 14:14:29 --> 404 Page Not Found: Assets/css
+ERROR - 2021-12-31 14:14:37 --> 404 Page Not Found: Images/05.svg
+ERROR - 2021-12-31 14:14:37 --> 404 Page Not Found: Images/04.svg
+ERROR - 2021-12-31 14:14:37 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+ERROR - 2021-12-31 14:14:37 --> 404 Page Not Found: Images/06.svg
+ERROR - 2021-12-31 14:14:37 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+ERROR - 2021-12-31 14:14:38 --> 404 Page Not Found: Assets/css
+ERROR - 2021-12-31 14:14:48 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+ERROR - 2021-12-31 14:14:48 --> 404 Page Not Found: Images/04.svg
+ERROR - 2021-12-31 14:14:48 --> 404 Page Not Found: Images/05.svg
+ERROR - 2021-12-31 14:14:48 --> 404 Page Not Found: Images/06.svg
+ERROR - 2021-12-31 14:14:48 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+ERROR - 2021-12-31 14:14:49 --> 404 Page Not Found: Assets/css
+ERROR - 2021-12-31 14:15:05 --> 404 Page Not Found: Images/04.svg
+ERROR - 2021-12-31 14:15:05 --> 404 Page Not Found: Images/05.svg
+ERROR - 2021-12-31 14:15:05 --> 404 Page Not Found: Images/06.svg
+ERROR - 2021-12-31 14:15:05 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+ERROR - 2021-12-31 14:15:06 --> 404 Page Not Found: Assets/css
+ERROR - 2021-12-31 14:15:10 --> 404 Page Not Found: Images/04.svg
+ERROR - 2021-12-31 14:15:10 --> 404 Page Not Found: Images/05.svg
+ERROR - 2021-12-31 14:15:10 --> 404 Page Not Found: Images/06.svg
+ERROR - 2021-12-31 14:15:10 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+ERROR - 2021-12-31 14:15:11 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+ERROR - 2021-12-31 14:15:11 --> 404 Page Not Found: Assets/css
+ERROR - 2021-12-31 14:16:03 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+ERROR - 2021-12-31 14:16:03 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+ERROR - 2021-12-31 14:16:04 --> 404 Page Not Found: Assets/css
+ERROR - 2021-12-31 14:16:21 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+ERROR - 2021-12-31 14:16:22 --> 404 Page Not Found: Assets/css
+ERROR - 2021-12-31 14:16:26 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+ERROR - 2021-12-31 14:16:26 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+ERROR - 2021-12-31 14:16:27 --> 404 Page Not Found: Assets/css
+ERROR - 2021-12-31 14:16:35 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+ERROR - 2021-12-31 14:16:36 --> 404 Page Not Found: Assets/css
+ERROR - 2021-12-31 14:19:12 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+ERROR - 2021-12-31 14:19:12 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+ERROR - 2021-12-31 14:19:13 --> 404 Page Not Found: Assets/css
+ERROR - 2021-12-31 14:20:32 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+ERROR - 2021-12-31 14:20:32 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+ERROR - 2021-12-31 14:20:33 --> 404 Page Not Found: Assets/css
+ERROR - 2021-12-31 14:20:50 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+ERROR - 2021-12-31 14:20:50 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+ERROR - 2021-12-31 14:20:51 --> 404 Page Not Found: Assets/css
+ERROR - 2021-12-31 14:21:38 --> 404 Page Not Found: Assets/css
+ERROR - 2021-12-31 14:22:09 --> 404 Page Not Found: Images/resources
+ERROR - 2021-12-31 14:22:45 --> The upload path does not appear to be valid.
+ERROR - 2021-12-31 14:25:54 --> 404 Page Not Found: Images/resources
+ERROR - 2021-12-31 14:26:42 --> The filetype you are attempting to upload is not allowed.
+ERROR - 2021-12-31 14:26:43 --> 404 Page Not Found: Images/resources
+ERROR - 2021-12-31 14:27:48 --> The filetype you are attempting to upload is not allowed.
+ERROR - 2021-12-31 14:27:50 --> 404 Page Not Found: Images/resources
+ERROR - 2021-12-31 14:28:00 --> 404 Page Not Found: Images/resources
+ERROR - 2021-12-31 14:33:56 --> 404 Page Not Found: Images/resources
+ERROR - 2021-12-31 14:34:09 --> The filetype you are attempting to upload is not allowed.
+ERROR - 2021-12-31 14:34:10 --> 404 Page Not Found: Images/resources
+ERROR - 2021-12-31 14:36:28 --> 404 Page Not Found: Images/resources
+ERROR - 2021-12-31 14:39:17 --> 404 Page Not Found: Images/resources
+ERROR - 2021-12-31 14:45:53 --> 404 Page Not Found: Images/resources
+ERROR - 2021-12-31 14:46:02 --> 404 Page Not Found: Images/resources
+ERROR - 2021-12-31 15:03:08 --> The filetype you are attempting to upload is not allowed.
+ERROR - 2021-12-31 16:21:24 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+ERROR - 2021-12-31 16:21:24 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+ERROR - 2021-12-31 16:21:26 --> 404 Page Not Found: Assets/css
+ERROR - 2021-12-31 16:21:47 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+ERROR - 2021-12-31 16:21:47 --> 404 Page Not Found: Js/bootstrap.bundle.min.js
+ERROR - 2021-12-31 16:21:48 --> 404 Page Not Found: Assets/css

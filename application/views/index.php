@@ -250,7 +250,7 @@
 
 
         <!-- MoneyPro History-section start  -->
-        <section class="MoneyPro-history">
+        <!-- <section class="MoneyPro-history">
             <div class="container">
                 <div class="heading-title">                    
                     <h2>What do you get access to at Goal Digger?</h2>                    
@@ -292,31 +292,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="item">
-                            <div class="media">
-                                <div class="content">
-                                    <h3>Meaningful career support and management</h3>                                    
-                                </div>
-                                <div class="media-body">
-                                    <div class="icon">
-                                        <img src="<?=$this->config->config['base_url']?>assets/images/02Icon.svg" alt="img">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="media">
-                                <div class="content">
-                                    <h3>Acquire new insight, inspiration and expertise</h3>                                    
-                                </div>
-                                <div class="media-body">
-                                    <div class="icon">
-                                        <img src="<?=$this->config->config['base_url']?>assets/images/02Icon.svg" alt="img">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        </div>                        
                     </div>
                     <div class="col-lg-4">
                         <div class="images">
@@ -335,9 +311,38 @@
                                         <h3>Mentorship, coaching and sponsorship</h3>                                       
                                     </div>
                                 </div>
-                            </div>
+                            </div>                                                        
                         </div>
                         <div class="item right_item">
+                            <div class="media">
+                                <div class="icon">
+                                    <img src="<?=$this->config->config['base_url']?>assets/images/02Icon.svg" alt="img">
+                                </div>
+                               
+                                <div class="media-body">
+                                    <div class="content">
+                                        <h3>Meaningful career support and management</h3>                                    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="item right_item ">
+                            <div class="media">
+                                <div class="icon">
+                                    <img src="<?=$this->config->config['base_url']?>assets/images/05.svg" alt="img">
+                                </div>
+                                
+                                <div class="media-body">
+                                <div class="content">
+                                    <h3>Acquire new insight, inspiration and expertise</h3>                                    
+                                </div>
+                                </div>
+                            </div>
+                        </div> -->
+                        
+
+                        <!-- <div class="item right_item">
                             <div class="media">
                                 <div class="icon">
                                     <img src="<?=$this->config->config['base_url']?>assets/images/05.svg" alt="img">
@@ -384,14 +389,108 @@
                                     </div>
                                 </div>
                             </div>
+                        </div> -->
+                    <!-- </div>
+                    </div>
+                </div>
+               
+        </section> -->
+        <!-- MoneyPro History-section end  -->
+
+<!-- MoneyPro History-section start  -->
+<section class="MoneyPro-history">
+            <div class="container">
+                <div class="heading-title">
+                    
+                    <h2>What do you get access to at Goal Digger?</h2>                    
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-lg-4">
+                        <div class="item">
+                            <div class="media">
+                                <div class="content">
+                                    <h3>Building quality network and increasing your social capital</h3>                                    
+                                </div>
+                                <div class="media-body">
+                                    <div class="icon">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="media">
+                                <div class="content">
+                                    <h3>Get timely and useful industry updates, trends, research or innovations</h3>                                    
+                                </div>
+                                <div class="media-body">
+                                    <div class="icon">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="media">
+                                <div class="content">
+                                    <h3>Skills upgrade and capacity development</h3>                                    
+                                </div>
+                                <div class="media-body">
+                                    <div class="icon">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="images">
+                            <img src="<?=$this->config->config['base_url']?>assets/images/we.jpg" alt="img">
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4">
+                        <div class="item right_item">
+                            <div class="media">
+                                <div class="icon">                                    
+                                </div>
+                                <div class="media-body">
+                                    <div class="content">
+                                        <h3>Mentorship, coaching and sponsorship</h3>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item right_item">
+                            <div class="media">
+                                <div class="icon">
+                                    
+                                </div>
+                                <div class="media-body">
+                                    <div class="content">
+                                        <h3>Affiliate Program</h3>
+                                        <p>You get to be part of Goal Digger Affiliate Program</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item right_item">
+                            <div class="media">
+                                <div class="icon">                                    
+                                </div>
+                                <div class="media-body">
+                                    <div class="content">
+                                        <h3>Access to career advancing resources, and events</h3>
+                                        <!-- <p>When you decide to go into business for, you need to make sure all your bases.</p> -->
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- MoneyPro History-section end  -->
-
-
         
     <!-- Calculate section start  -->
     <section class="calculate-section calculate_page-two">
