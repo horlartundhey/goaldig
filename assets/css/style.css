@@ -300,7 +300,7 @@ body a:focus, body a:hover, body .btn:focus, body .btn:hover, body button:focus,
   position: relative;
   z-index: 1;
 }
-.main-header .main-navbar::after {
+/* .main-header .main-navbar::after {
   content: "";
   position: absolute;
   height: 10px;
@@ -311,7 +311,7 @@ body a:focus, body a:hover, body .btn:focus, body .btn:hover, body button:focus,
   left: 0px;
   background: #e3e2e2;
   border-radius: 0 0 10px 10px;
-}
+} */
 .main-header .main-navbar .nav-inner {
   display: flex;
   justify-content: space-between;
@@ -455,7 +455,7 @@ body a:focus, body a:hover, body .btn:focus, body .btn:hover, body button:focus,
 .main-header .mobile-menu {
   max-width: 600px;
   margin: 0 auto;
-  background: #6A3CBA;
+  background: #000;
   border-radius: 10px;
   height: 0;
   padding: 0;
@@ -601,7 +601,7 @@ body a:focus, body a:hover, body .btn:focus, body .btn:hover, body button:focus,
   background-size: cover;
   padding-top: 290px;
   overflow: hidden;
-  padding-bottom: 140px;
+  padding-bottom: 257px;
 }
 .banner_section .slider-area .item .left-content h6 {
   font-size: 18px;

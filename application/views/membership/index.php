@@ -154,24 +154,6 @@
         </div>
     </footer>
     <!-- footer  section end  -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
     <!-- jQuery v3.5.1 -->
     <script src="<?=$this->config->config['base_url']?>assets/js/jquery-3.5.1.min.js"></script> 
     <!-- Bootstrap v5.0 -->

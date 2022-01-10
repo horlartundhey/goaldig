@@ -110,7 +110,7 @@
 
         <!-- header end  -->
 
-        <section class="banner_section banner_section_two">
+        <section class="banner_section banner_section">
             <!-- data-bs-ride="carousel" -->
             <div id="carouselExampleIndicators" class="carousel slide">
                 <div class="carousel-indicators">
@@ -124,11 +124,11 @@
                             <div class="slider-area">
                                 <div class="item">
                                     <div class id="home">
-                                        <h1 class="text-center text-light wow fadeInDown">WELCOME TO GOAL DIGGER PROFESSIONALS NETWORK</h1>
-                                        <p class="text-light text-center" style="font-size:20px;"><cite>"You are the average of the five people you spend the most time with".</cite></p>
+                                        <h1 class="text-center text-light wow fadeInDown" >WELCOME TO GOAL DIGGER PROFESSIONAL NETWORK</h1>
+                                        <p class="text-light text-center" style="font-size:20px;"><cite>"You are the average of the five people you spend the most time with"</cite> -Jim Rohn</p>
                                     </div>
                                     <br><br>
-                                    <div class="row align-items-center">                                        
+                                    <!-- <div class="row align-items-center">                                        
                                         <div class="col-lg-5">
                                             <div class="left-content">                                                                                              
                                             <p class="wow fadeInUp justi" data-wow-delay="0.5s">The law of averages as summed up in those words by motivational speaker and world-renowned author, Jim Rohn, holds true in all aspects of one’s life. The quality of the people that we hang out with constantly has a direct impact on what we become, in our careers also.</p>
@@ -143,7 +143,7 @@
                                                 <img src="<?=$this->config->config['base_url']?>assets/images/goald.png" alt="img">
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
@@ -162,36 +162,29 @@
                 <div class="row align-items-center">
                     <div class="col-lg-7">
                         <div class="left-content">
-                            <div class="heading-title" id="about">
-                                <h6><span></span> Who are we?</h6>
+                            <div class="heading-title" id="about">                                
                                 <h2>About Goal Digger</h2>
                                 <p>Goal digger is a professional network which strives to ensure performance excellence and improve individual productivity through knowledge sharing, inspirational sessions, productivity tools, coaching, mentoring, and training of young and middle level career professionals.</p>
                             </div>
-                            <div class="media">
-                                <div class="images">
-                                    <!-- <img src="<?=$this->config->config['base_url']?>assets/images/01Icon.svg" alt="img"> -->
-                                </div>
-                                <div class="media-body">
-                                    <h3>Our Vision</h3>
-                                    <p>Our vision is to bridge the gap between every professional’s current career position and desired destination.</p>
-                                </div>
+
+                            <div class="heading-title" id="about">                                
+                                <h2>Our Vision</h2>
+                                <p>Our vision is to bridge the gap between every professional’s current career position and desired destination.</p>
                             </div>
-                            <div class="media">
-                                <div class="images">
-                                    <!-- <img src="<?=$this->config->config['base_url']?>assets/images/02Icon.svg" alt="img"> -->
-                                </div>
-                                <div class="media-body">
-                                    <h3>What we Represent</h3>
-                                    <p>We represent a group of professionals, across the spectrum – entry level, mid level, senior level, business owners, consultants, managers, and more – seeking opportunities to learn from one another and take our career to a higher level.</p>
-                                </div>
+
+                            <div class="heading-title" id="about">                                
+                                <h2>What we Represent</h2>
+                                <p>We represent a group of professionals, across the spectrum – entry level, mid level, senior level, business owners, consultants, managers, and more – seeking opportunities to learn from one another and take our career to a higher level.</p>
                             </div>
-                            <a href="<?=$this->config->config['base_url']?>login" class="theme_btn">Join Us Now!</a>
+                                                       
+                            
+                            <a href="<?=$this->config->config['base_url']?>membership" class="theme_btn">Join Us Now!</a>
                         </div>
                     </div>
                     <div class="col-lg-5">
                         <div class="right-side">
 
-                            <img src="<?=$this->config->config['base_url']?>assets/images/soc.jpg" alt="img">
+                            <img src="<?=$this->config->config['base_url']?>assets/images/goald.png" style="border-radius:20px;" alt="img">
 
                         </div>
                     </div>
@@ -206,16 +199,15 @@
         <!-- How we work-section end  -->
         <section class="how-we-work-section">
             <div class="container">
-                <div class="heading-title" id="focus">
-                    <h6><span></span> Our Focus</h6>
+                <div class="heading-title" id="focus">                    
                     <h2>How It Works</h2>
-                    <p class="foont">We are professionals from various industries and sectors of the economy, focused on the same thing. We focus on communication, community building and collaboration. </p>
+                    <p class="foont">We focus on Communication, Community Building and Collaboration. </p>
                 </div>
                 <div class="row">
                     <div class="col-md-4">
                         <div class="item">
                             <div class="icon">
-                                <img src="<?=$this->config->config['base_url']?>assets/images/icon3.svg" alt="img">
+                                <img src="<?=$this->config->config['base_url']?>assets/images/communication-svgrepo-com.svg" alt="img" class="text-light">
                                 <span>1</span>
                             </div>                            
                             <div class="arrow-img">
@@ -226,7 +218,7 @@
                     <div class="col-md-4">
                         <div class="item">
                             <div class="icon icon-tow">
-                                <img src="<?=$this->config->config['base_url']?>assets/images/icon4.svg" alt="img">
+                                <img src="<?=$this->config->config['base_url']?>assets/images/02.svg" class="text-light" alt="img">
                                 <span>2</span>
                             </div>                            
                             <div class="arrow-img" style="top: 60px;">
@@ -237,7 +229,7 @@
                     <div class="col-md-4">
                         <div class="item">
                             <div class="icon icon-three">
-                                <img src="<?=$this->config->config['base_url']?>assets/images/icon5.svg" alt="img">
+                                <img src="<?=$this->config->config['base_url']?>assets/images/partnership-management-business-strategy-collaboration-colleague-jigsaw-svgrepo-com.svg" alt="img" class="text-light">
                                 <span>3</span>
                             </div>                            
                         </div>
@@ -469,8 +461,8 @@
                                 </div>
                                 <div class="media-body">
                                     <div class="content">
-                                        <h3>Affiliate Program</h3>
-                                        <p>You get to be part of Goal Digger Affiliate Program</p>
+                                        <h3>Affiliate Program: You get to be part of Goal Digger Affiliate Program</h3>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -517,16 +509,16 @@
                     <h2>Our regular events</h2>                   
                 </div>
                 <div class="row align-items-center">
-                    <div class="col-lg-4">
+                    <!-- <div class="col-lg-4">
                         <div class="images">
 
                             <img src="<?=$this->config->config['base_url']?>assets/images/webt.jpg" alt="img">
                         </div>
-                    </div>
-                    <div class="col-lg-8">
+                    </div> -->
+                    <div class="col-lg-12">
                         <div class="row ">
                             <div class="col-6">
-                                <div class="item one_item">
+                                <div class="item">
                                     <img src="<?=$this->config->config['base_url']?>assets/images/handshake.png" alt="img">
                                     <h5>An annual career and business growth workshop in October of every year.</h5>
                                 </div>
@@ -534,7 +526,7 @@
                             <div class="col-6">
                                 <div class="item">
                                     <img src="<?=$this->config->config['base_url']?>assets/images/profit.svg" alt="img">
-                                    <h5>A month book review session on the second Saturday of every month</h5>                                    
+                                    <h5>A monthly book review session on the second Saturday of every month</h5>                                    
                                 </div>
                             </div>
                             <div class="col-6">
@@ -544,7 +536,7 @@
                                 </div>
                             </div>
                             <div class="col-6">
-                                <div class="item last_item">
+                                <div class="item ">
                                     <img src="<?=$this->config->config['base_url']?>assets/images/Deposited.svg" alt="img">
                                     <h5>A quarterly KSS</h5>                                    
                                 </div>
@@ -597,7 +589,7 @@
                 </div>
             </div>
             <div class="text-center">
-                <a href="<?=$this->config->config['base_url']?>membership" class="theme_btn btn-warning btn text-light btn-lg">Membership Plans</a>
+                <a href="<?=$this->config->config['base_url']?>membership" class="theme_btn btn-warning btn text-light btn-lg">Register With Us Now!</a>
             </div>
         </div>
     </section>
@@ -660,7 +652,7 @@
         <div class="footer-bottom">
             <div class="container">
                 <div class="bottom-left">
-                    <span>Copyright &copy; <a href="">GOAL DIGGER NETWORK</a> 2021. All rights reserved</span>
+                    <span>Copyright &copy; <a href="">GOAL DIGGER NETWORK</a> 2022. All rights reserved</span>
                 </div>
             </div>
         </div>

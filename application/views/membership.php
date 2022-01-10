@@ -29,87 +29,13 @@
     <!-- Theme style CSS -->      
     <link href="<?=$this->config->config['base_url']?>assets/css/style.css" rel="stylesheet">
 </head>
-<body>  
-    
-
-        
-        <!-- header start  -->
-        <header class="main-header">
-            <div class="container">
-                <div class="top-header">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <ul class="topbar-left">
-                                <li><a href="mailto:info@goaldiggernetwork.ng"><span><i class="fa fa-envelope"></i></span> info@goaldiggernetwork.ng</a></li>
-                                <li><a href="tel: +234 705 439 4331"><span class="phone"><i class="fa fa-phone"></i></span>+234 705 439 4331</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-md-6">
-                            <ul class="topbar-right">
-                                
-                                <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
-                                <!-- <li ><a href=""><i class="fab fa-twitter"></i></a></li> -->
-                                <li ><a href=""><i class="fab fa-instagram"></i></a></li>
-                                <!-- <li><a href=""><span><i class="fa fa-user"></i></span> Sign in </a></li> -->
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <nav class="main-navbar">
-                    <div class="nav-inner">
-                        <a href="index.html" class="brand"><img src="<?=$this->config->config['base_url']?>assets/images/goaldig1.png" alt="img" width="25%"></a>
-                        <ul class="desktop-menu">
-
-                            <li><a href="<?=$this->config->config['base_url']?>index">Home</a></li>                               
-                            </li>                            
-                            <li><a href="#about">About Us</a></li>
-                            <li><a href="#focus">Focus</a>                               
-                            </li>
-                            <li><a href="#event">Events</a></li>
-                            <li><a href="<?=$this->config->config['base_url']?>membership">Membership Plans</a></li>
-                            <li><a href="<?=$this->config->config['base_url']?>login"><span><i class="fa fa-user"></i></span> Member Login</a></li>
-
-                        </ul>
-                        <div class="mobile-header">
-                            <!-- <a href="#" class="search_btn"><i class="far fa-search"></i></a> -->
-                            <div class="menu-icon">
-                                <div class="open-menu"><i class="far fa-bars"></i></div>
-                                <div class="close-menu"><i class="far fa-times"></i></div>
-                            </div>
-                        </div>
-                    </div>
-                </nav>
-                <div class="mobile-menu">
-                    <ul>
-                    <li><a href="<?=$this->config->config['base_url']?>index">Home</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#focus">focus</a></li>
-                        <li><a href="#event">Events</a></li>
-                        <li><a href="<?=$this->config->config['base_url']?>membership">Membership Plans</a></li>
-                        <li><a href="<?=$this->config->config['base_url']?>login"><span><i class="fa fa-user"></i></span> Member Login </a></li>
-                    </ul>
-                </div>
-            </div>
-        </header>
-
-        <div class="page-title-area overlay-bg style-1" style="background-color :#5e35b1">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-md-12 text-center">
-                        <h3 class="title">  Membership Plans</h3>
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
-        
-        <section class="pricing-section">
+<body>         
+     <section class="pricing-section">
         <div class="container">
             <div class="heading-title">
                
-                <h2>Start your journey to building Professional growth  in your carrer by being a part of this community.</h2>
-                <p>Experience Growth, Resources,Mentorship Programmes, Hnagouts, Business Connections and Most of All Financial Growth.</p>
+                <h2 class="wow fadeInDown">Start your journey to building Professional growth  in your carrer by being a part of this community.</h2>
+                <p>Experience Growth, Resources,Mentorship Programmes, Hangouts, Business Connections and Most of All Financial Growth.</p>
             </div>
             
               <div class="tab-content" id="pills-tabContent1">
@@ -120,17 +46,16 @@
                                 <div class="top-left">                                    
                                 </div>
                                 <div class="top-area">
-                                    <img src="<?=$this->config->config['base_url']?>assets/images/icon001.svg" alt="">
+                                    <img src="<?=$this->config->config['base_url']?>assets/images/account-add-follow-people-profile-user-svgrepo-com.svg" alt="">
                                     <p>CLASSIC</p>
                                 </div>
                                 <ul>
-                                    <li><span><i class="fal fa-check"></i></span><strong>N30,000 PER ANNUM</strong></li>
+                                    <li><span></span><strong>N30,000 PER ANNUM</strong></li>
                                     <li><span><i class="fal fa-check"></i></span>Book Review Sessions</li>
                                     <li><span><i class="fal fa-check"></i></span>Monthly KSS Sessions</li>
                                     <li><span><i class="fal fa-check"></i></span>Mentoring Program</li>
-                                    <li><span><i class="fal fa-check"></i></span>Daily Growth Topics</li>
-                                    <li><span><i class="fal fa-check"></i></span>Career Opportunities / Job Links</li>
-                                    <li><span><i class="fal fa-check"></i></span>Annual Goal Setting Workshop</li>
+                                    <li><span><i class="fal fa-check"></i></span>Regular Career/Personal Growth Topics</li>
+                                    <li><span><i class="fal fa-check"></i></span>Career Opportunities / Job Links</li>                                    
                                     <li><span><i class="fal fa-check"></i></span>Quaterly KSS with Industry Experts</li>
                                 </ul>
                                 <a href="https://flutterwave.com/pay/nlo1wcxxxqg5" class="buy-now">Sign Up Now</a>
@@ -142,20 +67,20 @@
                                     <!-- <p>7.50%</p> -->
                                 </div>
                                 <div class="top-area">
-                                    <img src="<?=$this->config->config['base_url']?>assets/images/icon02.svg" alt="">
+                                    <img src="<?=$this->config->config['base_url']?>assets/images/account-add-follow-people-profile-user-svgrepo-com.svg" alt="">
                                     <p>Gold</p>
                                 </div>
                                 <ul>
-                                    <li><span><i class="fal fa-check"></i></span><strong>N70,000 PER ANNUM</strong></li>
+                                    <li><span></span><strong>N70,000 PER ANNUM</strong></li>
                                     <li><span><i class="fal fa-check"></i></span>Book Review Sessions</li>
                                     <li><span><i class="fal fa-check"></i></span>Monthly KSS Sessions</li>
                                     <li><span><i class="fal fa-check"></i></span>Mentoring Program</li>
-                                    <li><span><i class="fal fa-check"></i></span>Daily Growth Topics</li>
-                                    <li><span><i class="fal fa-check"></i></span>Career Opportunities / Job Links</li>
-                                    <li><span><i class="fal fa-check"></i></span>Annual Goal Setting Workshop</li>
-                                    <li><span><i class="fal fa-check"></i></span>Quaterly Webinars with Industry Experts</li>
-                                    <li><span><i class="fal fa-check"></i></span>Annual Workshop (35k for Gold Members, 45k for others)</li>
-                                    <li><span><i class="fal fa-check"></i></span>Annual Goal Book (5K for Gold members, 6k for others)</li>
+                                    <li><span><i class="fal fa-check"></i></span>Regular Career/Personal Growth Topics</li>
+                                    <li><span><i class="fal fa-check"></i></span>Career Opportunities / Job Links</li>                                    
+                                    <li><span><i class="fal fa-check"></i></span>Quaterly KSS with Industry Experts</li>
+                                    <li><span><i class="fal fa-check"></i></span> <strong>Annual Goal Setting Workshop</strong></li>
+                                    <li><span><i class="fal fa-check"></i></span><strong>Annual Career Workshop</strong></li>
+                                    <li><span><i class="fal fa-check"></i></span><strong>Annual Goal Book </strong></li>
                                     <!-- <li><span><i class="fal fa-check"></i></span>Quaterly Webinars with Industry Experts</li> -->
                                 </ul>
                                 <a href="https://flutterwave.com/pay/nlo1wcxxxqg5" class="buy-now">Sign Up Now</a>

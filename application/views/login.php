@@ -51,7 +51,7 @@
 								<input type="checkbox" checked="checked"/><i class="check-box"></i>Always Remember Me.
 							  </label>
 							</div>
-							<!-- <a href="<?php echo $this->config->config['base_url']?>index" title="" class="already-have">Go back to Home</a> -->
+							<a href="<?php echo $this->config->config['base_url']?>forgot" title="" class="already-have">Forgot Password</a>
 							<div class="submit-btns">
 								<button class="mtr-btn signin" type="submit"><span>Login</span></button>
 								<button class="mtr-btn signup" type="button"><span>Register</span></button>								
