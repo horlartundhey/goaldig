@@ -161,9 +161,11 @@ $('#registerform').submit( function(e) {
 																
 								$('#error-box2').html(msg);
 								$("#error-box2").show();//css("display","true");
+								
 								location.href="#error-box1";
 								return false;
 						}else{
+							location.href=response.url;
 							//toastr.success('Registration successfull!','Success');
 							//return false;
 							var msg = '<div class="alert alert-success alert-dismissible" id="error-box2" >';

@@ -33,6 +33,7 @@
 						<li><a href="<?php echo $this->config->config['base_url']?>ResourceCenter" >Resources Center</a></li>
 				<li><a href="<?php echo $this->config->config['base_url']?>goals" >Set Goals</a></li>
 				<li><a href="<?php echo $this->config->config['base_url']?>Profile" >Profile Setting</a></li>
+				<li><a href="<?php echo $this->config->config['base_url']?>users/network" >Network</a></li>
 				
 			</ul>
 		</nav>
@@ -49,9 +50,23 @@
 				<li><a href="<?php echo $this->config->config['base_url']?>ResourceCenter" >Resources Center</a></li>
 				<li><a href="<?php echo $this->config->config['base_url']?>goals" >Set Goals</a></li>
 				<li><a href="<?php echo $this->config->config['base_url']?>Profile" >Profile Setting</a></li>
+				<li><a href="<?php echo $this->config->config['base_url']?>users/network" >Network</a></li>
 				
 			</ul>
-			
+			<div class="user-img">
+			<?php if(isset($user['profile_picture']) && $user['profile_picture']!="" &&
+file_exists("resources/profile/_profiles/".$user['profile_picture'])){?>
+								<img src="
+resources/profile/_profiles/<?=$user['profile_picture']?>?v=<?=time()?>" alt="" style="width:48px">
+								<?php }else{ ?>
+								<img src="<?php echo $this->config->config['base_url']?>social/images/resources/noimage.jpg"  style="width:48px;" alt="">
+								<?php } ?>
+				<span class="status f-online"></span>
+				<div class="user-setting">					
+					
+					<a href="#" onclick="logout()" title=""><i class="ti-power-off"></i>log out</a>
+				</div>
+			</div>		
 		</div>
 	</div><!-- topbar -->
 
@@ -64,6 +79,17 @@
 							<h1><?= $title ?></h1>
                             <div class="text-center">
                                <a href="<?php echo $this->config->config['base_url']?>create" class="btn btn-warning text-light btn-lg"><strong>Create a New Goal</strong></a>
+                               <?php if($this->session->flashdata('success')): ?>
+								<div class="alert alert-success alert-dismissible" role="alert">
+								  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+								  <?php echo $this->session->flashdata('success'); ?>
+								</div>
+							  <?php elseif($this->session->flashdata('error')): ?>
+								<div class="alert alert-error alert-dismissible" role="alert">
+								  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+								  <?php echo $this->session->flashdata('error'); ?>
+								</div>
+							  <?php endif; ?>
 
                             </div>
 							<!-- <form method="post">

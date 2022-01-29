@@ -38,19 +38,25 @@
             <div class="container">
                 <div class="top-header">
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-3">
                             <ul class="topbar-left">
-                                <li><a href="mailto:info@goaldiggernetwork.ng"><span><i class="fa fa-envelope"></i></span> info@goaldiggernetwork.ng</a></li>
-                                <li><a href="tel: +234 705 439 4331"><span class="phone"><i class="fa fa-phone"></i></span>+234 705 439 4331</a></li>
+                                <li><a href="<?=$this->config->config['base_url']?>index" class="brand"><img src="<?=$this->config->config['base_url']?>assets/images/goaldig1.1.png" alt="img" width="25%"></a></li>
                             </ul>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-5">
+                            <ul class="topbar-left">
+                                
+                                <li><a href="mailto:info@goaldiggernetwork.ng"><span><i class="fa fa-envelope"></i></span> info@goaldiggernetwork.ng</a></li>
+                                <li><a href="tel: +234 818 3749 812"><span class="phone"><i class="fa fa-phone"></i></span>+234 818 3749 812</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
                             <ul class="topbar-right">
                                 
-                                <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
+                                <li><a target="_blank" href="https://www.facebook.com/goaldiggerNG"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a target="_blank" href="https://www.linkedin.com/company/goal-digger-ng/"><i class="fab fa-linkedin-in"></i></a></li>
                                 <!-- <li ><a href=""><i class="fab fa-twitter"></i></a></li> -->
-                                <li ><a href=""><i class="fab fa-instagram"></i></a></li>
+                                <li ><a target="_blank" href="https://www.instagram.com/goaldigger_ng/"><i class="fab fa-instagram"></i></a></li>
                                 <!-- <li><a href=""><span><i class="fa fa-user"></i></span> Sign in </a></li> -->
                             </ul>
                         </div>
@@ -58,13 +64,13 @@
                 </div>
                 <nav class="main-navbar">
                     <div class="nav-inner">
-                        <a href="index.html" class="brand"><img src="<?=$this->config->config['base_url']?>assets/images/goaldig1.png" alt="img" width="25%"></a>
+                        <a href="" class="brand"><img src=""  width="25%"></a>
                         <ul class="desktop-menu">
 
                             <li><a class="active" href="#home">Home</a>                                
                             </li>                            
                             <li><a href="#about">About Us</a></li>
-                            <li><a href="#focus">Focus</a>                               
+                            <!-- <li><a href="#focus">Focus</a>                                -->
                             </li>
                             <li><a href="#event">Events</a></li>
                             <li><a href="<?=$this->config->config['base_url']?>membership">Membership Plans</a></li>
@@ -84,7 +90,7 @@
                     <ul>
                         <li><a class="active" href="#home">Home</a></li>                        
                         <li><a href="#about">About Us</a></li>
-                        <li><a href="#focus">focus</a></li>
+                        <!-- <li><a href="#focus">focus</a></li> -->
                         <li><a href="#event">Events</a></li>
                         <li><a href="<?=$this->config->config['base_url']?>membership">Membership Plans</a></li>
                         <li><a href="<?=$this->config->config['base_url']?>login"><span><i class="fa fa-user"></i></span> Member Login </a></li>
@@ -124,7 +130,8 @@
                             <div class="slider-area">
                                 <div class="item">
                                     <div class id="home">
-                                        <h1 class="text-center text-light wow fadeInDown" >WELCOME TO GOAL DIGGER PROFESSIONAL NETWORK</h1>
+                                        <h4 class="text-center text-light wow fadeInDown" >WELCOME TO </h4>
+                                        <h1 class="text-center text-light wow fadeInDown" >GOAL DIGGER PROFESSIONAL NETWORK</h1>
                                         <p class="text-light text-center" style="font-size:20px;"><cite>"You are the average of the five people you spend the most time with"</cite> -Jim Rohn</p>
                                     </div>
                                     <br><br>
@@ -163,22 +170,20 @@
                     <div class="col-lg-7">
                         <div class="left-content">
                             <div class="heading-title" id="about">                                
-                                <h2>About Goal Digger</h2>
-                                <p>Goal digger is a professional network which strives to ensure performance excellence and improve individual productivity through knowledge sharing, inspirational sessions, productivity tools, coaching, mentoring, and training of young and middle level career professionals.</p>
+                                <h2>About Goal Digger Network</h2>
+                                <p>We are a group of professionals who have come together for Career and Personal Development. We are passionate about developing our leadership potentials and leveraging each other’s knowledge, expertise, and experiences to improve ourselves to become valuable members of our organizations and society at large. <br>                                
+                                </p>
                             </div>
 
                             <div class="heading-title" id="about">                                
                                 <h2>Our Vision</h2>
-                                <p>Our vision is to bridge the gap between every professional’s current career position and desired destination.</p>
+                                <p>To develop conscious leaders who will make a difference at work and in life.</p>
                             </div>
 
                             <div class="heading-title" id="about">                                
-                                <h2>What we Represent</h2>
-                                <p>We represent a group of professionals, across the spectrum – entry level, mid level, senior level, business owners, consultants, managers, and more – seeking opportunities to learn from one another and take our career to a higher level.</p>
-                            </div>
-                                                       
-                            
-                            <a href="<?=$this->config->config['base_url']?>membership" class="theme_btn">Join Us Now!</a>
+                                <h2>Who We Are</h2>
+                                <p>We are a diverse group of intentional individuals; career professionals (Entry, Mid & Senior-level), and entrepreneurs who have come together seeking opportunities to learn in order to take our careers and businesses to a higher level.</p>
+                            </div>                                                                                                           
                         </div>
                     </div>
                     <div class="col-lg-5">
@@ -193,215 +198,18 @@
         </section>
         <!-- about-section end  -->
 
-        
-
-
-        <!-- How we work-section end  -->
-        <section class="how-we-work-section">
-            <div class="container">
-                <div class="heading-title" id="focus">                    
-                    <h2>How It Works</h2>
-                    <p class="foont">We focus on Communication, Community Building and Collaboration. </p>
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="item">
-                            <div class="icon">
-                                <img src="<?=$this->config->config['base_url']?>assets/images/communication-svgrepo-com.svg" alt="img" class="text-light">
-                                <span>1</span>
-                            </div>                            
-                            <div class="arrow-img">
-                                <img src="<?=$this->config->config['base_url']?>assets/images/arrow1.svg" alt="img">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="item">
-                            <div class="icon icon-tow">
-                                <img src="<?=$this->config->config['base_url']?>assets/images/02.svg" class="text-light" alt="img">
-                                <span>2</span>
-                            </div>                            
-                            <div class="arrow-img" style="top: 60px;">
-                                <img src="<?=$this->config->config['base_url']?>assets/images/arrow2.svg" alt="img">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="item">
-                            <div class="icon icon-three">
-                                <img src="<?=$this->config->config['base_url']?>assets/images/partnership-management-business-strategy-collaboration-colleague-jigsaw-svgrepo-com.svg" alt="img" class="text-light">
-                                <span>3</span>
-                            </div>                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- How we work-section end  -->
-
-
-
-        <!-- MoneyPro History-section start  -->
-        <!-- <section class="MoneyPro-history">
-            <div class="container">
-                <div class="heading-title">                    
-                    <h2>What do you get access to at Goal Digger?</h2>                    
-                </div>
-                <div class="row align-items-center">
-                    <div class="col-lg-4">
-                        <div class="item">
-                            <div class="media">
-                                <div class="content">
-                                    <h3>Building quality network and increasing your social capital</h3>                                    
-                                </div>
-                                <div class="media-body">
-                                    <div class="icon">
-                                        <img src="<?=$this->config->config['base_url']?>assets/images/01Icon.svg" alt="img">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="media">
-                                <div class="content">
-                                    <h3>Get timely and useful industry updates, trends, research or innovations</h3>                                    
-                                </div>
-                                <div class="media-body">
-                                    <div class="icon">
-                                        <img src="<?=$this->config->config['base_url']?>assets/images/02.svg" alt="img">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="media">
-                                <div class="content">
-                                    <h3>Skills upgrade and capacity development</h3>                                    
-                                </div>
-                                <div class="media-body">
-                                    <div class="icon">
-                                        <img src="<?=$this->config->config['base_url']?>assets/images/03.svg" alt="img">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>                        
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="images">
-
-                            <img src="<?=$this->config->config['base_url']?>assets/images/we.jpg" alt="img">
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="item right_item">
-                            <div class="media">
-                                <div class="icon">
-                                    <img src="<?=$this->config->config['base_url']?>assets/images/04.svg" alt="img">
-                                </div>
-                                <div class="media-body">
-                                    <div class="content">
-                                        <h3>Mentorship, coaching and sponsorship</h3>                                       
-                                    </div>
-                                </div>
-                            </div>                                                        
-                        </div>
-                        <div class="item right_item">
-                            <div class="media">
-                                <div class="icon">
-                                    <img src="<?=$this->config->config['base_url']?>assets/images/02Icon.svg" alt="img">
-                                </div>
-                               
-                                <div class="media-body">
-                                    <div class="content">
-                                        <h3>Meaningful career support and management</h3>                                    
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="item right_item ">
-                            <div class="media">
-                                <div class="icon">
-                                    <img src="<?=$this->config->config['base_url']?>assets/images/05.svg" alt="img">
-                                </div>
-                                
-                                <div class="media-body">
-                                <div class="content">
-                                    <h3>Acquire new insight, inspiration and expertise</h3>                                    
-                                </div>
-                                </div>
-                            </div>
-                        </div> -->
-                        
-
-                        <!-- <div class="item right_item">
-                            <div class="media">
-                                <div class="icon">
-                                    <img src="<?=$this->config->config['base_url']?>assets/images/05.svg" alt="img">
-                                </div>
-                                <div class="media-body">
-                                    <div class="content">
-                                        <h3>Setting and clarifying professional goals and paths to take</h3>                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item right_item">
-                            <div class="media">
-                                <div class="icon">
-                                    <img src="<?=$this->config->config['base_url']?>assets/images/06.svg" alt="img">
-                                </div>
-                                <div class="media-body">
-                                    <div class="content">
-                                        <h3>Access to career advancing resources, and events</h3>                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item right_item">
-                            <div class="media">
-                                <div class="icon">
-                                    <img src="<?=$this->config->config['base_url']?>assets/images/06.svg" alt="img">
-                                </div>
-                                <div class="media-body">
-                                    <div class="content">
-                                        <h3>Job search</h3>                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item right_item">
-                            <div class="media">
-                                <div class="icon">
-                                    <img src="<?=$this->config->config['base_url']?>assets/images/06.svg" alt="img">
-                                </div>
-                                <div class="media-body">
-                                    <div class="content">
-                                        <h3>Building your resume</h3>                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
-                    <!-- </div>
-                    </div>
-                </div>
-               
-        </section> -->
-        <!-- MoneyPro History-section end  -->
-
-<!-- MoneyPro History-section start  -->
 <section class="MoneyPro-history">
             <div class="container">
                 <div class="heading-title">
                     
-                    <h2>What do you get access to at Goal Digger?</h2>                    
+                    <h2>What you get access to as members of GDPN</h2>                    
                 </div>
                 <div class="row align-items-center">
                     <div class="col-lg-4">
                         <div class="item">
                             <div class="media">
                                 <div class="content">
-                                    <h3>Building quality network and increasing your social capital</h3>                                    
+                                    <h3 class="text-center">Build quality network and increase your social capital</h3>                                    
                                 </div>
                                 <div class="media-body">
                                     <div class="icon">
@@ -413,7 +221,7 @@
                         <div class="item">
                             <div class="media">
                                 <div class="content">
-                                    <h3>Get timely and useful industry updates, trends, research or innovations</h3>                                    
+                                    <h3 class="text-center">Get timely and useful industry updates, trends, research or innovations</h3>                                    
                                 </div>
                                 <div class="media-body">
                                     <div class="icon">
@@ -425,7 +233,7 @@
                         <div class="item">
                             <div class="media">
                                 <div class="content">
-                                    <h3>Skills upgrade and capacity development</h3>                                    
+                                    <h3 class="text-center">Skills upgrade and capacity development Programmes</h3>                                    
                                 </div>
                                 <div class="media-body">
                                     <div class="icon">
@@ -448,7 +256,7 @@
                                 </div>
                                 <div class="media-body">
                                     <div class="content">
-                                        <h3>Mentorship, coaching and sponsorship</h3>
+                                        <h3 class="text-center">Mentorship, and coaching and sponsorship</h3>
                                         
                                     </div>
                                 </div>
@@ -461,7 +269,7 @@
                                 </div>
                                 <div class="media-body">
                                     <div class="content">
-                                        <h3>Affiliate Program: You get to be part of Goal Digger Affiliate Program</h3>
+                                        <h3 class="text-center">Goal Digger Marketplace</h3>
                                         
                                     </div>
                                 </div>
@@ -473,7 +281,7 @@
                                 </div>
                                 <div class="media-body">
                                     <div class="content">
-                                        <h3>Access to career advancing resources, and events</h3>
+                                        <h3 class="text-center">Access to career advancing resources, and events</h3>
                                         <!-- <p>When you decide to go into business for, you need to make sure all your bases.</p> -->
                                     </div>
                                 </div>
@@ -506,7 +314,7 @@
         <section class="counterup-section">
             <div class="container">
                 <div class="heading-title" id="event">                    
-                    <h2>Our regular events</h2>                   
+                    <h2>Our Regular Events</h2>                   
                 </div>
                 <div class="row align-items-center">
                     <!-- <div class="col-lg-4">
@@ -519,32 +327,38 @@
                         <div class="row ">
                             <div class="col-6">
                                 <div class="item">
-                                    <img src="<?=$this->config->config['base_url']?>assets/images/handshake.png" alt="img">
-                                    <h5>An annual career and business growth workshop in October of every year.</h5>
+                                    <img src="<?=$this->config->config['base_url']?>assets/images/grow.png" alt="img" style="width:20%;">
+                                    <h5>Annual Career workshop</h5>
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class="item">
-                                    <img src="<?=$this->config->config['base_url']?>assets/images/profit.svg" alt="img">
-                                    <h5>A monthly book review session on the second Saturday of every month</h5>                                    
+                                    <img src="<?=$this->config->config['base_url']?>assets/images/know.png" alt="img" style="width:20%;">
+                                    <h5>Book Review Session</h5>                                    
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class="item">
-                                    <img src="<?=$this->config->config['base_url']?>assets/images/Transaction.svg" alt="img">
-                                    <h5>An annual Goal Setting hangout</h5>                                    
+                                    <img src="<?=$this->config->config['base_url']?>assets/images/goalset.jpg" alt="img" style="width:20%;">
+                                    <h5>Annual Goal Setting Workshop</h5>                                    
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class="item ">
-                                    <img src="<?=$this->config->config['base_url']?>assets/images/Deposited.svg" alt="img">
-                                    <h5>A quarterly KSS</h5>                                    
+                                    <img src="<?=$this->config->config['base_url']?>assets/images/networkin.png" alt="img" style="width:20%;">
+                                    <h5>Quarterly Networking Opportunities</h5>                                    
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="item ">
+                                    <img src="<?=$this->config->config['base_url']?>assets/images/knowsha.jpg" style="width:15%;" alt="img">
+                                    <h5>Quarterly Knowledge Sharing System with Industry Experts</h5>                                    
                                 </div>
                             </div>
                             <div class="col">
                                 <div class="item ">
-                                    <img src="<?=$this->config->config['base_url']?>assets/images/03.svg" alt="img">
-                                    <h5>Daily sessions on inspiration, career management, leadership, and more</h5>                                    
+                                    <img src="<?=$this->config->config['base_url']?>assets/images/sharingses.jpg" style="width:20%;" alt="img">
+                                    <h5>Monthly Knowledge Sharing Session</h5>                                    
                                 </div>
                             </div>
                         </div>
@@ -568,9 +382,9 @@
     <section class="testimonials-section_two">
         <div class="container">
             <div class="heading-title">                
-                <h2>Who should join?</h2>                
+                <!-- <h2>Testimonials</h2>                 -->
             </div>
-            <div class="testimonial_wraper_two owl-carousel">
+            <!-- <div class="testimonial_wraper_two owl-carousel">
                 <div class="item">                   
                     <p>We welcome all growth minded individuals dedicated to taking all available opportunities to equip themselves for doing excellently in their chosen career.</p>                   
                 </div>
@@ -587,9 +401,9 @@
                 <div class="item">                    
                     <p>We welcome all growth minded professionals, willing to broaden their horizon in their fields as to what is possible. These individuals are willing to commit their time, talent and resources to advancing themselves and others.</p>                    
                 </div>
-            </div>
+            </div> -->
             <div class="text-center">
-                <a href="<?=$this->config->config['base_url']?>membership" class="theme_btn btn-warning btn text-light btn-lg">Register With Us Now!</a>
+                <a href="<?=$this->config->config['base_url']?>membership" class="theme_btn btn-warning btn text-light btn-lg buton">Register With Us Now!</a>
             </div>
         </div>
     </section>
@@ -610,7 +424,7 @@
                     <div class="footer-item">
                         <h3 >Gold Digger Network</h3>
                         <!-- <a href="" class="logo"><img src="<?=$this->config->config['base_url']?>assets/images/goaldig1.png" alt="img" width="20%"></a> -->
-                        <p class="text-light">Goal digger is a professional network which strives to ensure performance excellence and improve individual productivity through knowledge sharing, inspirational sessions, productivity tools, coaching, mentoring, and training of young and middle level career professionals.</p>
+                        <p class="text-light">We are a group of professionals who have come together for Career and Personal Development. We are passionate about developing our leadership potentials and leveraging each other’s knowledge, expertise, and experience to improve ourselves to become valuable members of our organizations and society at large.</p>
                         <ul>
                             <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
                             <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
@@ -624,7 +438,7 @@
                         <h3>Useful Link</h3>
                         <ul>                          
                             <li><a href="<?=$this->config->config['base_url']?>login"><i class="fal fa-angle-right"></i>MEMBER LOGIN</a></li>
-                            <!-- <li><a href="<?=$this->config->config['base_url']?>login"><i class="fal fa-angle-right"></i>REGISTER NOW</a></li> -->
+                            <li><a href="<?=$this->config->config['base_url']?>membership"><i class="fal fa-angle-right"></i>REGISTER NOW</a></li>
                         </ul>
                     </div>
                 </div>
@@ -632,9 +446,9 @@
                     <div class="footer-item contact_item">
                         <h3>Contact Info</h3>
                         <ul>                            
-                            <li><a href="+234 705 439 4331"><i class="fas fa-phone-volume"></i>+234 705 439 4331</a></li>
-                            <li><a href="info@goaldiggernetwork.ng"><i class="far fa-envelope"></i>info@goaldiggernetwork.ng</a></li>
-                            <li><a href="www.goaldiggernetwork.ng"><i class="fas fa-globe" target="_blank"></i>www.goaldiggernetwork.ng</a></li>
+                            <li><a><i class="fas fa-phone-volume"></i>+234 818 3749 812</a></li>
+                            <li><a><i class="far fa-envelope"></i>info@goaldiggernetwork.ng</a></li>
+                            <li><a><i class="fas fa-globe" target="_blank"></i>www.goaldiggernetwork.ng</a></li>
                         </ul>
                     </div>
                 </div>

@@ -34,58 +34,38 @@
         <div class="container">
             <div class="heading-title">
                
-                <h2 class="wow fadeInDown">Start your journey to building Professional growth  in your carrer by being a part of this community.</h2>
-                <p>Experience Growth, Resources,Mentorship Programmes, Hangouts, Business Connections and Most of All Financial Growth.</p>
+                <h2 class="wow fadeInDown">Start your journey to building Personal and Professional Growth by being a part of our community.</h2>                
             </div>
             
               <div class="tab-content" id="pills-tabContent1">
                 <div class="tab-pane fade show active" id="pills-home1" style="overflow: visible;">
                     <div class="row">
-                        <div class="col-lg-6">
+						<?php foreach($plans as $plan){
+								$features = explode(",",$plan['features']);
+						?>
+                        <div class="col-lg-4">
                             <div class="pracing-item ">
                                 <div class="top-left">                                    
                                 </div>
                                 <div class="top-area">
-                                    <img src="<?=$this->config->config['base_url']?>assets/images/account-add-follow-people-profile-user-svgrepo-com.svg" alt="">
-                                    <p>CLASSIC</p>
+
+                                    <img src="<?=$this->config->config['base_url']?>assets/images/<?=$plan['logo']?>" alt=""  style="width:20%;border-radius:50%;">
+                                    <p><?=$plan['name']?></p>
                                 </div>
                                 <ul>
-                                    <li><span></span><strong>N30,000 PER ANNUM</strong></li>
-                                    <li><span><i class="fal fa-check"></i></span>Book Review Sessions</li>
-                                    <li><span><i class="fal fa-check"></i></span>Monthly KSS Sessions</li>
-                                    <li><span><i class="fal fa-check"></i></span>Mentoring Program</li>
-                                    <li><span><i class="fal fa-check"></i></span>Regular Career/Personal Growth Topics</li>
-                                    <li><span><i class="fal fa-check"></i></span>Career Opportunities / Job Links</li>                                    
-                                    <li><span><i class="fal fa-check"></i></span>Quaterly KSS with Industry Experts</li>
+                                   <strong style="font-size:25px;color:#00000; ">N<?=number_format($plan['price'],2)?> PER ANNUM</strong></li>
+                                    <br><br>
+									<?php foreach($features as $feature){?>
+                                    <li><span><i class="fal fa-check"></i></span><?=$feature?></li>
+                                    <?php } ?>
                                 </ul>
-                                <a href="https://flutterwave.com/pay/nlo1wcxxxqg5" class="buy-now">Sign Up Now</a>
+
+                                <a href="<?=$this->config->config['base_url']?>register?id=<?=$plan['id']?>" class="buy-now ">Sign Up Now</a>
+
                             </div>
                         </div>
-                        <div class="col-lg-6">
-                            <div class="pracing-item active">
-                                <div class="top-left">
-                                    <!-- <p>7.50%</p> -->
-                                </div>
-                                <div class="top-area">
-                                    <img src="<?=$this->config->config['base_url']?>assets/images/account-add-follow-people-profile-user-svgrepo-com.svg" alt="">
-                                    <p>Gold</p>
-                                </div>
-                                <ul>
-                                    <li><span></span><strong>N70,000 PER ANNUM</strong></li>
-                                    <li><span><i class="fal fa-check"></i></span>Book Review Sessions</li>
-                                    <li><span><i class="fal fa-check"></i></span>Monthly KSS Sessions</li>
-                                    <li><span><i class="fal fa-check"></i></span>Mentoring Program</li>
-                                    <li><span><i class="fal fa-check"></i></span>Regular Career/Personal Growth Topics</li>
-                                    <li><span><i class="fal fa-check"></i></span>Career Opportunities / Job Links</li>                                    
-                                    <li><span><i class="fal fa-check"></i></span>Quaterly KSS with Industry Experts</li>
-                                    <li><span><i class="fal fa-check"></i></span> <strong>Annual Goal Setting Workshop</strong></li>
-                                    <li><span><i class="fal fa-check"></i></span><strong>Annual Career Workshop</strong></li>
-                                    <li><span><i class="fal fa-check"></i></span><strong>Annual Goal Book </strong></li>
-                                    <!-- <li><span><i class="fal fa-check"></i></span>Quaterly Webinars with Industry Experts</li> -->
-                                </ul>
-                                <a href="https://flutterwave.com/pay/nlo1wcxxxqg5" class="buy-now">Sign Up Now</a>
-                            </div>
-                        </div>
+						<?php } ?>
+                  
                         
                     </div>
                 </div>
@@ -94,21 +74,15 @@
         </div>
     </section>
 
-
-
-
-
-
-
          <!-- footer  section start  -->
     <footer class="footer-section">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 col-sm-6">
+                <div class="col-lg-6 col-sm-6">
                     <div class="footer-item">
                         <h3 >Gold Digger Network</h3>
                         <!-- <a href="" class="logo"><img src="<?=$this->config->config['base_url']?>assets/images/goaldig1.png" alt="img" width="20%"></a> -->
-                        <p class="text-light">Goal digger is a professional network which strives to ensure performance excellence and improve individual productivity through knowledge sharing, inspirational sessions, productivity tools, coaching, mentoring, and training of young and middle level career professionals.</p>
+                        <p class="text-light">We are a group of professionals who have come together for Career and Personal Development. We are passionate about developing our leadership potentials and leveraging each other’s knowledge, expertise, and experience to improve ourselves to become valuable members of our organizations and society at large.</p>
                         <ul>
                             <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
                             <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
@@ -122,21 +96,21 @@
                         <h3>Useful Link</h3>
                         <ul>                          
                             <li><a href="<?=$this->config->config['base_url']?>login"><i class="fal fa-angle-right"></i>MEMBER LOGIN</a></li>
-                            <!-- <li><a href="<?=$this->config->config['base_url']?>login"><i class="fal fa-angle-right"></i>REGISTER NOW</a></li> -->
+                            <li><a href="<?=$this->config->config['base_url']?>membership"><i class="fal fa-angle-right"></i>REGISTER NOW</a></li>
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-3 col-sm-6">
+                <div class="col-lg-4 col-sm-6">
                     <div class="footer-item contact_item">
                         <h3>Contact Info</h3>
                         <ul>                            
-                            <li><a href="+234 705 439 4331"><i class="fas fa-phone-volume"></i>+234 705 439 4331</a></li>
-                            <li><a href="info@goaldiggernetwork.ng"><i class="far fa-envelope"></i>info@goaldiggernetwork.ng</a></li>
-                            <li><a href="www.goaldiggernetwork.ng"><i class="fas fa-globe" target="_blank"></i>www.goaldiggernetwork.ng</a></li>
+                            <li><a><i class="fas fa-phone-volume"></i>+234 705 439 4331</a></li>
+                            <li><a><i class="far fa-envelope"></i>info@goaldiggernetwork.ng</a></li>
+                            <li><a><i class="fas fa-globe" target="_blank"></i>www.goaldiggernetwork.ng</a></li>
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-3 col-sm-6">
+                <!-- <div class="col-lg-3 col-sm-6">
                     <div class="footer-item footer-gallery">
                         <h3>Newsletter</h3>
                         <form>
@@ -144,13 +118,13 @@
                             <button type="submit" class="theme_btn">Subscribe <i class="fa fa-paper-plane"></i></button>
                         </form>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
         <div class="footer-bottom">
             <div class="container">
                 <div class="bottom-left">
-                    <span>Copyright &copy; <a href="">GOAL DIGGER NETWORK</a> 2021. All rights reserved</span>
+                    <span>Copyright &copy; <a href="">GOAL DIGGER NETWORK</a> 2022. All rights reserved</span>
                 </div>
             </div>
         </div>

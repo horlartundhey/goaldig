@@ -8,6 +8,10 @@ class Users extends CI_Controller {
 				$this->load->database();
 				$this->load->library('session');
 				$this->load->model('crud_model');
+				$this->load->model('model_users');
+				$this->load->model('model_transaction');
+				
+				$this->load->model('model_email');
 				$this->table_map = array(
 					'voters'=>'voter',
 					'elections'=>'election',
@@ -82,18 +86,62 @@ class Users extends CI_Controller {
 				$this->load->view('index', $data);
 				
         }
+		
 		public function membership(){
 			$data = array();
 			$data["title"] = "Welcome to the Membership Plans we have";
-				
+			$data['plans'] = $this->db->get("plans")->result_array();
 			$this->load->view('membership',$data);
 		}
-
+		
 		public function network(){
 			$data = array();
 			$data["title"] = "Networking is as Important to us as our Goals";
-				
+			$data['users'] = $this->model_users->getArray(array('status'=>'active'));
+			// var_dump($data['users']);
 			$this->load->view('network/index', $data);
+		}
+		
+
+		public function singleUser($id){
+			//$data = array();
+			//$data["title"] = "Networking is as Important to us as our Goals";
+			$user = $this->model_users->getArray(array('id'=>$id));
+			if(!empty($user))
+				echo json_encode($user[0]);
+			else
+				echo json_encode(array());
+			 
+		}
+
+
+		public function sendemailer(){
+			//$data = array();
+			// var_dump($_POST);
+			// exit
+			$email = $_POST['email'];
+			$message = $_POST['message'];
+			$subject="";
+		
+			$this->model_email->send_report($subject,$message,$email);
+			//$data["title"] = "Networking is as Important to us as our Goals";
+			// $user = $this->model_users->getArray(array('id'=>$id));
+
+			// if(!empty($user))
+			// 	echo json_encode($user[0]);
+			// else
+			// 	echo json_encode(array());
+			 
+		}
+
+		public function completed(){
+			if($this->session->flashdata('completed_message')==null || $this->session->flashdata('completed_message')==""){
+				 $this->loadUrl('index');
+			}
+			$data = array();
+			$data["title"] = "Transaction completed";
+		
+			$this->load->view('completed',$data);
 		}
 		
 		
@@ -215,6 +263,110 @@ class Users extends CI_Controller {
 								}
 								$data['candidates'] = $candids;
 								$this->load->view('templates/breakdown.php', $data);
+		}
+		
+		
+			
+		public function complete_flutter_transaction($action=''){
+				//var_dump($_GET); exit;
+				if($action=="pay" && isset($_GET['tx_ref']) ){											
+					$tid = $_GET['tx_ref'];				
+					if($tid!=""){
+							$curl = curl_init();
+							$reference = isset($_GET['transaction_id']) ? $_GET['transaction_id'] : '';
+							if(!$reference){
+							  //die('No reference supplied');
+							  $this->loadUrl("checkout");
+							}
+
+							$curl = curl_init();
+							curl_setopt_array($curl, array(
+							  CURLOPT_URL => "https://api.flutterwave.com/v3/transactions/".$reference."/verify" ,
+							  CURLOPT_RETURNTRANSFER => true,
+							  CURLOPT_ENCODING => "",
+							  CURLOPT_MAXREDIRS => 10,
+							  CURLOPT_TIMEOUT => 0,
+							  CURLOPT_FOLLOWLOCATION => true,
+							  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+							  CURLOPT_CUSTOMREQUEST => "GET",
+							  CURLOPT_HTTPHEADER => array(
+								"Content-Type: application/json",
+								"Authorization: Bearer ".FLUTTER_SEC_KEY
+							  ),
+							));
+
+							$response = curl_exec($curl);
+							$err = curl_error($curl);
+														
+							//var_dump($response);exit;
+							if($err){
+								$this->session->set_flashdata('error_message', "Transaction error!");
+								$this->loadUrl(""); 
+							}
+
+							$tranx = json_decode($response,true);
+							
+							if(!$tranx['status'] || $tranx['status']!="success"){							
+									$this->session->set_flashdata('error_message', "Invalid transaction");
+									$this->loadUrl("");														
+							}
+							
+							
+							$addition = '';
+							if('successful' == $tranx['data']['status']){
+									$data =  $tranx['data']['meta'];
+									$ex = $this->model_transaction->getByParam(array('transaction_key'=>$reference));
+									 if($ex!=null){
+										$this->session->set_flashdata('error_message', "Already paid");
+										$this->loadUrl("");		
+									 }	
+									 
+									//var_dump($data);exit;
+									if($data['type']=="subscription"){
+												$dt = $data;
+												unset($dt["__CheckoutInitAddress"]);
+												$dt['plan_id'] = $dt['plan'];
+												$dt['username'] = $dt['email'];
+												unset($dt["plan"]);
+												unset($dt["type"]);
+												unset($dt["amount"]);
+												unset($dt["email"]);
+												$created = $this->db->insert("users",$dt);
+												$user_id = $this->db->insert_id();
+												$data['transaction_key'] = $tranx['data']["id"];
+												$transa = array(
+													'email'=>$data['email'],
+													'date'=>date("d/m/Y"),
+													'amount'=>$data['amount'],
+													'transaction_key'=>$reference,
+													'user_id'=>$user_id,
+													'type'=>$data['type'],
+													'description'=>"Membership plan subscription",
+													'quantity'=>"1",
+													'payment_method'=>"online",
+													'plan_id'=>$data['plan'],
+													'status'=>'success');
+													
+													$this->model_transaction->create($transa);//db->insert("transaction",$transa);
+										
+													$this->session->set_flashdata('completed_message', "yes");
+													$this->loadUrl("users/completed");
+												
+											}else{
+												$this->session->set_flashdata('error_message', "Invalid operation");
+												$this->loadUrl("");
+												
+											}
+													
+							}
+						
+					}else{
+						$this->session->set_flashdata('error_message', "Invalid transaction");
+						$this->loadUrl("success"); 
+					}
+				}else{
+					$this->loadUrl("");
+				}
 		}
 		
 		function   loadUrl($url){

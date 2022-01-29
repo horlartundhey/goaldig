@@ -22,10 +22,6 @@
 			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 				<div class="land-featurearea">
 					<div class="land-meta">
-						<h1>GOAL DIGGER</h1>
-						<p>
-							Goal Digger a Network of Professionals for Growth
-						</p>
 						<div class="friend-logo">
 							<span><img src="<?php echo $this->config->config['base_url']?>social/images/goaldig2.png" alt="" width="50%"></span>
 						</div>						
@@ -44,6 +40,9 @@
 							</div>
 							<div class="form-group">	
 							  <input type="password" id="password" name="password" required="required"/>
+							  <span class="eye-posit">
+								  <i class="ti-eye" id="eye" onclick="toggle()"></i>
+								</span>
 							  <label class="control-label" for="input">Password</label><i class="mtrl-select"></i>
 							</div>
 							<div class="checkbox">
@@ -51,10 +50,10 @@
 								<input type="checkbox" checked="checked"/><i class="check-box"></i>Always Remember Me.
 							  </label>
 							</div>
-							<a href="<?php echo $this->config->config['base_url']?>forgot" title="" class="already-have">Forgot Password</a>
+							<!-- <a href="<?php echo $this->config->config['base_url']?>forgot" title="" class="already-have">Forgot Password</a> -->
 							<div class="submit-btns">
 								<button class="mtr-btn signin" type="submit"><span>Login</span></button>
-								<button class="mtr-btn signup" type="button"><span>Register</span></button>								
+								<!--<button class="mtr-btn signup" type="button"><span>Register</span></button>								-->
 							</div>							
 						</form>
 					</div>
@@ -110,7 +109,23 @@
 		</div>
 	</div>
 </div>
-	
+	<script>
+		var state = false;
+		function toggle(){
+			if(state){
+				document.getElementById("password").setAttribute("type","password");
+				document.getElementById("eye").style.color='#7a797e';
+				state = false;
+
+			}
+			else{
+				document.getElementById("password").setAttribute("type","text");
+				document.getElementById("eye").style.color='#5887ef';
+				state = true;
+
+			}
+		}
+	</script>
 	<script src="<?php echo $this->config->config['base_url']?>social/js/main.min.js"></script>
 	<script src="<?php echo $this->config->config['base_url']?>social/js/script.js"></script>
 	

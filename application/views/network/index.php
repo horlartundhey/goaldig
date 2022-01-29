@@ -33,6 +33,7 @@
 						<li><a href="<?php echo $this->config->config['base_url']?>ResourceCenter" >Resources Center</a></li>
 				<li><a href="<?php echo $this->config->config['base_url']?>goals" >Set Goals</a></li>
 				<li><a href="<?php echo $this->config->config['base_url']?>Profile" >Profile Setting</a></li>
+				<li><a href="<?php echo $this->config->config['base_url']?>users/network" >Network</a></li>
 				
 			</ul>
 		</nav>
@@ -49,6 +50,7 @@
 				<li><a href="<?php echo $this->config->config['base_url']?>ResourceCenter" >Resources Center</a></li>
 				<li><a href="<?php echo $this->config->config['base_url']?>goals" >Set Goals</a></li>
 				<li><a href="<?php echo $this->config->config['base_url']?>Profile" >Profile Setting</a></li>
+				<li><a href="<?php echo $this->config->config['base_url']?>users/network" >Network</a></li>
 				
 			</ul>
 			
@@ -71,39 +73,39 @@
 						</div>
 					</div>
 					<div class="row know-box">
+					<?php if(isset($users) && !empty($users)){
+										foreach($users as $user){
+									?>
+									
 						<div class="col-lg-4 col-md-4">
+							<br><br>
 							<div class="knowldeg-box">
                             <div class="nearly-pepls">
                               
-								<a href="time-line.html" title=""><img src="<?php echo $this->config->config['base_url']?>social/images/resources/noimage.jpg" alt="" style="width:100%"></a>							  
+								<a href="time-line.html" title="">
+									
+								<?php if(isset($user['profile_picture']) && $user['profile_picture']!="" &&file_exists("resources/profile/_profiles/".$user['profile_picture'])){?>
+									<img src="<?php echo $this->config->config['base_url']?>resources/profile/_profiles/<?=$user['profile_picture']?>?v=<?=time()?>" alt="" style="width:47%;">
+											<?php }else{ ?>
+												<img src="<?php echo $this->config->config['base_url']?>social/images/resources/noimage.jpg" alt="">
+											<?php } 
+											// var_dump($users)
+											
+											?>
+								
+								</a>							  
                             </div>								
-								<span>Member Name:</span>
-								<p>About from Profile</p>
+								<span><?=$user['name']?></span>
+								<p><?=$user['about']?></p>
 								<!-- <a href="#" title="" class="underline btn btn-primary">View Profile</a> -->
-                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">View Profile</button>                               
+                                <button type="button" onclick="loadDetaill('<?=$user['id']?>')" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">View Profile</button>                               
 
-                                <a href="#" title="" class="underline btn btn-warning text-light">Send a Message!</a>
+                                <a href="#" title="" class="underline btn btn-warning text-light" onclick="sendDetaillMail('<?=$user['username']?>')" data-toggle="modal" data-target="#exampleModal1Center">Send a Message!</a>
 							</div>
 						</div>
-						<div class="col-lg-4 col-md-4">
-							<div class="knowldeg-box">
-								<i class="fa fa-check-square-o"></i>
-								<span>FAQ</span>
-								<p>Guys! you may make your own social media website for their friends, or publically.</p>
-								<a href="#" title="" class="underline">Read More</a>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-4">
-							<div class="knowldeg-box">
-								<i class="fa fa-envelope-o"></i>
-								<span>Contact us</span>
-								<p>Guys! you may make your own social media website for their friends, or publically.</p>
-								<a href="#" title="" class="underline">Read More</a>
-							</div>
-						</div>
-					</div>
-                    
+						<?php }} ?>
 
+					</div>                    
 				</div>
 			</div>
 		</div>
@@ -113,7 +115,7 @@
                                 <div class="modal-dialog modal-dialog-centered" role="document">
                                     <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                                        <h5 class="modal-title" id="exampleModalLongTitle"></h5>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                         </button>
@@ -121,10 +123,9 @@
                                     <div class="modal-body">
                                     <section>
                                     <div class="about">
-										<div class="personal">
-											<h5 class="f-title"><i class="ti-info-alt"></i> Personal Info</h5>
-											<p>
-												Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+										<div class="personal">											
+											<p id="about"><span id="about" >
+												Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
 											</p>
 										</div>
 										<div class="d-flex flex-row mt-2">
@@ -133,16 +134,16 @@
 													<a href="#basic" class="nav-link active" data-toggle="tab" >Basic info</a>
 												</li>											
 												<li class="nav-item">
-													<a href="#work" class="nav-link" data-toggle="tab" >work and education</a>
+													<a href="#work" class="nav-link" data-toggle="tab" >Career</a>
 												</li>																								
 											</ul>
 											<div class="tab-content">
 												<div class="tab-pane fade show active" id="basic" >
 													<ul class="basics">
-														<li><i class="ti-user"></i>sarah grey</li>
-														<li><i class="ti-map-alt"></i>live in Dubai</li>
-														<li><i class="ti-mobile"></i>+1-234-345675</li>
-														<li><i class="ti-email"></i><a href="https://wpkixx.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3c4553494e515d55507c59515d5550125f5351">[email&#160;protected]</a></li>
+														<li><i class="ti-user"></i><span id="name">sarah grey</span></li>
+														<li><i class="ti-map-alt"></i><span id="city" >live in Dubai</span></li>
+														<li><i class="ti-mobile"></i><span id="phone_number" >+1-234-345675</span></li>
+														<li><i class="ti-email"></i><a href="" class="__cf_email__" data-cfemail=""><span id="email" >[email&#160;protected]</span></a></li>
 														
 													</ul>
 												</div>
@@ -154,8 +155,8 @@
 												<div class="tab-pane fade" id="work" role="tabpanel">
 													<div>
 														
-														<a href="#" title="">Envato</a>
-														<p>work as autohr in envato themeforest from 2013</p> 
+														<a href="#" title="">Career</a>
+														<p><span id="career" >work as autohr in envato themeforest from 2013</span></p> 
 														
 													</div>
 												</div>
@@ -173,6 +174,38 @@
                                 </div>
                                 </div>
                                 <!-- end Modal1 -->
+
+								<!-- Modal2 -->
+                                <div class="modal fade" id="exampleModal1Center" tabindex="-1" role="dialog" aria-labelledby="exampleModal1CenterTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                    <div class="modal-header">
+                                        
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+									<form method="post" action="<?php echo $this->config->config['base_url']?>users/sendemailer">
+									<div class="form-group">
+												
+												<input type="text" id="user_email" name="email">
+											</div>
+										<div class="form-group">
+												<label for="exampleFormControlTextarea1">Send a Message</label>
+												<textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="message"></textarea>
+											</div>
+											<button type="submit" class="btn btn-success" >Submit</button>
+										</form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        
+                                    </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <!-- end Modal2 -->
 	
 	
 	<div class="bottombar">
@@ -185,17 +218,43 @@
 			</div>
 		</div>
 	</div>
-</div>			
+</div>		
+		
+
 <script src="<?=$this->config->config['base_url']?>assets/js/jquery-3.5.1.min.js"></script> 
 	<script>
 		function logout(){
 			location.href="<?php echo $this->config->config['base_url']?>logout";
 		}
+
+		function loadDetaill(id){
+			$.ajax({
+				url : "<?php echo $this->config->config['base_url']?>users/singleUser/"+id, // give complete url here
+				type : 'post',
+				success : function(data){
+					//alert('success');
+					console.log(data);
+					data = JSON.parse(data);
+					$("#name").html(data.name),
+					$("#city").html(data.city),
+					$("#phone_number").html(data.phone),
+					$("#email").html(data.username),
+					$("#about").html(data.about),
+					$("#career").html(data.career)
+				}
+			});
+		}
+
+		function sendDetaillMail(username){
+			$("#user_email").val(username);
+		}
+
 	</script>
 	<script src="<?php echo $this->config->config['base_url']?>social/js/main.min.js"></script>
 	<script src="<?php echo $this->config->config['base_url']?>social/js/script.js"></script>
 	<script src="<?php echo $this->config->config['base_url']?>social/js/map-init.js"></script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8c55_YHLvDHGACkQscgbGLtLRdxBDCfI"></script>
+
 
 </body>	
 </html>

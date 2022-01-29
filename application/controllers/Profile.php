@@ -6,7 +6,7 @@
 
             $this->load->database();
 			$this->load->library('session');
-			$this->load->model('goal_model');
+			$this->load->model('Goal_model');
 			$this->load->library('form_validation');		
 			$this->load->model('model_users');
 			$this->load->model('model_messaging');
@@ -74,6 +74,7 @@
 					'city'=>$this->input->post('city'),
 					'phone'=>$this->input->post('phone'),
 					'country'=>$this->input->post('country'),
+					'career'=>$this->input->post('career'),
 				);
 				
 				$create = $this->model_users->update($this->session->userdata('user_id'),$data);

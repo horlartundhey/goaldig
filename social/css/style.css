@@ -3411,6 +3411,19 @@ nav.breadcrumb {
     width: 60px;
 }
 
+.eye-posit {
+    position: absolute;
+    right: 15px;
+    transform: translate(0,-50%);
+    top: 50%;
+    cursor: pointer;
+  }
+
+  .ti-eye {
+    font-size: 20px;
+    color: #7a797e;
+  }
+  
 .pepl-info {
     display: inline-block;
     padding-left: 15px;
@@ -4727,14 +4740,14 @@ canvas {
     letter-spacing: 0.3px;
 }
 
-.top-area > ul.main-menu > li::after {
+/* .top-area > ul.main-menu > li::after {
     content: "";
     font-family: fontawesome;
     font-size: 13px;
     position: absolute;
     right: 10px;
     top: 0;
-}
+} */
 
 .top-area > ul.main-menu > li > ul li {
     line-height: initial;

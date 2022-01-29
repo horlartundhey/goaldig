@@ -1,5 +1,5 @@
 <?php
-class goal_model extends CI_Model{
+class Goal_model extends CI_Model{
 
     function __construct() {
         parent::__construct();
@@ -12,7 +12,7 @@ class goal_model extends CI_Model{
 		}
 		
         $this->db->order_by('id', 'DESC');
-        $query = $this->db->get('goals');
+        $query = $this->db->get_where('goals',array("user_id"=>$this->session->userdata('user_id')));
         return $query->result_array();
     }
 	

@@ -117,11 +117,11 @@ Table of Content:
   text-align: center;
   line-height: 40px;
   font-size: 14px;
-  color: #4D3184;
+  color: #CD8029;
 }
 .search_btn:hover {
   color: #fff;
-  background: #4d3184;
+  background: #CD8029;
 }
 
 .input_box {
@@ -294,7 +294,7 @@ body a:focus, body a:hover, body .btn:focus, body .btn:hover, body button:focus,
   font-family: 'Source Sans Pro', sans-serif;
 }
 .main-header .main-navbar {
-  background: #fff;
+  /* background: #fff; */
   border-radius: 10px;
   padding: 0 30px;
   position: relative;
@@ -333,7 +333,7 @@ body a:focus, body a:hover, body .btn:focus, body .btn:hover, body button:focus,
   position: relative;
   font-size: 16px;
   font-weight: 400;
-  color: #313131;
+  color: #fff;
   margin: 0 10px;
   font-family: 'Source Sans Pro', sans-serif;
   text-transform: capitalize;
@@ -421,11 +421,11 @@ body a:focus, body a:hover, body .btn:focus, body .btn:hover, body button:focus,
   text-align: center;
   line-height: 40px;
   font-size: 14px;
-  color: #4D3184;
+  color: #CD8029;
 }
 .main-header .main-navbar .nav-inner .search_btn:hover {
   color: #fff;
-  background: #4d3184;
+  background: #CD8029;
 }
 .main-header .main-navbar .mobile-header {
   display: flex;
@@ -441,7 +441,7 @@ body a:focus, body a:hover, body .btn:focus, body .btn:hover, body button:focus,
   display: none;
 }
 .main-header .main-navbar .mobile-header .menu-icon i {
-  color: #4d3184;
+  color: #CD8029;
   font-size: 20px;
 }
 .main-header .main-navbar .mobile-header .menu-icon .close-menu {
@@ -455,7 +455,7 @@ body a:focus, body a:hover, body .btn:focus, body .btn:hover, body button:focus,
 .main-header .mobile-menu {
   max-width: 600px;
   margin: 0 auto;
-  background: #000;
+  background: #fff;
   border-radius: 10px;
   height: 0;
   padding: 0;
@@ -474,7 +474,7 @@ body a:focus, body a:hover, body .btn:focus, body .btn:hover, body button:focus,
   line-height: 40px;
   font-size: 16px;
   font-weight: 400;
-  color: #ffff;
+  color: #000;
   font-size: "Red Hat Display", sans-serif;
   width: 100%;
   text-transform: capitalize;
@@ -819,7 +819,7 @@ body a:focus, body a:hover, body .btn:focus, body .btn:hover, body button:focus,
 .about-section {
   background: url(../images/about.jpg) no-repeat center center;
   background-size: cover;
-  padding: 100px 0;
+  padding: 30px 0;
 }
 .about-section .left-content .heading-title {
   text-align: left;
@@ -1191,7 +1191,7 @@ body a:focus, body a:hover, body .btn:focus, body .btn:hover, body button:focus,
   top: 0px;
   left: 0;
   background-color: #F4F2F9;
-  color: #4D3184;
+  color: #CD8029;
   width: 120px;
   height: 85px;
   clip-path: polygon(0 41%, 41% 0, 100% 0, 0 100%);
@@ -1204,7 +1204,7 @@ body a:focus, body a:hover, body .btn:focus, body .btn:hover, body button:focus,
   text-align: center;
   font-size: 16px;
   font-weight: 700;
-  color: #4D3184;
+  color: #CD8029;
   font-family: "Red Hat Display", sans-serif;
 }
 .pricing-section .pracing-item .top-area {
@@ -1228,7 +1228,7 @@ body a:focus, body a:hover, body .btn:focus, body .btn:hover, body button:focus,
 .pricing-section .pracing-item ul li {
   font-size: 18px;
   font-weight: 400;
-  color: #513E75;
+  color: #000000;
   margin-bottom: 15px;
   font-family: "Source Sans Pro", sans-serif;
 }
@@ -1243,24 +1243,32 @@ body a:focus, body a:hover, body .btn:focus, body .btn:hover, body button:focus,
   width: 100%;
   text-align: center;
   line-height: 60px;
-  border: 1px solid #D3CBE2;
+  border: 1px solid #000;
   border-radius: 30px;
-  font-size: 18px;
-  font-weight: 500;
-  color: #4D3184;
+  font-size: 24px;
+  font-weight: 600;
+  color: #000;
   margin: 0 auto;
   margin-bottom: 50px;
 }
+
+.buton{
+  font-size: 40px;
+}
+
+.sizer{
+  font-size: 20px;
+}
 .pricing-section .pracing-item .buy-now:hover, .pricing-section .pracing-item .buy-now:focus {
   color: #fff;
-  background: #4D3184;
+  background: #333333;
 }
 .pricing-section .pracing-item:hover, .pricing-section .pracing-item:focus, .pricing-section .pracing-item.active {
   box-shadow: 0px 30px 70px rgba(221, 215, 233, 0.5);
   border: 1px solid transparent;
 }
 .pricing-section .pracing-item:hover .top-left, .pricing-section .pracing-item:focus .top-left, .pricing-section .pracing-item.active .top-left {
-  background: #4D3184;
+  background: #CD8029;
 }
 .pricing-section .pracing-item:hover .top-left p, .pricing-section .pracing-item:focus .top-left p, .pricing-section .pracing-item.active .top-left p {
   color: #fff;
@@ -1459,13 +1467,13 @@ body a:focus, body a:hover, body .btn:focus, body .btn:hover, body button:focus,
   text-align: center;
   border-radius: 50%;
   font-size: 16px;
-  color: #4D3184;
+  color: #CD8029;
   margin: 0 5px;
   background: rgba(107, 94, 128, 0.1);
 }
 .top-investor-section .investor-item .card .card-body ul li a:hover, .top-investor-section .investor-item .card .card-body ul li a:focus {
   background: #fff;
-  color: #4D3184;
+  color: #CD8029;
 }
 .top-investor-section .investor-item:hover .card, .top-investor-section .investor-item:focus .card {
   background: #523680;
@@ -1484,12 +1492,12 @@ body a:focus, body a:hover, body .btn:focus, body .btn:hover, body button:focus,
   background: rgba(107, 94, 128, 0.3);
 }
 .top-investor-section .investor-item:hover .card .card-body ul li a:hover, .top-investor-section .investor-item:hover .card .card-body ul li a:focus, .top-investor-section .investor-item:focus .card .card-body ul li a:hover, .top-investor-section .investor-item:focus .card .card-body ul li a:focus {
-  color: #4D3184;
+  color: #CD8029;
   background: #fff;
 }
 
 .MoneyPro-history {
-  padding: 100px 0;
+  padding: 0px 0;
 }
 .MoneyPro-history .item {
   text-align: right;
@@ -2161,7 +2169,7 @@ body.search.search-results .content-area {
   color: #fff;
 }
 .blog-section .left-side .card .images-slider .owl-nav button:hover, .blog-section .left-side .card .images-slider .owl-nav button:focus {
-  background: #4D3184;
+  background: #CD8029;
 }
 .blog-section .left-side .card .video iframe {
   width: 100%;
@@ -2287,7 +2295,7 @@ body.search.search-results .content-area {
   color: #707070;
 }
 .blog-section .left-side .MoneyPro-pagination ul.page-numbers li:hover {
-  background: #4D3184;
+  background: #CD8029;
   color: #fff;
 }
 .blog-section .left-side .MoneyPro-pagination ul.page-numbers li:hover a {
@@ -2331,7 +2339,7 @@ body.search.search-results .content-area {
   color: #ffffff;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  background-color: #4D3184;
+  background-color: #CD8029;
   text-transform: capitalize;
   font-weight: 600;
   font-size: 15px;
@@ -2362,7 +2370,7 @@ body.search.search-results .content-area {
   width: 45px;
   height: 3px;
   content: "";
-  background-color: #4D3184;
+  background-color: #CD8029;
   bottom: 0;
   left: 0;
 }
@@ -2522,7 +2530,7 @@ body.search.search-results .content-area {
   font-size: 14px;
   line-height: 14px;
   font-weight: 700;
-  color: #4D3184;
+  color: #CD8029;
   text-transform: uppercase;
 }
 .blog-details-section .left-side .card .card-body p {
@@ -2683,7 +2691,7 @@ body.search.search-results .content-area {
   font-weight: 500;
   text-transform: capitalize;
   cursor: pointer;
-  background-color: #4D3184;
+  background-color: #CD8029;
   color: #fff;
   margin-top: 30px;
   padding: 14px 40px;
@@ -2738,7 +2746,7 @@ body.search.search-results .content-area {
   font-weight: 500;
   text-transform: capitalize;
   cursor: pointer;
-  background-color: #4D3184;
+  background-color: #CD8029;
   color: #fff;
   margin-top: 30px;
   padding: 14px 40px;
@@ -2767,7 +2775,7 @@ body.search.search-results .content-area {
   font-size: 24px;
 }
 .contact-info-section .heading h2 {
-  color: #4D3184;
+  color: #CD8029;
   text-transform: capitalize;
   margin-bottom: 20px;
   font-weight: 500;
@@ -2793,7 +2801,7 @@ body.search.search-results .content-area {
   transition: 0.3s;
 }
 .contact-info-section .item .icon i {
-  color: #4D3184;
+  color: #CD8029;
   font-size: 24px;
 }
 .contact-info-section .item .icon .fa-phone {
@@ -2814,7 +2822,7 @@ body.search.search-results .content-area {
   border: 1px solid transparent;
 }
 .contact-info-section .item:hover .icon, .contact-info-section .item:focus .icon {
-  border: 1px solid #4D3184;
+  border: 1px solid #CD8029;
 }
 
 .contact-width-section {
@@ -3096,7 +3104,7 @@ body.search.search-results .content-area {
     text-align: center;
     line-height: 30px;
     font-size: 14px;
-    color: #4D3184;
+    color: #CD8029;
   }
 
   .main-header .main-navbar .mobile-header .menu-icon {

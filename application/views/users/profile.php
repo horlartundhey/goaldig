@@ -41,6 +41,7 @@
 						<li><a href="<?php echo $this->config->config['base_url']?>ResourceCenter" >Resources Center</a></li>
 				<li><a href="<?php echo $this->config->config['base_url']?>goals" >Set Goals</a></li>
 				<li><a href="<?php echo $this->config->config['base_url']?>Profile" >Profile Setting</a></li>
+				<li><a href="<?php echo $this->config->config['base_url']?>users/network" >Network</a></li>
 				
 			</ul>
 		</nav>
@@ -48,7 +49,7 @@
 	</div><!-- responsive header -->
 	<div class="topbar stick">
 		<div class="logo">
-			<a title="" href="<?php echo $this->config->config['base_url']?>home"><img src="<?=$this->config->config['base_url']?>assets/images/goaldig1.png" width="25%" alt=""></a>
+			<a title="" href="<?php echo $this->config->config['base_url']?>home"><img src="<?=$this->config->config['base_url']?>assets/images/goaldig1.png" width="15%" alt=""></a>
 		</div>
 		
 		<div class="top-area">
@@ -57,6 +58,7 @@
 				<li><a href="<?php echo $this->config->config['base_url']?>ResourceCenter" >Resources Center</a></li>
 				<li><a href="<?php echo $this->config->config['base_url']?>goals" >Set Goals</a></li>
 				<li><a href="<?php echo $this->config->config['base_url']?>Profile" >Profile Setting</a></li>
+				<li><a href="<?php echo $this->config->config['base_url']?>users/network" >Network</a></li>
 				
 			</ul>
 			
@@ -146,10 +148,10 @@ resources/profile/_profiles/<?=$user['profile_picture']?>?v=<?=time()?>" alt="">
 											</li>
 											
 											
-											<li>
+											<!-- <li>
 												<i class="ti-lock"></i>
 												<a href="<?php echo $this->config->config['base_url']?>Profile/changePassword" title="">change password</a>
-											</li>
+											</li> -->
 
 											<li>
 												<i class="ti-settings"></i>
@@ -162,6 +164,17 @@ resources/profile/_profiles/<?=$user['profile_picture']?>?v=<?=time()?>" alt="">
 							</div><!-- sidebar -->
 							<div class="col-lg-6">
 								<div class="central-meta">
+								    <?php if($this->session->flashdata('success')): ?>
+								<div class="alert alert-success alert-dismissible" role="alert">
+								  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+								  <?php echo $this->session->flashdata('success'); ?>
+								</div>
+							  <?php elseif($this->session->flashdata('error')): ?>
+								<div class="alert alert-error alert-dismissible" role="alert">
+								  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+								  <?php echo $this->session->flashdata('error'); ?>
+								</div>
+							  <?php endif; ?>
 									<div class="editing-info">
 										<h5 class="f-title"><i class="ti-info-alt"></i> Edit Basic Information</h5>
 										<span style="color:red"><?=isset($errors)?$errors:""?></span>
@@ -181,6 +194,11 @@ resources/profile/_profiles/<?=$user['profile_picture']?>?v=<?=time()?>" alt="">
 											  <label class="control-label" for="input">Phone No.</label><i class="mtrl-select"></i>
 											</div>
 											
+											<!-- <div class="form-group">	
+											  <input type="text" required="required" value="<?=$user['career']?>" name="career" />
+											  <label class="control-label" for="input">Career</label><i class="mtrl-select"></i>
+											</div> -->
+											
 											<div class="form-radio">
 											  <div class="radio">
 												<label>
@@ -197,11 +215,25 @@ resources/profile/_profiles/<?=$user['profile_picture']?>?v=<?=time()?>" alt="">
 											  <input type="text" value="<?=$user['city']?>" name="city" required="required"/>
 											  <label class="control-label" for="input">City</label><i class="mtrl-select"></i>
 											</div>
+
+											<div class="form-group">	
+											  <input type="text" value="<?=$user['career']?>" name="career" required="required"/>
+											  <label class="control-label" for="input">Career</label><i class="mtrl-select"></i>
+											</div>
+											
 											<div class="form-group">	
 											  <select name="country">
 												<option value="">Country</option>
 												  
-												  <option <?=($user['country']=="NGA")?"selected":""?> value="NGA">Nigeria</option>
+												  <option <?=($user['country']=="Nigeria")?"selected":""?> value="Nigeria">Nigeria</option>
+												  <option <?=($user['country']=="Ghana")?"selected":""?> value="Ghana">Ghana</option>
+												  <option <?=($user['country']=="Germany")?"selected":""?> value="Germany">Germany</option>
+												  <option <?=($user['country']=="Italy")?"selected":""?> value="Italy">Italy</option>
+												  <option <?=($user['country']=="Ivory Coast")?"selected":""?> value="Ivory Coast">Ivory Coast</option>
+												  <option <?=($user['country']=="Japan")?"selected":""?> value="Japan">Japan</option>
+												  <option <?=($user['country']=="South Africa")?"selected":""?> value="South Africa">South Africa</option>
+												  <option <?=($user['country']=="United States of America")?"selected":""?> value="United States of America">United States of America</option>
+												  <option <?=($user['country']=="United Kingdom")?"selected":""?> value="United Kingdom">United Kingdom</option>
 												  
 											  </select>
 											</div>

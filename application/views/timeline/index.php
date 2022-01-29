@@ -38,6 +38,7 @@
 						<li><a href="<?php echo $this->config->config['base_url']?>ResourceCenter" >Resources Center</a></li>
 				<li><a href="<?php echo $this->config->config['base_url']?>goals" >Set Goals</a></li>
 				<li><a href="<?php echo $this->config->config['base_url']?>Profile" >Profile Setting</a></li>
+				<li><a href="<?php echo $this->config->config['base_url']?>users/network" >Network</a></li>
 				
 			</ul>
 		</nav>
@@ -50,12 +51,12 @@
 		</div>
 		
 		<div class="top-area">
-			<div class="top-search">
+			<!-- <div class="top-search">
 				<form method="post" class="">
 					<input type="text" placeholder="Search Friend">
 					<button data-ripple><i class="ti-search"></i></button>
 				</form>
-			</div>
+			</div> -->
 			<ul class="setting-area">
 				
 			</ul>
@@ -84,7 +85,7 @@ resources/profile/_profiles/<?=$user['profile_picture']?>?v=<?=time()?>" alt="" 
 				<li><a href="<?php echo $this->config->config['base_url']?>goals" title="Set Goals" data-toggle="tooltip" data-placement="right"><i class="ti-import"></i></a></li>
 				<!-- <li><a href="./social/forum-create-topic.html" title="Mentoring Session" data-toggle="tooltip" data-placement="right"><i class="ti-comment-alt"></i></a></li> -->
 				<li><a href="<?php echo $this->config->config['base_url']?>Profile" title="Profile Setting" data-toggle="tooltip" data-placement="right"><i class="ti-panel"></i></a></li>
-				<li><a href="<?php echo $this->config->config['base_url']?>network" title="Network" data-toggle="tooltip" data-placement="right"><i class="ti-light-bulb"></i></a></li>
+				<li><a href="<?php echo $this->config->config['base_url']?>users/network" title="Network" data-toggle="tooltip" data-placement="right"><i class="ti-light-bulb"></i></a></li>
 				<!-- <li><a href="timeline-friends.html" title="Friends" data-toggle="tooltip" data-placement="right"><i class="ti-themify-favicon"></i></a></li>
 				<li><a href="widgets.html" title="Widgets" data-toggle="tooltip" data-placement="right"><i class="ti-eraser"></i></a></li>
 				<li><a href="notifications.html" title="Notification" data-toggle="tooltip" data-placement="right"><i class="ti-bookmark-alt"></i></a></li> -->
@@ -119,9 +120,23 @@ resources/profile/_profiles/<?=$user['profile_picture']?>?v=<?=time()?>" alt="" 
 									
 								</aside>
 							</div><!-- sidebar -->
+							
 							<div class="col-lg-6">
+							    <?php if($this->session->flashdata('success')): ?>
+								<div class="alert alert-success alert-dismissible" role="alert">
+								  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+								  <?php echo $this->session->flashdata('success'); ?>
+								</div>
+							  <?php elseif($this->session->flashdata('error')): ?>
+								<div class="alert alert-error alert-dismissible" role="alert">
+								  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+								  <?php echo $this->session->flashdata('error'); ?>
+								</div>
+							  <?php endif; ?>
 								<div class="central-meta">
+								    
 									<div class="new-postbox">
+									    
 										<figure>
 										<?php if(isset($user['profile_picture']) && $user['profile_picture']!="" &&
 file_exists("resources/profile/_profiles/".$user['profile_picture'])){?>
@@ -137,12 +152,12 @@ resources/profile/_profiles/<?=$user['profile_picture']?>?v=<?=time()?>" alt="">
 												<textarea rows="2" name="content" id="content" placeholder="write something"></textarea>
 												<div class="attachments">
 													<ul>
-														<li>
+														<!-- <li>
 															<i class="fa fa-music"></i>
 															<label class="fileContainer">
-																<input id= "music_file" name="music" type="file">
+																<input id= "music_file" name="audio" type="file">
 															</label>
-														</li>
+														</li> -->
 														<li>
 															<i class="fa fa-image"></i>
 															<label class="fileContainer">
@@ -185,16 +200,10 @@ resources/profile/_profiles/<?=$user['profile_picture']?>?v=<?=time()?>" alt="">
 										  
 											<figure>
 											<?php if(isset($users[$post['user_id']]
-['profile_picture']) && $users[$post['user_id']]
-['profile_picture']!="" &&
-file_exists("resources/profile/_profiles/".$users[$post['user_id']]
-['profile_picture'])){?>
-								<img src="
-resources/profile/_profiles/<?=$users[$post['user_id']]
-['profile_picture']?>?v=<?=time()?>" alt="">
-								<?php }else{ ?>
-								<img src="<?php echo $this->config->config['base_url']?>social/images/resources/noimage.jpg" alt="">
-								<?php } ?>
+												['profile_picture']) && $users[$post['user_id']]['profile_picture']!="" &&file_exists("resources/profile/_profiles/".$users[$post['user_id']]['profile_picture'])){?><img src="resources/profile/_profiles/<?=$users[$post['user_id']]['profile_picture']?>?v=<?=time()?>" alt="">
+											<?php }else{ ?>
+												<img src="<?php echo $this->config->config['base_url']?>social/images/resources/noimage.jpg" alt="">
+											<?php } ?>
 											</figure>
 											<div class="friend-name">
 												<ins><a href="<?php echo $this->config->config['base_url']?>Profile" title="">
@@ -211,7 +220,7 @@ resources/profile/_profiles/<?=$users[$post['user_id']]
 												<iframe width="" height="315" src="https://www.youtube.com/embed/5JJ_jqqpTMY" allow="autoplay;" allowfullscreen></iframe>
 												<?php } ?>
 												<div class="we-video-info">
-													<ul>
+													<!-- <ul>
 														<li>
 															<span class="views" data-toggle="tooltip" title="views">
 																<i class="fa fa-eye"></i>
@@ -232,11 +241,11 @@ resources/profile/_profiles/<?=$users[$post['user_id']]
 														</li>
 														
 														</li>
-													</ul>
+													</ul> -->
 												</div>
 												<div class="description">
 													
-													<p>
+													<p style="font-weight:bolder; color:#000; font-size:20px;">
 													<?=$post['content']?>	
 													</p>
 												</div>
@@ -245,23 +254,29 @@ resources/profile/_profiles/<?=$users[$post['user_id']]
 										<div class="coment-area">
 											<ul class="we-comet">
 											<?php 
+											
 											if(isset($post['comments']) && !empty($post['comments'])){
+												
 												foreach($post['comments'] as $comment){
 											?>
 												<li>
 													<div class="comet-avatar">
-														<img src="<?php echo $this->config->config['base_url']?>social/images/resources/comet-1.jpg" alt="">
+														<?php if(isset($users[$comment['user_id']]['profile_picture']) && $users[$comment['user_id']]['profile_picture']!="" &&file_exists("resources/profile/_profiles/".$users[$comment['user_id']]['profile_picture'])){?>
+														<img src="resources/profile/_profiles/<?=$users[$comment['user_id']]['profile_picture']?>?v=<?=time()?>" alt="">
+											<?php }else{ ?>
+												<img src="<?php echo $this->config->config['base_url']?>social/images/resources/noimage.jpg" alt="">
+											<?php } ?>
 													</div>
 													<div class="we-comment">
 														<div class="coment-head">
 															<h5><a href="<?php echo $this->config->config['base_url']?>Profile" title="">
-															<?=isset($users[$post['user_id']])?$users[$post['user_id']]['name']:""?>
+															<?=isset($users[$comment['user_id']])?$users[$comment['user_id']]['name']:""?>
 												
 															</a></h5>
 															<span><?=$comment['date_created']?></span>
 															<a class="we-reply" href="#" title="Reply"><i class="fa fa-reply"></i></a>
 														</div>
-														<p><?=$comment['content']?></p>
+														<p style="color: #000;"><?=$comment['content']?></p>
 													</div>
 
 												</li>
@@ -272,13 +287,13 @@ resources/profile/_profiles/<?=$users[$post['user_id']]
 												</li>
 												<li class="post-comment">
 													<div class="comet-avatar">
-														<img src="<?php echo $this->config->config['base_url']?>social/images/resources/comet-2.jpg" alt="">
+														<!-- <img src="<?php echo $this->config->config['base_url']?>social/images/resources/comet-2.jpg" alt=""> -->
 													</div>
 													<div class="post-comt-box">
 														<form  name="form_<?=$post['post_id']?>" name="form_<?=$post['post_id']?>" action="<?php echo $this->config->config['base_url']?>Messaging/createcomment/<?=$post['post_id']?>" method="post">
 															<textarea id="<?=$post['post_id']?>" name="comment" placeholder="Post your comment"></textarea>
 															
-															<button type="submit"></button>
+															<button type="submit" class="btn btn-primary" style="background-color: #088dcd !important;">Post Your Comment</button>
 														</form>	
 													</div>
 												</li>

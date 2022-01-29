@@ -21,13 +21,10 @@
 		<div class="row merged">
 			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 				<div class="land-featurearea">
-					<div class="land-meta">
-						<h1>GOAL DIGGER</h1>
-						<p>
-							Goal Digger a Network of Professionals for Growth
-						</p>
+					<div class="land-meta">						
+						
 						<div class="friend-logo">
-							<span><img src="<?php echo $this->config->config['base_url']?>social/images/goaldig1.png" alt=""></span>
+							<span><img src="<?php echo $this->config->config['base_url']?>social/images/goaldig2.png" alt=""></span>
 						</div>						
 					</div>	
 				</div>
@@ -70,10 +67,11 @@
 							
 							<div class="checkbox">
 							  <label>
-								<input type="checkbox" checked="checked"/><i class="check-box"></i>Accept Terms & Conditions ?
+								<input type="hidden" name="plan" id="plan" value="<?=$plan_id?>" />
+								<!-- <input type="checkbox" checked="checked"/><i class="check-box"></i>Accept Terms & Conditions ? -->
 							  </label>
 							</div>
-							<a href="#" title="" class="already-have">Already have an account?</a>
+							<a href="<?=$this->config->config['base_url']?>login" title="" class="text-success">Already have an account?</a>
 							<div class="submit-btns">
 								<button class="mtr-btn" type="submit"><span>Register</span></button>
 							</div>
@@ -94,7 +92,7 @@
      <script src="<?php echo $this->config->config['base_url']?>backend/assets/js/pcoded.min.js"></script>
      <script src="<?php echo $this->config->config['base_url']?>backend/assets/js/sweetalert.min.js"></script>
      
-	<script type="text/javascript" src="<?= $this->config->config['base_url']?>js/login.js?v=699"></script>
+	<script type="text/javascript" src="<?= $this->config->config['base_url']?>js/login.js?v=649"></script>
 </body>	
 
 </html>

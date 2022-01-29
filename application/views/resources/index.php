@@ -74,10 +74,18 @@
 				<div class="row">
 					<div class="col-lg-9">
 						<div class="forum-warper">
-							<h5>Upload Resources Link, Images Here:</h5>
-							 <?php if ($this->session->flashdata('errors') != ""):?>
-								<?=$this->session->flashdata('errors')?>		
-							<?php endif;?>
+							<h5>Upload Resources PDF Materials Here:</h5>
+							 <?php if($this->session->flashdata('success')): ?>
+								<div class="alert alert-success alert-dismissible" role="alert">
+								  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+								  <?php echo $this->session->flashdata('success'); ?>
+								</div>
+							  <?php elseif($this->session->flashdata('error')): ?>
+								<div class="alert alert-error alert-dismissible" role="alert">
+								  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+								  <?php echo $this->session->flashdata('error'); ?>
+								</div>
+							  <?php endif; ?>
 							<form method="post" id="createForm"  enctype="multipart/form-data" action="<?=$this->config->config['base_url']?>ResourceCenter/create">
 											<input type="hidden" name="post" value="yes" />
 												<textarea rows="1" name="content" required id="content" placeholder="Share resources"></textarea>

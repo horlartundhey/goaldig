@@ -6,7 +6,7 @@
 
             $this->load->database();
 			$this->load->library('session');
-			$this->load->model('goal_model');
+			$this->load->model('Goal_model');
 			$this->load->library('form_validation');
 
         }
@@ -15,7 +15,9 @@
 			$data = array();            
             $data["title"] = "Set Goals For 2022";
             //to fetch goals
-            $data['goals'] =$this->goal_model->get_goals();
+			// $data['goals'] =$this->Goal_model->get($this->session->userdata('user_id'));
+
+            $data['goals'] =$this->Goal_model->get_goals();
 
             //to route the goals page
 			$this->load->view('goals/index', $data);
@@ -40,7 +42,7 @@
 					'date_created'=>date("Y-m-d"),
 				);
 				
-				$create = $this->goal_model->create_goal($data);
+				$create = $this->Goal_model->create_goal($data);
 				
 				if($create == true) {
 					$this->session->set_flashdata('success', 'Successfully created');
@@ -86,7 +88,7 @@
 					'date_created'=>date("Y-m-d"),
 				);
 				
-				$update = $this->goal_model->update_goal($id,$data);
+				$update = $this->Goal_model->update_goal($id,$data);
 				
 				if($update == true) {
 					$this->session->set_flashdata('success', 'Successfully created');
@@ -104,7 +106,7 @@
 				}
 				$data['errors'] = implode(",",$errors);
 			}
-			$data['goal'] =  $this->goal_model->get_goals(array('id'=>$id,'user_id'=>$this->session->userdata('user_id')));
+			$data['goal'] =  $this->Goal_model->get_goals(array('id'=>$id,'user_id'=>$this->session->userdata('user_id')));
 			if($data['goal']==null){
 				$this->loadUrl('goals');
 			}
@@ -113,9 +115,9 @@
 		
     public function delete($id){
 
-		$data['goal'] =  $this->goal_model->get_goals(array('id'=>$id,'user_id'=>$this->session->userdata('user_id')));
+		$data['goal'] =  $this->Goal_model->get_goals(array('id'=>$id,'user_id'=>$this->session->userdata('user_id')));
 		if($data['goal']!=null){
-			$this->goal_model->delete_goal($id);
+			$this->Goal_model->delete_goal($id);
 		}
 		$this->loadUrl('goals');
 		

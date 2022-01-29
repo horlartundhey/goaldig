@@ -66,6 +66,67 @@ class Crud_model extends CI_Model {
 	}
 	
 	
+		function get_flutter_payment_url($amount,$email,$param=array()){	
+						$response = array();
+						$custom = array('amount'=>$amount,'email'=>$email,'type'=>"subscription");
+						$custom = array_merge($param,$custom);					
+
+						$body = array(
+							'tx_ref'=>$email.time(),
+							'redirect_url'=>$this->config->config['base_url']."users/complete_flutter_transaction/pay",
+							'payment_options'=>"card",
+							'amount'=>$amount, 
+							'meta'=>$custom,
+							'currency'=>"NGN",
+							'customer'=>array(
+											'email'=>$email
+											)
+											
+						);
+
+						//var_dump(FLUTTER_SEC_KEY);
+						try
+						{
+							$headers = array(
+							"cache-control: no-cache",
+							'Content-Type: application/json',
+							'Authorization: Bearer '.FLUTTER_SEC_KEY		
+							);
+							$url = "https://api.flutterwave.com/v3/payments";
+							$args = array('url'=>$url);
+							$ch = curl_init($url);
+							curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+							curl_setopt($ch, CURLOPT_HTTP_VERSION, CURL_HTTP_VERSION_1_1);
+							//if($type=="POST")
+								curl_setopt($ch, CURLOPT_POST, 1);
+							curl_setopt($ch, CURLOPT_RETURNTRANSFER,1);
+							curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($body));
+							curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+							curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+							curl_setopt($ch, CURLOPT_FORBID_REUSE, 1);
+							curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+							$resp = curl_exec($ch);
+							
+						} catch(Exception $e){
+						     $response['message']         =   'Operation failed';
+							 $response['status']         =   'error';
+							//var_dump($e);
+							 return json_encode($response,true); exit;
+						}
+						
+						 
+						 $resp = json_decode($resp,true);
+						// var_dump($resp);
+						 if(isset($resp['data']['link']) && $resp['data']['link']!=""){					  
+							 $response['message']   =   '';
+							 $response['status']    =   'success';
+							 $response['url']       =   $resp['data']['link'];
+						 }else{
+							 $response['message']         =   'Operation failed';
+							 $response['status']         =   'error';
+						 }
+						 return json_encode($response,true); 	
+	}
 		
 	
 	function key_name_map($data,$table){
